@@ -10,10 +10,10 @@
       <v-list dense>
         <v-list-tile @click="">
           <v-list-tile-action>
-            <v-icon>perm_identity</v-icon>
+            <v-icon>face</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Perfil</v-list-tile-title>
+            <v-list-tile-title>PERFIL</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         <v-list-tile @click="">
@@ -21,68 +21,68 @@
             <v-icon>work</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Mi Empresa</v-list-tile-title>
+            <v-list-tile-title>MI EMPRESA</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
       <v-list-tile @click="">
           <v-list-tile-action>
-            <v-icon>people</v-icon>
+            <v-icon>perm_identity</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Cliente</v-list-tile-title>
+            <v-list-tile-title>CLIENTE</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
       <v-list-tile @click="">
           <v-list-tile-action>
-            <v-icon>work</v-icon>
+            <v-icon>peoplegi</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Proveedores</v-list-tile-title>
+            <v-list-tile-title>PROVEEDORES</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
       <v-list-tile @click="">
           <v-list-tile-action>
-            <v-icon>work</v-icon>
+            <v-icon>add_shopping_cart</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Productos</v-list-tile-title>
+            <v-list-tile-title>PRODUCTOS</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
       <v-list-tile @click="">
           <v-list-tile-action>
-            <v-icon>work</v-icon>
+            <v-icon>shopping_cart</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Facturación</v-list-tile-title>
+            <v-list-tile-title>FACTURACIÓN</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
       <v-list-tile @click="">
           <v-list-tile-action>
-            <v-icon>work</v-icon>
+            <v-icon>https</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Candados</v-list-tile-title>
+            <v-list-tile-title>CANDADOS</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
       <v-list-tile @click="">
           <v-list-tile-action>
-            <v-icon>work</v-icon>
+            <v-icon>settings_power</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Salir</v-list-tile-title>
+            <v-list-tile-title>SALIR</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
     <v-toolbar app fixed clipped-left>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title>Gustof</v-toolbar-title>
+      <v-toolbar-title>administrador</v-toolbar-title>
     </v-toolbar>
     <v-content>
       <v-container fluid fill-height>
