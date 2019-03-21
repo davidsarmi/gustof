@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Administrador from '@/layouts/Administrador.vue'
 import Bodega from '@/views/Bodega.vue'
+import mesas from '@/views/Mesas.vue'
 import Login from '@/views/Login.vue'
 
 Vue.use(Router)
@@ -24,6 +25,11 @@ export default new Router({
       path: '/Bodega',
       name: 'Bodega',
       component: Bodega
+    },
+    {
+      path: '/mesas',
+      name: 'mesas',
+      component: mesas
     }
   ]
 })

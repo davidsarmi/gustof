@@ -1,6 +1,5 @@
 <template>
-  
-    
+
 <div id="app">
   <v-app id="inspire" dark>
     <v-navigation-drawer
@@ -9,7 +8,7 @@
       v-model="drawer"
       app
     >
-    
+
       <v-list dense>
         <v-list-tile @click="">
           <v-list-tile-action>
@@ -53,17 +52,14 @@
       <v-toolbar-title>Gustof-Bodega</v-toolbar-title>
        <img src="../assets/gustof.png">
     </v-toolbar>
-  
-      
-       
-      
+
          <v-btn
                 icon
                 large
                 :href="source"
                 target="_blank"
                 slot="activator"
-              
+
           </v-btn>
          <v-btn
           color="red"
@@ -86,7 +82,7 @@
       <span>&copy; 2019</span>
     </v-footer>
   </v-app>
-  
+
 </div>
 </template>
 <script>

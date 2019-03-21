@@ -43,9 +43,11 @@
 </template>
 <script>
 export default {
-  data: ({
-    drawer: null
-  }),
+  data: function () {
+    return ({
+      drawer: null
+    })
+  },
 
   props: {
     source: String
@@ -57,5 +59,5 @@ export default {
   img{
     height: 100px;
     margin: 0px 0px 0px 100px;
-  }
+ }
 </style>
