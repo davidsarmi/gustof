@@ -49,7 +49,7 @@ export default {
     height: 150px;
     margin: 129px 0px 0px 33px;
  }
- nav{
+ .v-toolbar{
     height: 180px;
 }
 .chef {
