@@ -54,19 +54,14 @@
     </v-toolbar>
 
          <v-btn
-                icon
-                large
-                :href="source"
-                target="_blank"
-                slot="activator"
-
-          </v-btn>
-         <v-btn
           color="red"
           dark
+          
         >
           Productos por agotar
+          
         </v-btn>
+        
           <v-btn
           color="red"
           dark
@@ -103,6 +98,11 @@ img {
     width: 120px;
     position: absolute;
     left: 612px;
+}
+bottom v-btn{
+margin: 10px 396px;
+background-color: red;
+
 }
 </style>
 

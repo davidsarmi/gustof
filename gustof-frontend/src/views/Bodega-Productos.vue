@@ -53,7 +53,7 @@
        <img src="../assets/gustof.png">
     </v-toolbar>
 
-         <v-btn
+         <v-btn>
                 icon
                 large
                 :href="source"
@@ -61,12 +61,14 @@
                 slot="activator"
 
           </v-btn>
+          
          <v-btn
           color="red"
           dark
         >
           Productos por agotar
         </v-btn>
+      
           <v-btn
           color="red"
           dark
@@ -106,6 +108,12 @@ img{
     width: 120px;
     position: absolute;
     left: 612px;
+}
+.v-btn {
+    font-size: 16px;
+    font-weight: 500;
+    margin:20px 401px;
+  
 }
 
 </style>
