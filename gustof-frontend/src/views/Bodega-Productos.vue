@@ -27,6 +27,7 @@
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
+       <v-list dense>
       <v-list-tile @click="">
           <v-list-tile-action>
             <v-icon>edit</v-icon>
@@ -36,6 +37,7 @@
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
+       <v-list dense>
       <v-list-tile @click="">
           <v-list-tile-action>
             <v-icon>settings_power</v-icon>
@@ -49,30 +51,28 @@
     </v-navigation-drawer>
     <v-toolbar app fixed clipped-left>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title>Gustof-Bodega</v-toolbar-title>
+      <v-toolbar-title>Bodega-Productos</v-toolbar-title>
        <img src="../assets/gustof.png">
     </v-toolbar>
+
 
          <v-btn
           color="red"
           dark
-          
         >
           Productos por agotar
-          
         </v-btn>
-        
+      
           <v-btn
           color="red"
           dark
         >
           Productos agotados
         </v-btn>
-            </v-tooltip>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </v-content>
+         <p> Todos los productos de bodega </p>
+
+         
+  
     <v-footer app fixed>
       <span>&copy; 2019</span>
     </v-footer>
@@ -92,17 +92,18 @@ export default {
   }
 }
 </script>
+
 <style>
-img {
+img{
     border-style: none;
     width: 120px;
     position: absolute;
     left: 612px;
 }
-bottom v-btn{
-margin: 10px 396px;
-background-color: red;
-
+p{
+  text-align: center;
+  font-size: 25px;
+  font-weight: 80px;
 }
-</style>
 
+</style>

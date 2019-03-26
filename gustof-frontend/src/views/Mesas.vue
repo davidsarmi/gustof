@@ -39,12 +39,12 @@
               <v-btn
                 icon
                 large
-                :href="source"
+                
                 target="_blank"
                slot="activator"
                 
               >
-              <article>
+              <article class="bloque">
             
 
                               <div id="app">
@@ -54,7 +54,7 @@
                         <v-flex xs12 sm6 d-flex>
                           <v-select
                             :items="items"
-                            label="Standard"
+                            label=""
                           ></v-select>
                         </v-flex>
                   
@@ -118,6 +118,8 @@ export default {
 
 
 </script>
-<style >
-
+<style>
+.v-text-field.v-text-field--enclosed .v-text-field__details, .v-text-field.v-text-field--enclosed > .v-input__control > .v-input__slot {
+    padding: 6px 179px;
+}
 </style>
