@@ -5,23 +5,12 @@
       <v-container fluid fill-height>
         <v-layout align-center justify-center>
           <v-flex xs12 sm8 md4>
-            <img src="../assets/gustof.png">
+            <img class="chef" src="../assets/chef.verdadero.png">
             <v-card class="elevation-12">
               <v-toolbar dark color="black">
-                <v-toolbar-title text-center>Login</v-toolbar-title>
+                <v-toolbar-title text-center><img class="gustof" src="../assets/gustof.png"></v-toolbar-title>
                 <v-spacer></v-spacer>
-                <v-tooltip bottom>
-                  <v-btn
-                    icon
-                    large
-                    :href="source"
-                    target="_blank"
-                    slot="activator"
-                  >
-                    <v-icon large></v-icon>
-                  </v-btn>
-                  <span>Source</span>
-                </v-tooltip>
+            
               </v-toolbar>
               <v-card-text>
                 <v-form>
@@ -56,8 +45,16 @@ export default {
 }
 </script>
 <style>
-  img{
-    height: 100px;
-    margin: 0px 0px 0px 100px;
+  .gustof {
+    height: 150px;
+    margin: 129px 0px 0px 33px;
  }
+ nav{
+    height: 180px;
+}
+.chef {
+    border-style: none;
+    height: 180px;
+    margin: 0 0 0 171px;
+}
 </style>
