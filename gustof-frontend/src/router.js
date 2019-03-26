@@ -4,6 +4,7 @@ import Administrador from '@/layouts/Administrador.vue'
 import Bodega from '@/views/Bodega.vue'
 import mesas from '@/views/Mesas.vue'
 import Login from '@/views/Login.vue'
+import asdasd from '@/views/administrador/perfil.vue'
 
 Vue.use(Router)
 
@@ -30,6 +31,11 @@ export default new Router({
       path: '/mesas',
       name: 'mesas',
       component: mesas
+    },
+    {
+      path: '/administrador/perfil',
+      name: 'perfil',
+      component: asdasd
     }
   ]
 })

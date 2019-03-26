@@ -8,7 +8,7 @@
       app
     >
       <v-list dense>
-        <v-list-tile @click="">
+        <v-list-tile>
           <v-list-tile-action>
             <v-icon>face</v-icon>
           </v-list-tile-action>
@@ -16,7 +16,7 @@
             <v-list-tile-title>PERFIL</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile @click="">
+        <v-list-tile>
           <v-list-tile-action>
             <v-icon>work</v-icon>
           </v-list-tile-action>
@@ -24,8 +24,7 @@
             <v-list-tile-title>MI EMPRESA</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-      </v-list>
-      <v-list-tile @click="">
+      <v-list-tile>
           <v-list-tile-action>
             <v-icon>perm_identity</v-icon>
           </v-list-tile-action>
@@ -33,8 +32,7 @@
             <v-list-tile-title>CLIENTE</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-      </v-list>
-      <v-list-tile @click="">
+      <v-list-tile>
           <v-list-tile-action>
             <v-icon>peoplegi</v-icon>
           </v-list-tile-action>
@@ -42,8 +40,7 @@
             <v-list-tile-title>PROVEEDORES</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-      </v-list>
-      <v-list-tile @click="">
+      <v-list-tile>
           <v-list-tile-action>
             <v-icon>add_shopping_cart</v-icon>
           </v-list-tile-action>
@@ -51,8 +48,7 @@
             <v-list-tile-title>PRODUCTOS</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-      </v-list>
-      <v-list-tile @click="">
+      <v-list-tile>
           <v-list-tile-action>
             <v-icon>shopping_cart</v-icon>
           </v-list-tile-action>
@@ -60,8 +56,7 @@
             <v-list-tile-title>FACTURACIÓN</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-      </v-list>
-      <v-list-tile @click="">
+      <v-list-tile>
           <v-list-tile-action>
             <v-icon>https</v-icon>
           </v-list-tile-action>
@@ -69,8 +64,7 @@
             <v-list-tile-title>CANDADOS</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-      </v-list>
-      <v-list-tile @click="">
+      <v-list-tile>
           <v-list-tile-action>
             <v-icon>settings_power</v-icon>
           </v-list-tile-action>
