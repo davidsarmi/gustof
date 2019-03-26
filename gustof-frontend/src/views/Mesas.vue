@@ -41,8 +41,54 @@
                 large
                 :href="source"
                 target="_blank"
-                slot="activator"
+               slot="activator"
+                
               >
+              <article>
+            
+
+                              <div id="app">
+                  <v-app id="inspire">
+                    <v-container fluid grid-list-xl>
+                      <v-layout wrap align-center>
+                        <v-flex xs12 sm6 d-flex>
+                          <v-select
+                            :items="items"
+                            label="Standard"
+                          ></v-select>
+                        </v-flex>
+                  
+                        <v-flex xs12 sm6 d-flex>
+                          <v-select
+                            :items="items"
+                            box
+                            label="Box style"
+                          ></v-select>
+                        </v-flex>
+                  
+                        <v-flex xs12 sm6 d-flex>
+                          <v-select
+                            :items="items"
+                            label="Outline style"
+                            outline
+                          ></v-select>
+                        </v-flex>
+                  
+                        <v-flex xs12 sm6 d-flex>
+                          <v-select
+                            :items="items"
+                            label="Solo field"
+                            solo
+                          ></v-select>
+                        </v-flex>
+                      </v-layout>
+                    </v-container>
+                  </v-app>
+                </div>
+
+              </article>
+
+
                 <v-icon large>code</v-icon>
               </v-btn>
               <span>Source</span>
@@ -69,4 +115,9 @@ export default {
   }
 
 }
+
+
 </script>
+<style >
+
+</style>
