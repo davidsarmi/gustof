@@ -53,15 +53,7 @@
        <img src="../assets/gustof.png">
     </v-toolbar>
 
-         <v-btn>
-                icon
-                large
-                :href="source"
-                target="_blank"
-                slot="activator"
 
-          </v-btn>
-          
          <v-btn
           color="red"
           dark
@@ -77,11 +69,8 @@
         </v-btn>
          <p> Todos los productos de bodega </p>
 
-            </v-tooltip>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </v-content>
+         
+  
     <v-footer app fixed>
       <span>&copy; 2019</span>
     </v-footer>
@@ -109,11 +98,10 @@ img{
     position: absolute;
     left: 612px;
 }
-.v-btn {
-    font-size: 16px;
-    font-weight: 500;
-    margin:20px 401px;
-  
+p{
+  text-align: center;
+  font-size: 25px;
+  font-weight: 80px;
 }
 
 </style>
