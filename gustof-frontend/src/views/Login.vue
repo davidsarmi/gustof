@@ -5,10 +5,10 @@
       <v-container fluid fill-height>
         <v-layout align-center justify-center>
           <v-flex xs12 sm8 md4>
-            <img class="chef" src="../assets/chef.verdadero.png">
+            <img class="gustof" src="../assets/gustof.png">
             <v-card class="elevation-12">
               <v-toolbar dark color="black">
-                <v-toolbar-title text-center><img class="gustof" src="../assets/gustof.png"></v-toolbar-title>
+                <v-toolbar-title text-center></v-toolbar-title>
                 <v-spacer></v-spacer>
             
               </v-toolbar>
@@ -48,13 +48,7 @@ export default {
   .gustof {
     height: 150px;
     margin: 129px 0px 0px 33px;
+    display: inline-block;
  }
- .v-toolbar{
-    height: 180px;
-}
-.chef {
-    border-style: none;
-    height: 180px;
-    margin: 0 0 0 171px;
-}
+
 </style>
