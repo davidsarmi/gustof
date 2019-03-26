@@ -97,3 +97,12 @@ export default {
   }
 }
 </script>
+<style>
+img {
+    border-style: none;
+    width: 120px;
+    position: absolute;
+    left: 612px;
+}
+</style>
+
