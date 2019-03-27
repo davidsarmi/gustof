@@ -27,6 +27,7 @@
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
+       <v-list dense>
       <v-list-tile @click="">
           <v-list-tile-action>
             <v-icon>edit</v-icon>
@@ -36,6 +37,7 @@
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
+       <v-list dense>
       <v-list-tile @click="">
           <v-list-tile-action>
             <v-icon>settings_power</v-icon>
@@ -99,9 +101,10 @@ img {
     position: absolute;
     left: 612px;
 }
-bottom v-btn{
-margin: 10px 396px;
-background-color: red;
+.v-btn{
+font-size:14px;
+font-weight: 500;
+margin:20px 401px;
 
 }
 </style>
