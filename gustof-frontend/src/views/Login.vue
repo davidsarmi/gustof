@@ -46,9 +46,9 @@ export default {
 </script>
 <style>
   .gustof {
-    height: 150px;
-    margin: 129px 0px 0px 33px;
-    display: inline-block;
+    height: 153px;
+    width: 250px;
+    margin: -150px 0px 1px -31px;
  }
 
 </style>
