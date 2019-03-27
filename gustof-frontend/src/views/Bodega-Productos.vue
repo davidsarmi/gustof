@@ -71,7 +71,15 @@
         </v-btn>
          <p> Todos los productos de bodega </p>
 
-         
+         <article>
+            <v-flex xs12 sm6 d-flex>
+        <v-select
+          :items="items"
+          label="Outline style"
+          outline
+        ></v-select>
+      </v-flex>
+         </article>
   
     <v-footer app fixed>
       <span>&copy; 2019</span>
@@ -101,9 +109,10 @@ img{
     left: 612px;
 }
 p{
-  text-align: center;
-  font-size: 25px;
-  font-weight: 80px;
+ 
+  font-size: 29px;
+  font-weight: 100px;
 }
+
 
 </style>
