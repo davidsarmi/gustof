@@ -4,7 +4,6 @@ import Administrador from '@/layouts/Administrador.vue'
 import Bodega from '@/views/Bodega.vue'
 import mesas from '@/views/Mesas.vue'
 import Login from '@/views/Login.vue'
-import Meseros from '@/layouts/meseros.vue'
 import asdasd from '@/views/administrador/perfil.vue'
 import Bodega_Productos from '@/views/Bodega-Productos.vue'
 Vue.use(Router)
