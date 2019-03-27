@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Administrador from '@/layouts/Administrador.vue'
 import Bodega from '@/views/Bodega.vue'
 import mesas from '@/views/Mesas.vue'
+import Chef from '@/views/Chef.vue'
 import Login from '@/views/Login.vue'
 import asdasd from '@/views/administrador/perfil.vue'
 import BodegaProductos from '@/views/Bodega-Productos.vue'
@@ -42,5 +43,10 @@ export default new Router({
       name: 'bodega_productos',
       component: BodegaProductos
     },
+    {
+      path: '/Chef',
+      name: 'Chef',
+      component: Chef
+    }
   ]
 })

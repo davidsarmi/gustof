@@ -47,9 +47,8 @@ export default {
 <style>
   .gustof {
     height: 153px;
-    width: 200px;
-    margin: -147px 0px -10px 
-    
+    width: 250px;
+    margin: -150px 0px 1px -31px;
  }
 
 </style>
