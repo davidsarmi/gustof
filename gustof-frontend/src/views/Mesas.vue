@@ -31,17 +31,16 @@
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>mesas</v-toolbar-title>
     </v-toolbar>
-    
-     
+
          <v-container fluid grid-list-xl>
     <v-layout wrap align-center>
       <v-flex xs12 sm6 d-flex>
         <v-select
           :items="comidas"
           label="Comidas"
-         
+
         ></v-select>
-        
+
       </v-flex>
            <v-flex xs12 sm6 d-flex>
         <v-select
@@ -66,12 +65,9 @@
           solo
         ></v-select>
       </v-flex>
-    
+
     </v-layout>
   </v-container>
-
-
-
 
     <v-data-table
     :headers="headers"
@@ -87,7 +83,7 @@
       <td class="text-xs-right">{{ props.item.iron }}</td>
     </template>
   </v-data-table>
-  
+
     <v-footer app fixed>
       <span>&copy; 2017</span>
     </v-footer>
@@ -99,19 +95,17 @@
 export default {
   data: () => ({
     drawer: true,
-    comidas:["hamburguesa","perros calientes","picada mixta","salchicha gua gua","sandwich","mazorca","patocones","alitas" ],
-    tipos:["Artesanal","Deli tocino","Espacial","Pechugona","Master","Maxima","chilanga" ],
-    receta:["Pan","Vegetales(Lechuga, tomate)","Pepinillos","Cebolla caramelisada","carne al carbon","Queso" ],
-    papa:["Criolla","Francesa","Casquitos","criolla y francesa","criolla y casquitos","francesa y casquitos","Sin papa" ],
+    comidas: ['hamburguesa', 'perros calientes', 'picada mixta', 'salchicha gua gua', 'sandwich', 'mazorca', 'patocones', 'alitas' ],
+    tipos: ['Artesanal', 'Deli tocino', 'Espacial', 'Pechugona', 'Master', 'Maxima', 'chilanga' ],
+    receta: ['Pan', 'Vegetales(Lechuga, tomate)', 'Pepinillos', 'Cebolla caramelisada', 'carne al carbon', 'Queso' ],
+    papa: ['Criolla', 'Francesa', 'Casquitos', 'criolla y francesa', 'criolla y casquitos', 'francesa y casquitos', 'Sin papa' ]
   }),
-    
 
   props: {
     source: String
   }
 
 }
-
 
 </script>
 <style>

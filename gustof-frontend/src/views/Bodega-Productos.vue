@@ -55,14 +55,13 @@
        <img src="../assets/gustof.png">
     </v-toolbar>
 
-
          <v-btn
           color="red"
           dark
         >
           Productos por agotar
         </v-btn>
-      
+
           <v-btn
           color="red"
           dark
@@ -80,7 +79,7 @@
         ></v-select>
       </v-flex>
          </article>
-  
+
     <v-footer app fixed>
       <span>&copy; 2019</span>
     </v-footer>
@@ -109,10 +108,9 @@ img{
     left: 612px;
 }
 p{
- 
+
   font-size: 29px;
   font-weight: 100px;
 }
-
 
 </style>
