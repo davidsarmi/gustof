@@ -31,61 +31,15 @@
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>mesas</v-toolbar-title>
     </v-toolbar>
-    <v-content>
-      <v-container fluid fill-height>
-        <v-layout justify-center align-center>
-          <v-flex shrink>
-            <v-tooltip right>
-              <v-btn
-                icon
-                large
 
-                target="_blank"
-               slot="activator"
+         <v-container fluid grid-list-xl>
+    <v-layout wrap align-center>
+      <v-flex xs12 sm6 d-flex>
+        <v-select
+          :items="comidas"
+          label="Comidas"
 
-              >
-              <article class="bloque">
-
-                              <div id="app">
-                  <v-app id="inspire">
-                    <v-container fluid grid-list-xl>
-                      <v-layout wrap align-center>
-                        <v-flex xs12 sm6 d-flex>
-                          <v-select
-                            :items="items"
-                            label=""
-                          ></v-select>
-                        </v-flex>
-
-                        <v-flex xs12 sm6 d-flex>
-                          <v-select
-                            :items="items"
-                            box
-                            label="Box style"
-                          ></v-select>
-                        </v-flex>
-
-                        <v-flex xs12 sm6 d-flex>
-                          <v-select
-                            :items="items"
-                            label="Outline style"
-                            outline
-                          ></v-select>
-                        </v-flex>
-
-                        <v-flex xs12 sm6 d-flex>
-                          <v-select
-                            :items="items"
-                            label="Solo field"
-                            solo
-                          ></v-select>
-                        </v-flex>
-                      </v-layout>
-                    </v-container>
-                  </v-app>
-                </div>
-
-        
+        ></v-select>
 
       </v-flex>
            <v-flex xs12 sm6 d-flex>
@@ -130,7 +84,6 @@
     </template>
   </v-data-table>
 
->>>>>>> 5252af1c3a3bcc39c6e38415c349448d92b045ad
     <v-footer app fixed>
       <span>&copy; 2017</span>
     </v-footer>
