@@ -14,6 +14,8 @@ import producto from '@/views/administrador/productos.vue'
 import proveedor from '@/views/administrador/proveedores.vue'
 import salir from '@/views/administrador/salir.vue'
 import BodegaProductos from '@/views/Bodega-Productos.vue'
+import AgregarB from '@/views/AgregarB.vue'
+import SacarB from '@/views/SacarB.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -56,6 +58,7 @@ export default new Router({
       component: Chef
     },
     {
+<<<<<<< HEAD
       path: '/candado',
       name: 'candado',
       component: Candado
@@ -89,6 +92,17 @@ export default new Router({
       path: '/salir',
       name: 'salir',
       component: salir
+=======
+      path: '/Agregar',
+      name: 'AgregarB',
+      component: AgregarB
+    },
+    {
+      path: '/Sacar',
+      name: 'SacarB',
+      component: SacarB
+>>>>>>> 78af793b96f67b94be3e941b99178fabf6b36cdf
     }
+
   ]
 })

@@ -10,7 +10,7 @@
     >
 
       <v-list dense>
-        <v-list-tile @click="">
+        <v-list-tile>
           <v-list-tile-action>
             <v-icon>store</v-icon>
           </v-list-tile-action>
@@ -18,7 +18,7 @@
             <v-list-tile-title>Productos</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile @click="">
+        <v-list-tile>
           <v-list-tile-action>
             <v-icon>edit</v-icon>
           </v-list-tile-action>
@@ -28,7 +28,7 @@
         </v-list-tile>
       </v-list>
        <v-list dense>
-      <v-list-tile @click="">
+      <v-list-tile>
           <v-list-tile-action>
             <v-icon>edit</v-icon>
           </v-list-tile-action>
@@ -38,7 +38,7 @@
         </v-list-tile>
       </v-list>
        <v-list dense>
-      <v-list-tile @click="">
+      <v-list-tile>
           <v-list-tile-action>
             <v-icon>settings_power</v-icon>
           </v-list-tile-action>
@@ -79,7 +79,6 @@
         ></v-select>
       </v-flex>
          </article>
-
     <v-footer app fixed>
       <span>&copy; 2019</span>
     </v-footer>

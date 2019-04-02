@@ -84,7 +84,7 @@
             :append-icon="show1 ? 'visibility' : 'visibility_off'"
             :rules="rules.contraseña"
             :type="show1 ? 'text' : 'password'"
-            label="Contraseña :v"
+            label="Contraseña"
             @click:append="show1 = !show1"
           ></v-text-field>
         </v-flex>

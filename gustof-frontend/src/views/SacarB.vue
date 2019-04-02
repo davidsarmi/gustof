@@ -8,7 +8,6 @@
       v-model="drawer"
       app
     >
-
       <v-list dense>
         <v-list-tile>
           <v-list-tile-action>
@@ -72,8 +71,8 @@
         </v-btn>
         <v-combobox
           v-model="select"
-          :items="COMIDAS"
-          label="COMIDAS"
+          :items="PRODUCTOS"
+          label="PRODUCTOS"
         ></v-combobox>
     <v-footer app fixed>
       <span>&copy; 2019</span>
@@ -86,8 +85,9 @@ export default {
   el: '#app',
   data: () => ({
     drawer: true,
-    COMIDAS: ['Pan', 'Vegetales(Lechuga,tomate)','Pepinillos', 'Cebolla', 'carne', 'Queso']
+    PRODUCTOS: ['Pan', 'Vegetales(Lechuga,tomate)', 'Pepinillos', 'Cebolla', 'carne', 'Queso']
   }),
+
   props: {
     source: String
   }
