@@ -7,7 +7,6 @@ import Chef from '@/views/Chef.vue'
 import Login from '@/views/Login.vue'
 import asdasd from '@/views/administrador/perfil.vue'
 import BodegaProductos from '@/views/Bodega-Productos.vue'
-import Candados from '@/views/candados.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -48,11 +47,6 @@ export default new Router({
       path: '/Chef',
       name: 'Chef',
       component: Chef
-    },
-    {
-      path: '/candados',
-      name: 'candados',
-      component: Candados
     }
   ]
 })
