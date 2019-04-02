@@ -55,20 +55,21 @@
       </template>
     </v-data-table>
     <div class="botones">
-    <v-btn color="success">listo</v-btn>
-    <v-btn color="success">listo</v-btn>
-    <v-btn color="success">listo</v-btn>
-    <v-btn color="success">listo</v-btn>
-    <v-btn color="success">listo</v-btn>
-    <v-btn color="success">listo</v-btn>
-    <v-btn color="success">listo</v-btn>
-    <v-btn color="success">listo</v-btn>
-    <v-btn color="success">listo</v-btn>
-    <v-btn color="success">listo</v-btn>
-    <v-btn color="success">listo</v-btn>
-    <v-btn color="success">listo</v-btn>
-    <v-btn color="success">listo</v-btn>
-    <v-btn color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+
 </div>
 
   </v-app>
@@ -212,15 +213,18 @@ div.elevation-1 {
 }
 
 .botones {
-    height: 48px;
-    width: 20px;
+    top: 120px;
+    left: 1337px;
     position: absolute;
-    display: inline-block;
-    top: 117px;
-    right: 67px;
     margin: auto;
-}
+    display: inline-block;
 
+}
+.botonesverdes{
+ margin: 0 0 3px 0;
+ height: 45px;
+
+}
 .comida{
     position: absolute;
     left: 25px;
@@ -239,6 +243,10 @@ div.elevation-1 {
     position: absolute;
     margin: 85px 0px 0px 1250px;
 }
-
+.theme--light.v-table {
+    background-color: #fff;
+    margin: 59px 0 0 0px;
+    color: rgba(0,0,0,0.87);
+}
 
     </style>
