@@ -1,5 +1,5 @@
 <template>
-    <v-app>
-        <h3>asdasdasd</h3>
-    </v-app>
+  <div>
+    <h1>asdasdasd</h1>
+  </div>
 </template>
