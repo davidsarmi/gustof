@@ -58,7 +58,7 @@ export default new Router({
       component: Chef
     },
     {
-<<<<<<< HEAD
+
       path: '/candado',
       name: 'candado',
       component: Candado
@@ -92,7 +92,8 @@ export default new Router({
       path: '/salir',
       name: 'salir',
       component: salir
-=======
+    },
+    {
       path: '/Agregar',
       name: 'AgregarB',
       component: AgregarB
@@ -101,7 +102,6 @@ export default new Router({
       path: '/Sacar',
       name: 'SacarB',
       component: SacarB
->>>>>>> 78af793b96f67b94be3e941b99178fabf6b36cdf
     }
 
   ]
