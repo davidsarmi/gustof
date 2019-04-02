@@ -210,13 +210,7 @@ div.elevation-1 {
         display: inline-block;
 
 }
-.v-btn {
-  height: 48px;
-    width: 20px;
-    display: inline-block;
-    margin: 0px;
 
-}
 .botones {
     height: 48px;
     width: 20px;
@@ -245,7 +239,6 @@ div.elevation-1 {
     position: absolute;
     margin: 85px 0px 0px 1250px;
 }
-.v-text-field{
-      margin: 0px 0px 0px 1173px;
-}
+
+
     </style>
