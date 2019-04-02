@@ -103,5 +103,3 @@ export default {
     background-color: yellow;
 }
 </style>
-
-

@@ -39,13 +39,12 @@
               <v-btn
                 icon
                 large
-                
+
                 target="_blank"
                slot="activator"
-                
+
               >
               <article class="bloque">
-            
 
                               <div id="app">
                   <v-app id="inspire">
@@ -57,7 +56,7 @@
                             label=""
                           ></v-select>
                         </v-flex>
-                  
+
                         <v-flex xs12 sm6 d-flex>
                           <v-select
                             :items="items"
@@ -65,7 +64,7 @@
                             label="Box style"
                           ></v-select>
                         </v-flex>
-                  
+
                         <v-flex xs12 sm6 d-flex>
                           <v-select
                             :items="items"
@@ -73,7 +72,7 @@
                             outline
                           ></v-select>
                         </v-flex>
-                  
+
                         <v-flex xs12 sm6 d-flex>
                           <v-select
                             :items="items"
@@ -87,7 +86,6 @@
                 </div>
 
               </article>
-
 
                 <v-icon large>code</v-icon>
               </v-btn>
@@ -115,7 +113,6 @@ export default {
   }
 
 }
-
 
 </script>
 <style>

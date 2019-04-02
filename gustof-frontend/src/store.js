@@ -8,7 +8,7 @@ export default new Vuex.Store({
     layout: 'login-layout'
   },
   mutations: {
-    SET_LAYOUT (state, newLayout){
+    SET_LAYOUT (state, newLayout) {
       console.log(newLayout)
       state.layout = newLayout
     }

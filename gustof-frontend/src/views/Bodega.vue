@@ -58,12 +58,12 @@
          <v-btn
           color="red"
           dark
-          
+
         >
           Productos por agotar
-          
+
         </v-btn>
-        
+
           <v-btn
           color="red"
           dark
@@ -108,4 +108,3 @@ margin:20px 401px;
 
 }
 </style>
-
