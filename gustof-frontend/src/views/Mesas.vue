@@ -41,7 +41,7 @@
 
         ></v-select>
 
-      </v-flex>
+      </v-flex>|
            <v-flex xs12 sm6 d-flex>
         <v-select
           :items="tipos"
