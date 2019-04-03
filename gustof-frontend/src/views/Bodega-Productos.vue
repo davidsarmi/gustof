@@ -92,8 +92,8 @@ export default {
   el: '#app',
   data: () => ({
     drawer: true,
-    Productos:['Salchicha','Jamon','Queso','Carne plancha','Pollo desmechado','Mazorca','Tocineta']
-    
+    Productos: ['Salchicha', 'Jamon', 'Queso', 'Carne plancha', 'Pollo desmechado', 'Mazorca', 'Tocineta']
+
   }),
 
   props: {

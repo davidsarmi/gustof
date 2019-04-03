@@ -5,14 +5,13 @@ import Bodega from '@/views/Bodega.vue'
 import mesas from '@/views/Mesas.vue'
 import Chef from '@/views/Chef.vue'
 import Login from '@/views/Login.vue'
-import asdasd from '@/views/administrador/perfil.vue'
+import Perfil from '@/views/administrador/perfil.vue'
 import Candado from '@/views/administrador/candados.vue'
 import cliente from '@/views/administrador/cliente.vue'
 import facturacion from '@/views/administrador/facturacion.vue'
 import miempresa from '@/views/administrador/miempresa.vue'
 import producto from '@/views/administrador/productos.vue'
 import proveedor from '@/views/administrador/proveedores.vue'
-import salir from '@/views/administrador/salir.vue'
 import BodegaProductos from '@/views/Bodega-Productos.vue'
 import AgregarB from '@/views/AgregarB.vue'
 import SacarB from '@/views/SacarB.vue'
@@ -45,7 +44,7 @@ export default new Router({
     {
       path: '/administrador/perfil',
       name: 'perfil',
-      component: asdasd
+      component: Perfil
     },
     {
       path: '/bodega_productos',
@@ -58,45 +57,44 @@ export default new Router({
       component: Chef
     },
     {
-      path: '/candado',
+      path: '/administrador/candado',
       name: 'candado',
       component: Candado
     },
     {
-      path: '/cliente',
+      path: '/administrador/cliente',
       name: 'cliente',
       component: cliente
     },
     {
-      path: '/facturacion',
+      path: '/administrador/facturacion',
       name: 'facturacion',
       component: facturacion
     },
     {
-      path: '/miempresa',
+      path: '/administrador/miempresa',
       name: 'miempresa',
       component: miempresa
     },
     {
-      path: '/productos',
+      path: '/administrador/productos',
       name: 'productos',
       component: producto
     },
     {
-      path: '/proveedores',
+      path: '/administrador/proveedores',
       name: 'proveedores',
       component: proveedor
     },
     {
-      path: '/salir',
-      name: 'salir',
-      component: salir
-    },
-    {
-      path: '/Sacar',
+      path: '/sacar',
       name: 'SacarB',
       component: SacarB
+    },
+    {
+      path: '/agregar',
+      name: 'AgregarB',
+      component: AgregarB
     }
-
   ]
 })

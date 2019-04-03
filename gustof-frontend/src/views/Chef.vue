@@ -34,7 +34,7 @@
         @change="save"
       ></v-date-picker>
     </v-menu>
-    
+
     <footer class="pedidos" style="
     position: absolute;
     top: 120px;
@@ -53,11 +53,9 @@
       <v-btn class="pepe" color="info">Info</v-btn>
       <v-btn class="pepe" color="error">Error</v-btn>
       <v-btn class="pepe" color="warning">Warning</v-btn>
-      
+
     </footer>
 
-      
-  
     <div class="botones">
     <v-btn class="botonesverdes" color="success">listo</v-btn>
     <v-btn class="botonesverdes" color="success">listo</v-btn>
@@ -74,8 +72,7 @@
     <v-btn class="botonesverdes" color="success">listo</v-btn>
     <v-btn class="botonesverdes" color="success">listo</v-btn>
 <<<<<<< HEAD
-  
-  
+
 =======
     <v-btn class="botonesverdes" color="success">listo</v-btn>
 
