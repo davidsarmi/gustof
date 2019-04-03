@@ -71,12 +71,13 @@
          <p> Todos los productos de bodega </p>
 
          <article>
-            <v-flex xs12 sm6 d-flex>
+         <v-flex xs12 sm6 d-flex>
         <v-select
-          :items="items"
-          label="Outline style"
-          outline
+          :items="Productos"
+          label="Productos"
+
         ></v-select>
+
       </v-flex>
          </article>
 
@@ -91,7 +92,9 @@
 export default {
   el: '#app',
   data: () => ({
-    drawer: true
+    drawer: true,
+    Productos:['Salchicha','Jamon','Queso','Carne plancha','Pollo desmechado','Mazorca','Tocineta']
+    
   }),
 
   props: {
@@ -104,13 +107,15 @@ export default {
 img{
     border-style: none;
     width: 120px;
-    position: absolute;
     left: 612px;
 }
+
 p{
 
   font-size: 29px;
   font-weight: 100px;
 }
-
+.v-input__control {
+  height: 0;
+}
 </style>
