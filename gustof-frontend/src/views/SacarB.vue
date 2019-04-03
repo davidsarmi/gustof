@@ -71,21 +71,21 @@
         </v-btn>
         <v-combobox
           v-model="select"
-          :items="items"
+          :items="PRODUCTOS"
           label="PRODUCTOS"
         ></v-combobox>
     <v-footer app fixed>
       <span>&copy; 2019</span>
     </v-footer>
   </v-app>
-
 </div>
 </template>
 <script>
 export default {
   el: '#app',
   data: () => ({
-    drawer: true
+    drawer: true,
+    PRODUCTOS: ['Pan', 'Vegetales(Lechuga,tomate)', 'Pepinillos', 'Cebolla', 'carne', 'Queso']
   }),
 
   props: {
@@ -102,4 +102,3 @@ export default {
     background-color: yellow;
 }
 </style>
-

@@ -18,10 +18,6 @@
       min-width="290px"
     >
       <template v-slot:activator="{ on }">
-        <h2 class="comida">COMIDA</h2>
-        <h2 class="receta">RECETA</h2>
-        <h2 class="papa">PAPA</h2>
-        <h2 class="pedido">PEDIDOS</h2>
         <v-text-field
           v-model="date"
           label="Birthday date"
@@ -38,22 +34,30 @@
         @change="save"
       ></v-date-picker>
     </v-menu>
-    <v-data-table
-      :items="desserts"
-      class="elevation-1"
-      hide-actions
-      hide-headers
+    
+    <footer class="pedidos" style="
+    position: absolute;
+    top: 120px;
+    left: 0px;">
+      <v-btn class="pepe" color="error">HAMBURGUESA ARTESANAL</v-btn>
+      <v-btn class="pepe" color="warning">Warning</v-btn>
+      <v-btn class="pepe" color="info">Info</v-btn>
+      <v-btn class="pepe" color="error">Error</v-btn>
+      <v-btn class="pepe" color="warning">Warning</v-btn>
+      <v-btn class="pepe" color="info">Info</v-btn>
+      <v-btn class="pepe" color="error">Error</v-btn>
+      <v-btn class="pepe" color="warning">Warning</v-btn>
+      <v-btn class="pepe" color="info">Info</v-btn>
+      <v-btn class="pepe" color="error">Error</v-btn>
+      <v-btn class="pepe" color="warning">Warning</v-btn>
+      <v-btn class="pepe" color="info">Info</v-btn>
+      <v-btn class="pepe" color="error">Error</v-btn>
+      <v-btn class="pepe" color="warning">Warning</v-btn>
+      
+    </footer>
 
-    >
-
-      <template v-slot:items="props">
-        <td>{{ props.item.name }}</td>
-        <td class="text-xs-right">{{ props.item.calories }}</td><br>
-        <td class="text-xs-right">{{ props.item.fat }}</td>
-        <td class="text-xs-right">{{ props.item.carbs }}</td>
-
-      </template>
-    </v-data-table>
+      
+  
     <div class="botones">
     <v-btn class="botonesverdes" color="success">listo</v-btn>
     <v-btn class="botonesverdes" color="success">listo</v-btn>
@@ -69,8 +73,13 @@
     <v-btn class="botonesverdes" color="success">listo</v-btn>
     <v-btn class="botonesverdes" color="success">listo</v-btn>
     <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
+<<<<<<< HEAD
   
+  
+=======
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+
+>>>>>>> d621684c0e2338f7224eeac57ce9140f7dfc2e08
 </div>
 
   </v-app>
@@ -78,117 +87,7 @@
     </template>
 
 <script>
-export default {
 
-  data () {
-    return {
-      date: null,
-      menu: false,
-      desserts: [
-        {
-          name: 'HAMBURGUESA ARTESANAL',
-          calories: '-PEPINILLOS' + '    ' + '-TOMATE',
-          fat: 'PAPA CRIOLLA',
-          carbs: 'PEDIDO 1'
-
-        },
-        {
-          name: 'PERRO MELOSO',
-          calories: '-PAN      ' + '+TOCINO',
-          fat: 'SIN PAPA',
-          carbs: 'PEDIDO 2'
-
-        },
-        {
-          name: 'PATACON ESPECIAL',
-          calories: '-CHAMPIÑONES',
-          fat: 'PAPA FRANCESA',
-          carbs: 'PEDIDO 3'
-
-        },
-        {
-          name: 'PERRO PELIGRO DE MUERTE',
-          calories: '+JALAPEÑOS',
-          fat: 'PAPA FRANCESA',
-          carbs: 'PEDIDO 4'
-
-        },
-        {
-          name: 'PERRO PELIGRO DE MUERTE',
-          calories: '+JALAPEÑOS',
-          fat: 'PAPA FRANCESA',
-          carbs: 'PEDIDO 4'
-
-        }, {
-          name: 'PERRO PELIGRO DE MUERTE',
-          calories: '+JALAPEÑOS',
-          fat: 'PAPA FRANCESA',
-          carbs: 'PEDIDO 4'
-
-        }, {
-          name: 'PERRO PELIGRO DE MUERTE',
-          calories: '+JALAPEÑOS',
-          fat: 'PAPA FRANCESA',
-          carbs: 'PEDIDO 4'
-
-        }, {
-          name: 'PERRO PELIGRO DE MUERTE',
-          calories: '+JALAPEÑOS',
-          fat: 'PAPA FRANCESA',
-          carbs: 'PEDIDO 4'
-
-        }, {
-          name: 'PERRO PELIGRO DE MUERTE',
-          calories: '+JALAPEÑOS',
-          fat: 'PAPA FRANCESA',
-          carbs: 'PEDIDO 4'
-
-        }, {
-          name: 'PERRO PELIGRO DE MUERTE',
-          calories: '+JALAPEÑOS',
-          fat: 'PAPA FRANCESA',
-          carbs: 'PEDIDO 4'
-
-        }, {
-          name: 'PERRO PELIGRO DE MUERTE',
-          calories: '+JALAPEÑOS',
-          fat: 'PAPA FRANCESA',
-          carbs: 'PEDIDO 4'
-
-        }, {
-          name: 'PERRO PELIGRO DE MUERTE',
-          calories: '+JALAPEÑOS',
-          fat: 'PAPA FRANCESA',
-          carbs: 'PEDIDO 4'
-
-        }, {
-          name: 'PERRO PELIGRO DE MUERTE',
-          calories: '+JALAPEÑOS',
-          fat: 'PAPA FRANCESA',
-          carbs: 'PEDIDO 4'
-
-        }, {
-          name: 'PERRO PELIGRO DE MUERTE',
-          calories: '+JALAPEÑOS',
-          fat: 'PAPA FRANCESA',
-          carbs: 'PEDIDO 4'
-
-        }
-
-      ]
-    }
-  },
-  watch: {
-    menu (val) {
-      val && setTimeout(() => (this.$refs.picker.activePicker = 'YEAR'))
-    }
-  },
-  methods: {
-    save (date) {
-      this.$refs.menu.save(date)
-    }
-  }
-}
 </script>
 
     <style>
@@ -224,7 +123,7 @@ div.elevation-1 {
 .botonesverdes{
  margin: 0 0 3px 0;
  height: 45px;
- 
+
 }
 .comida{
     position: absolute;
@@ -249,5 +148,9 @@ div.elevation-1 {
     margin: 59px 0 0 0px;
     color: rgba(0,0,0,0.87);
 }
-
+.pepe{
+  height: 45px;
+  width: 1331px;
+  margin: 0 0 3px 0;
+}
     </style>
