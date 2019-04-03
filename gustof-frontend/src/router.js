@@ -15,6 +15,8 @@ import proveedor from '@/views/administrador/proveedores.vue'
 import BodegaProductos from '@/views/Bodega-Productos.vue'
 import AgregarB from '@/views/AgregarB.vue'
 import SacarB from '@/views/SacarB.vue'
+import ProductosPorAgotar from '@/views/Productos-por-agotar.vue'
+import ProductosAgotados from '@/views/Productos-agotados.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -95,6 +97,16 @@ export default new Router({
       path: '/agregar',
       name: 'AgregarB',
       component: AgregarB
+    },
+    {
+      path: '/Productos_por_agotar',
+      name: 'Productos_por_agotar',
+      component: ProductosPorAgotar 
+    },
+    {
+      path: '/Productos_agotados',
+      name: 'Productos_agotados',
+      component: ProductosAgotados
     }
   ]
 })
