@@ -8,7 +8,6 @@
       v-model="drawer"
       app
     >
-
       <v-list dense>
         <v-list-tile>
           <v-list-tile-action>
@@ -51,15 +50,17 @@
     </v-navigation-drawer>
     <v-toolbar app fixed clipped-left>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title>Bodega-Productos</v-toolbar-title>
+      <v-toolbar-title>Gustof-Bodega</v-toolbar-title>
        <img src="../assets/gustof.png">
     </v-toolbar>
 
-         <v-btn
+        <v-btn
           color="red"
           dark
+
         >
           Productos por agotar
+
         </v-btn>
 
           <v-btn
@@ -68,29 +69,23 @@
         >
           Productos agotados
         </v-btn>
-         <p> Todos los productos de bodega </p>
-
-         <article>
-            <v-flex xs12 sm6 d-flex>
-        <v-select
-          :items="items"
-          label="Outline style"
-          outline
-        ></v-select>
-      </v-flex>
-         </article>
+        <v-combobox
+          v-model="select"
+          :items="PRODUCTOS"
+          label="PRODUCTOS"
+        ></v-combobox>
     <v-footer app fixed>
       <span>&copy; 2019</span>
     </v-footer>
   </v-app>
-
 </div>
 </template>
 <script>
 export default {
   el: '#app',
   data: () => ({
-    drawer: true
+    drawer: true,
+    PRODUCTOS: ['Pan', 'Vegetales(Lechuga,tomate)', 'Pepinillos', 'Cebolla', 'carne', 'Queso']
   }),
 
   props: {
@@ -98,18 +93,12 @@ export default {
   }
 }
 </script>
-
 <style>
-img{
-    border-style: none;
-    width: 120px;
-    position: absolute;
-    left: 612px;
+.v-input__slot{
+    width: 200px;
+    margin: auto;
 }
-p{
-
-  font-size: 29px;
-  font-weight: 100px;
+.v-combobox{
+    background-color: yellow;
 }
-
 </style>

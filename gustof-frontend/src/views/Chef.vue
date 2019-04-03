@@ -73,8 +73,13 @@
     <v-btn class="botonesverdes" color="success">listo</v-btn>
     <v-btn class="botonesverdes" color="success">listo</v-btn>
     <v-btn class="botonesverdes" color="success">listo</v-btn>
+<<<<<<< HEAD
   
   
+=======
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+
+>>>>>>> d621684c0e2338f7224eeac57ce9140f7dfc2e08
 </div>
 
   </v-app>
@@ -118,7 +123,7 @@ div.elevation-1 {
 .botonesverdes{
  margin: 0 0 3px 0;
  height: 45px;
- 
+
 }
 .comida{
     position: absolute;
