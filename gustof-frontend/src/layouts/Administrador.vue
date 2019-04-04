@@ -14,6 +14,7 @@
         :to="admin.to"
         >
           <v-list-tile-content>
+            <v-icon v-if="admin.icon"></v-icon>
             <v-list-tile-tile>{{ admin.text }}</v-list-tile-tile>
           </v-list-tile-content>
         </v-list-tile>
@@ -37,7 +38,7 @@ export default {
     admins: [
       {
         text: 'PERFIL',
-        /* icon: 'home', */
+        icon: 'home',
         to: '/administrador/perfil'
       },
       {
@@ -45,22 +46,28 @@ export default {
         to: '/administrador/miempresa'
       },
       {
-        text: 'CLIENTE'
+        text: 'CLIENTE',
+        to: '/administrador/cliente'
       },
       {
-        text: 'PROVEEDORES'
+        text: 'PROVEEDORES',
+        to: '/administrador/proveedores'
       },
       {
-        text: 'PRODUCTOS'
+        text: 'PRODUCTOS',
+        to: '/administrador/productos'
       },
       {
-        text: 'FACTURACIÒN'
+        text: 'FACTURACIÒN',
+        to: '/administrador/facturacion'
       },
       {
-        text: 'CANDADOS'
+        text: 'CANDADOS',
+        to: '/administrador/candados'
       },
       {
-        text: 'SALIR'
+        text: 'SALIR',
+        to: '/administrador/salir'
       }
     ]
   }),
