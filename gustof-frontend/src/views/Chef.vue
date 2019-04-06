@@ -45,6 +45,50 @@
   <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 9 LISTO</v-btn></pre>
   <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 10 LISTO</v-btn></pre>
   <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 11 LISTO</v-btn></pre>
+=======
+
+    <footer class="pedidos" style="
+    position: absolute;
+    top: 120px;
+    left: 0px;">
+      <v-btn class="pepe" color="error">HAMBURGUESA ARTESANAL</v-btn>
+      <v-btn class="pepe" color="warning">Warning</v-btn>
+      <v-btn class="pepe" color="info">Info</v-btn>
+      <v-btn class="pepe" color="error">Error</v-btn>
+      <v-btn class="pepe" color="warning">Warning</v-btn>
+      <v-btn class="pepe" color="info">Info</v-btn>
+      <v-btn class="pepe" color="error">Error</v-btn>
+      <v-btn class="pepe" color="warning">Warning</v-btn>
+      <v-btn class="pepe" color="info">Info</v-btn>
+      <v-btn class="pepe" color="error">Error</v-btn>
+      <v-btn class="pepe" color="warning">Warning</v-btn>
+      <v-btn class="pepe" color="info">Info</v-btn>
+      <v-btn class="pepe" color="error">Error</v-btn>
+      <v-btn class="pepe" color="warning">Warning</v-btn>
+
+    </footer>
+
+    <div class="botones">
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+
+=======
+    <v-btn class="botonesverdes" color="success">listo</v-btn>
+
+</div>
+
 
   </v-app>
 </div>
