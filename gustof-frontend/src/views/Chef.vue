@@ -1,3 +1,4 @@
+
 <template v-slot:items="props">
 <div id="app">
   <v-app id="inspire">
@@ -20,7 +21,7 @@
       <template v-slot:activator="{ on }">
         <v-text-field
           v-model="date"
-          label="Birthday date"
+          label="fecha actual"
           readonly
           v-on="on"
         ></v-text-field>
@@ -34,6 +35,7 @@
       ></v-date-picker>
     </v-menu>
 
+   
   <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 1 LISTO</v-btn></pre>
   <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 2 LISTO</v-btn></pre>
   <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 3 LISTO</v-btn></pre>
@@ -47,25 +49,7 @@
   <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 11 LISTO</v-btn></pre>
 
 
-    <div class="botones">
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-
-</div>
+  
 
   </v-app>
 </div>
@@ -119,6 +103,7 @@ margin: -28px 0px 0 950px;
     background-color: rgb(0, 0, 0);
     padding: 15px 15px;
     display: inline-block;
-       margin: 10px 150px 0px 150px ;
+       margin: 45px 150px 0px 150px ;
 }
+
    </style>
