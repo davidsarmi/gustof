@@ -33,16 +33,6 @@
           </v-flex>
           <v-flex xs12 sm6>
             <v-select
-              v-model="form.favoriteAnimal"
-              :items="animals"
-              :rules="rules.animal"
-              color="pink"
-              label="Cargo"
-              required
-            ></v-select>
-          </v-flex>
-          <v-flex xs12 sm6>
-            <v-select
               v-model="form.documento"
               :items="documento"
               :rules="rules.documento"
@@ -84,7 +74,7 @@
             :append-icon="show1 ? 'visibility' : 'visibility_off'"
             :rules="rules.contraseña"
             :type="show1 ? 'text' : 'password'"
-            label="Contraseña :v"
+            label="Contraseña"
             @click:append="show1 = !show1"
           ></v-text-field>
         </v-flex>
@@ -156,7 +146,6 @@ export default {
     const defaultForm = Object.freeze({
       first: '',
       last: '',
-      favoriteAnimal: '',
       documento: '',
       docume: '',
       telefono: '',
@@ -169,7 +158,6 @@ export default {
       form: Object.assign({}, defaultForm),
       rules: {
         show1: false,
-        animal: [val => (val || '').length > 0 || 'This field is required'],
         name: [val => (val || '').length > 0 || 'This field is required'],
         documento: [val => (val || '').length > 0 || 'This field is required'],
         docume: [val => (val || '').length > 0 || 'This field is required'],
@@ -178,7 +166,6 @@ export default {
         contraseña: [val => (val || '').length > 0 || 'This field is required']
       },
       documento: ['CC', 'TI'],
-      animals: ['Administrador', 'Mesero', 'Chef', 'Administrador de Caja'],
       conditions: false,
       content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.`,
       snackbar: false,
@@ -192,7 +179,6 @@ export default {
       return (
         this.form.first &&
           this.form.last &&
-          this.form.favoriteAnimal &&
           this.form.documento &&
           this.form.docume &&
           this.form.telefono &&

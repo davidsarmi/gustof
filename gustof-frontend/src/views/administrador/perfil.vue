@@ -94,7 +94,7 @@
               color="green"
             >
               <template v-slot:label>
-                <div @click.stop="">
+                <div @click.stop=" drawer = !drawer">
                   Do you accept the
                   <a href="javascript:;" @click.stop="terms = true">terms</a>
                   and

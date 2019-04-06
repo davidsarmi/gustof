@@ -86,7 +86,7 @@ export default {
   el: '#app',
   data: () => ({
     drawer: true,
-    COMIDAS: ['Pan', 'Vegetales(Lechuga,tomate)','Pepinillos', 'Cebolla', 'carne', 'Queso']
+    COMIDAS: ['Pan', 'Vegetales(Lechuga,tomate)', 'Pepinillos', 'Cebolla', 'carne', 'Queso']
   }),
   props: {
     source: String

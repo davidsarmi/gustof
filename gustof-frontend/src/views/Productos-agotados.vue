@@ -51,7 +51,7 @@
     </v-navigation-drawer>
     <v-toolbar app fixed clipped-left>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title>Bodega-Productos</v-toolbar-title>
+      <v-toolbar-title>Productos agotados</v-toolbar-title>
        <img src="../assets/gustof.png">
     </v-toolbar>
 
@@ -68,13 +68,12 @@
         >
           Productos agotados
         </v-btn>
-         <p> Todos los productos de bodega </p>
 
          <article>
          <v-flex xs12 sm6 d-flex>
         <v-select
-          :items="Productos"
-          label="Productos"
+          :items="ProductosA"
+          label="Productos agotados"
 
         ></v-select>
 
@@ -92,7 +91,7 @@ export default {
   el: '#app',
   data: () => ({
     drawer: true,
-    Productos: ['Salchicha', 'Jamon', 'Queso', 'Carne plancha', 'Pollo desmechado', 'Mazorca', 'Tocineta']
+    ProductosA: ['Salchicha', 'Jamon', 'Queso', 'Carne plancha', 'Pollo desmechado', 'Mazorca', 'Tocineta']
 
   }),
 
@@ -109,12 +108,4 @@ img{
     left: 612px;
 }
 
-p{
-
-  font-size: 29px;
-  font-weight: 100px;
-}
-.v-input__control {
-  height: 0;
-}
 </style>
