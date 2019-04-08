@@ -1,3 +1,4 @@
+
 <template v-slot:items="props">
 <div id="app">
   <v-app id="inspire">
@@ -20,8 +21,7 @@
       <template v-slot:activator="{ on }">
         <v-text-field
           v-model="date"
-          label="Birthday date"
-          prepend-icon="event"
+          label="fecha actual"
           readonly
           v-on="on"
         ></v-text-field>
@@ -35,49 +35,21 @@
       ></v-date-picker>
     </v-menu>
 
-    <footer class="pedidos" style="
-    position: absolute;
-    top: 120px;
-    left: 0px;">
-      <v-btn class="pepe" color="error">HAMBURGUESA ARTESANAL</v-btn>
-      <v-btn class="pepe" color="warning">Warning</v-btn>
-      <v-btn class="pepe" color="info">Info</v-btn>
-      <v-btn class="pepe" color="error">Error</v-btn>
-      <v-btn class="pepe" color="warning">Warning</v-btn>
-      <v-btn class="pepe" color="info">Info</v-btn>
-      <v-btn class="pepe" color="error">Error</v-btn>
-      <v-btn class="pepe" color="warning">Warning</v-btn>
-      <v-btn class="pepe" color="info">Info</v-btn>
-      <v-btn class="pepe" color="error">Error</v-btn>
-      <v-btn class="pepe" color="warning">Warning</v-btn>
-      <v-btn class="pepe" color="info">Info</v-btn>
-      <v-btn class="pepe" color="error">Error</v-btn>
-      <v-btn class="pepe" color="warning">Warning</v-btn>
+   
+  <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 1 LISTO</v-btn></pre>
+  <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 2 LISTO</v-btn></pre>
+  <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 3 LISTO</v-btn></pre>
+  <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 4 LISTO</v-btn></pre>
+  <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 5 LISTO</v-btn></pre>
+  <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 6 LISTO</v-btn></pre>
+  <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 7 LISTO</v-btn></pre>
+  <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 8 LISTO</v-btn></pre>
+  <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 9 LISTO</v-btn></pre>
+  <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 10 LISTO</v-btn></pre>
+  <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 11 LISTO</v-btn></pre>
 
-    </footer>
 
-    <div class="botones">
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-<<<<<<< HEAD
-
-=======
-    <v-btn class="botonesverdes" color="success">listo</v-btn>
-
->>>>>>> d621684c0e2338f7224eeac57ce9140f7dfc2e08
-</div>
+  
 
   </v-app>
 </div>
@@ -109,45 +81,29 @@ div.elevation-1 {
 
 }
 
-.botones {
-    top: 120px;
-    left: 1337px;
-    position: absolute;
-    margin: auto;
-    display: inline-block;
-
-}
 .botonesverdes{
- margin: 0 0 3px 0;
- height: 45px;
+
+margin: -28px 0px 0 950px;
 
 }
-.comida{
-    position: absolute;
-    left: 25px;
-    top: 85px;
-    margin: auto;
-}
-.receta{
-    position: absolute;
-    margin: 85px 0px 0px 700px;
-}
-.papa{
-    position: absolute;
-    margin: 85px 0px 0px 999px;
-}
-.pedido{
-    position: absolute;
-    margin: 85px 0px 0px 1250px;
-}
+
 .theme--light.v-table {
     background-color: #fff;
     margin: 59px 0 0 0px;
     color: rgba(0,0,0,0.87);
 }
-.pepe{
-  height: 45px;
-  width: 1331px;
-  margin: 0 0 3px 0;
+
+ pre {
+    color: rgb(255, 255, 255);
+    font-family: 'Courier';
+    font-size: 18px;
+    text-align: justify;
+    text-decoration: none;
+    display: inline-block;
+    background-color: rgb(0, 0, 0);
+    padding: 15px 15px;
+    display: inline-block;
+       margin: 45px 150px 0px 150px ;
 }
-    </style>
+
+   </style>

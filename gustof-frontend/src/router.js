@@ -5,18 +5,19 @@ import Bodega from '@/layouts/Bodega.vue'
 import mesas from '@/views/Mesas.vue'
 import Chef from '@/views/Chef.vue'
 import Login from '@/views/Login.vue'
-import Perfil from '@/views/administrador/perfil.vue'
+import asdasd from '@/views/administrador/perfil.vue'
 import Candado from '@/views/administrador/candados.vue'
 import cliente from '@/views/administrador/cliente.vue'
 import facturacion from '@/views/administrador/facturacion.vue'
 import miempresa from '@/views/administrador/miempresa.vue'
 import producto from '@/views/administrador/productos.vue'
 import proveedor from '@/views/administrador/proveedores.vue'
+import salir from '@/views/administrador/salir.vue'
 import BodegaProductos from '@/views/Bodega-Productos.vue'
 import AgregarB from '@/views/AgregarB.vue'
 import SacarB from '@/views/SacarB.vue'
-import ProductosPorAgotar from '@/views/Productos-por-agotar.vue'
-import ProductosAgotados from '@/views/Productos-agotados.vue'
+import Productosporagotar from '@/views/ProductosPorAgotar.vue'
+import Productosagotados from '@/views/ProductosAgotados.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -46,7 +47,7 @@ export default new Router({
     {
       path: '/administrador/perfil',
       name: 'perfil',
-      component: Perfil
+      component: asdasd
     },
     {
       path: '/bodega_productos',
@@ -59,32 +60,32 @@ export default new Router({
       component: Chef
     },
     {
-      path: '/administrador/candado',
+      path: '/candado',
       name: 'candado',
       component: Candado
     },
     {
-      path: '/administrador/cliente',
+      path: '/cliente',
       name: 'cliente',
       component: cliente
     },
     {
-      path: '/administrador/facturacion',
+      path: '/facturacion',
       name: 'facturacion',
       component: facturacion
     },
     {
-      path: '/administrador/miempresa',
+      path: '/miempresa',
       name: 'miempresa',
       component: miempresa
     },
     {
-      path: '/administrador/productos',
+      path: '/productos',
       name: 'productos',
       component: producto
     },
     {
-      path: '/administrador/proveedores',
+      path: '/proveedores',
       name: 'proveedores',
       component: proveedor
     },
@@ -99,14 +100,19 @@ export default new Router({
       component: AgregarB
     },
     {
-      path: '/Productos_por_agotar',
-      name: 'Productos_por_agotar',
-      component: ProductosPorAgotar
+      path: '/ProductosPorAgotar',
+      name: 'ProductosPorAgotar',
+      component: Productosporagotar
     },
     {
-      path: '/Productos_agotados',
-      name: 'Productos_agotados',
-      component: ProductosAgotados
+      path: '/ProductosAgotados',
+      name: 'ProductosAgotados',
+      component: Productosagotados
+    },
+    {
+      path: '/administrador/salir',
+      name: 'salir',
+      component: salir
     }
   ]
 })

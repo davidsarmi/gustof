@@ -15,6 +15,7 @@
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Mesas</v-list-tile-title>
+            <img src="/img/gustof.5ab63673.png" style="margin: 0px 0px 0px 70px;">
           </v-list-tile-content>
         </v-list-tile>
         <v-list-tile>
@@ -30,6 +31,7 @@
     <v-toolbar app fixed clipped-left>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>mesas</v-toolbar-title>
+       <img src="/img/gustof.5ab63673.png" style="margin: 0px 0px 0px 70px;">
     </v-toolbar>
 
          <v-container fluid grid-list-xl>
@@ -45,7 +47,6 @@
            <v-flex xs12 sm6 d-flex>
         <v-select
           :items="tipos"
-          box
           label="Tipo de comida"
         ></v-select>
       </v-flex >
@@ -54,7 +55,6 @@
         <v-select
           :items="receta"
           label="Recetas"
-          outline
         ></v-select>
       </v-flex>
 
@@ -62,27 +62,34 @@
         <v-select
           :items="papa"
           label="Papas"
-          solo
+
         ></v-select>
       </v-flex>
-
     </v-layout>
   </v-container>
 
-    <v-data-table
-    :headers="headers"
+   <v-btn color="success">Enviar</v-btn>
+
+    <table>
+     <v-data-table
     :items="desserts"
     class="elevation-1"
+    hide-actions
+    hide-headers
   >
-    <template v-slot:items="props">
-      <td>{{ props.item.name }}</td>
-      <td class="text-xs-right">{{ props.item.calories }}</td>
-      <td class="text-xs-right">{{ props.item.fat }}</td>
-      <td class="text-xs-right">{{ props.item.carbs }}</td>
-      <td class="text-xs-right">{{ props.item.protein }}</td>
-      <td class="text-xs-right">{{ props.item.iron }}</td>
+
+    <template v-slot:items="props" >
+      <td>{{ props.item.nombre }}</td>
+      <td class="cantidad">{{ props.item.cantidad}}</td>
+      <td class="descripcion">{{ props.item.descripcion }}</td>
+      <td class="valor">{{ props.item.valor }}</td>
     </template>
+
   </v-data-table>
+ </table>
+
+<v-btn color="success">Editar</v-btn>
+    <v-btn color="error">Eliminar</v-btn>
 
     <v-footer app fixed>
       <span>&copy; 2017</span>
@@ -98,7 +105,71 @@ export default {
     comidas: ['hamburguesa', 'perros calientes', 'picada mixta', 'salchicha gua gua', 'sandwich', 'mazorca', 'patocones', 'alitas' ],
     tipos: ['Artesanal', 'Deli tocino', 'Espacial', 'Pechugona', 'Master', 'Maxima', 'chilanga' ],
     receta: ['Pan', 'Vegetales(Lechuga, tomate)', 'Pepinillos', 'Cebolla caramelisada', 'carne al carbon', 'Queso' ],
-    papa: ['Criolla', 'Francesa', 'Casquitos', 'criolla y francesa', 'criolla y casquitos', 'francesa y casquitos', 'Sin papa' ]
+    papa: ['Criolla', 'Francesa', 'Casquitos', 'criolla y francesa', 'criolla y casquitos', 'francesa y casquitos', 'Sin papa' ],
+    desserts: [
+      {
+        nombre: 'Comida',
+        cantidad: 'cantidad',
+        descripcion: 'Descripcion',
+        valor: 'Precio'
+
+      },
+      {
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
+
+      },
+      {
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
+      },
+      {
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
+      },
+      {
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
+      },
+      {
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
+      },
+      {
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
+      },
+      {
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
+      },
+      {
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
+      },
+      {
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
+      }
+    ]
   }),
 
   props: {
