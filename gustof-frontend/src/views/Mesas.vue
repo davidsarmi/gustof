@@ -15,6 +15,7 @@
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Mesas</v-list-tile-title>
+            <img src="/img/gustof.5ab63673.png" style="margin: 0px 0px 0px 70px;">
           </v-list-tile-content>
         </v-list-tile>
         <v-list-tile>
@@ -30,6 +31,7 @@
     <v-toolbar app fixed clipped-left>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>mesas</v-toolbar-title>
+       <img src="/img/gustof.5ab63673.png" style="margin: 0px 0px 0px 70px;">
     </v-toolbar>
 
          <v-container fluid grid-list-xl>
@@ -86,8 +88,8 @@
   </v-data-table>
  </table>
 
-<v-btn color="success">Success</v-btn>
-    <v-btn color="error">Error</v-btn>
+<v-btn color="success">Editar</v-btn>
+    <v-btn color="error">Eliminar</v-btn>
 
     <v-footer app fixed>
       <span>&copy; 2017</span>
