@@ -1,0 +1,8 @@
+{
+  "name": "@gustof/errors",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
+}
