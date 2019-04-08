@@ -9,7 +9,6 @@ export default new Vuex.Store({
   },
   mutations: {
     SET_LAYOUT (state, newLayout) {
-      console.log(newLayout)
       state.layout = newLayout
     }
   },

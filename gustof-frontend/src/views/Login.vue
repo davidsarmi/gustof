@@ -1,40 +1,32 @@
 <template>
-<div id="app">
-  <v-app id="inspire">
-    <v-content>
-      <v-container fluid fill-height>
-        <v-layout align-center justify-center>
-          <v-flex xs12 sm8 md4>
-            <img class="gustof" src="../assets/gustof.png">
-            <v-card class="elevation-12">
-              <v-toolbar dark color="black">
-                <v-toolbar-title text-center></v-toolbar-title>
-                <v-spacer></v-spacer>
+  <v-flex xs12 sm8 md4 >
+    <v-card class="elevation-12">
+      <v-img :src="logo" class="gustof"/>
+      <v-toolbar dark color="black">
+        <v-toolbar-title text-center></v-toolbar-title>
+        <v-spacer></v-spacer>
 
-              </v-toolbar>
-              <v-card-text>
-                <v-form>
-                  <v-text-field prepend-icon="person" name="login" label="Nombre" type="text"></v-text-field>
-                  <v-text-field  prepend-icon="lock" name="password" label="Contraseña" id="password" type="password"></v-text-field>
-                </v-form>
-              </v-card-text>
-              <v-card-actions>
-                <v-spacer></v-spacer>
-                <v-btn color="green" >Entrar</v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </v-content>
-  </v-app>
-</div>
+      </v-toolbar>
+      <v-card-text>
+        <v-form>
+          <v-text-field prepend-icon="person" name="login" label="Nombre" type="text"></v-text-field>
+          <v-text-field  prepend-icon="lock" name="password" label="Contraseña" id="password" type="password"></v-text-field>
+        </v-form>
+      </v-card-text>
+      <v-card-actions>
+        <v-spacer></v-spacer>
+        <v-btn color="green" >Entrar</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-flex>
 </template>
 <script>
+import logo from '@/assets/gustof.png'
 export default {
   data: function () {
     return ({
-      drawer: null
+      drawer: null,
+      logo
     })
   },
 
@@ -45,10 +37,8 @@ export default {
 }
 </script>
 <style>
-  .gustof {
-    height: 153px;
-    width: 250px;
-    margin: -150px 0px 1px -31px;
+  .gustof{
+    background-color: transparent !important;
  }
 
 </style>

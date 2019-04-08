@@ -1,19 +1,19 @@
 <template>
-  <v-app>
-    <v-content>
-      <router-view/>
-    </v-content>
-  </v-app>
+  <div>
+    <component :is="layout"></component>
+  </div>
 </template>
-
 <script>
-
+import {mapState} from 'vuex'
+import AdministradorLayout from '@/layouts/Administrador.vue'
+import LoginLayout from '@/layouts/Login.vue'
 export default {
   name: 'App',
+  components: { AdministradorLayout, LoginLayout },
   data () {
     return {
-      //
     }
-  }
+  },
+  computed: mapState(['layout'])
 }
 </script>

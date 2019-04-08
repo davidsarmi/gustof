@@ -27,6 +27,13 @@
     <v-footer app fixed>
       <span>&copy; 2017</span>
     </v-footer>
+    <v-content>
+        <v-container fill-height>
+          <v-layout justify-center >
+            <router-view></router-view>
+          </v-layout>
+        </v-container>
+      </v-content>
   </v-app>
 </div>
 </template>
