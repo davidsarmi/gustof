@@ -9,13 +9,13 @@
     >
       <v-list dense>
         <v-list-tile
-        v-for="bodepro in bodega"
-        :key="bodepro.bodega"
-        :to="bodepro.to"
+        v-for="bode in bodegas"
+        :key="bode.bodegas"
+        :to="bode.to"
         >
           <v-list-tile-content>
-            <v-icon v-if="bodepro.icon"></v-icon>
-            <v-list-tile-tile>{{ bodepro.text }}</v-list-tile-tile>
+            <v-icon v-if="bode.icon"></v-icon>
+            <v-list-tile-tile>{{ bode.text }}</v-list-tile-tile>
           </v-list-tile-content>
 
         </v-list-tile>
@@ -41,15 +41,6 @@
         >
           Productos agotados
         </v-btn>
-        <p> Todos los productos de bodega </p>
-        <v-flex xs12 sm6 d-flex>
-        <v-select
-          :items="Productos"
-          label="Productos"
-
-        ></v-select>
-
-      </v-flex>
 
     <v-footer app fixed>
       <span>&copy; 2019</span>
@@ -62,28 +53,25 @@ export default {
   el: '#app',
   data: () => ({
     drawer: true,
-    Productos: ['Salchicha', 'Jamon', 'Queso', 'Carne plancha', 'Pollo desmechado', 'Mazorca', 'Tocineta'],
-    bodega: [
+    bodegas: [
 
       {
         text: 'PRODUCTOS',
-        icon: 'store',
-        to: '/bodega_productos'
+        to: 'bodega_productos'
       },
       {
         text: 'AGREGAR',
-        to: '/agregar'
+        to: '/Agregar'
       },
       {
         text: 'SACAR',
-        to: '/sacar'
+        to: '/Sacar'
       },
       {
         text: 'SALIR',
         to: '/'
       }
     ]
-
   }),
 
   props: {
@@ -92,18 +80,16 @@ export default {
 }
 </script>
 <style>
-img{
+img {
     border-style: none;
     width: 120px;
+    position: absolute;
     left: 612px;
 }
+.v-btn{
+font-size:14px;
+font-weight: 500;
+margin:20px 401px;
 
-p{
-
-  font-size: 29px;
-  font-weight: 100px;
-}
-.v-input__control {
-  height: 0;
 }
 </style>

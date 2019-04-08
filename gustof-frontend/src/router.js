@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Administrador from '@/layouts/Administrador.vue'
-import Bodega from '@/views/Bodega.vue'
+import Bodega from '@/layouts/Bodega.vue'
 import mesas from '@/views/Mesas.vue'
 import Chef from '@/views/Chef.vue'
 import Login from '@/views/Login.vue'
@@ -101,7 +101,7 @@ export default new Router({
     {
       path: '/Productos_por_agotar',
       name: 'Productos_por_agotar',
-      component: ProductosPorAgotar 
+      component: ProductosPorAgotar
     },
     {
       path: '/Productos_agotados',
