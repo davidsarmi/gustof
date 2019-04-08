@@ -65,11 +65,20 @@
 
         ></v-select>
       </v-flex>
+
+      <v-flex xs12 sm6 d-flex>
+        <v-select
+          :items="cantidad"
+          label="cantidades"
+
+        ></v-select>
+      </v-flex>
     </v-layout>
   </v-container>
 
    <v-btn color="success">Enviar</v-btn>
 
+  <v-flex>
     <table>
      <v-data-table
     :items="desserts"
@@ -79,17 +88,20 @@
   >
 
     <template v-slot:items="props" >
-      <td>{{ props.item.nombre }}</td>
-      <td class="cantidad">{{ props.item.cantidad}}</td>
-      <td class="descripcion">{{ props.item.descripcion }}</td>
-      <td class="valor">{{ props.item.valor }}</td>
+      <td>{{ props.item.nombre }}   </td>
+      <td class="cantidad" style="padding: 0px 0px 0px 200px" >{{ props.item.cantidad}}</td>
+      <td class="descripcion" style="padding: 0px 0px 0px 200px">{{ props.item.descripcion }}</td>
+      <td class="valor" style="padding: 0px 0px 0px 200px">{{ props.item.valor }}</td>
+     <v-btn class="editar"  color="warning">Editar</v-btn>
+    <v-btn  class="eliminar" color="error">Eliminar</v-btn>
+    
     </template>
 
   </v-data-table>
  </table>
+ </v-flex >
 
-<v-btn color="success">Editar</v-btn>
-    <v-btn color="error">Eliminar</v-btn>
+
 
     <v-footer app fixed>
       <span>&copy; 2017</span>
@@ -106,6 +118,7 @@ export default {
     tipos: ['Artesanal', 'Deli tocino', 'Espacial', 'Pechugona', 'Master', 'Maxima', 'chilanga' ],
     receta: ['Pan', 'Vegetales(Lechuga, tomate)', 'Pepinillos', 'Cebolla caramelisada', 'carne al carbon', 'Queso' ],
     papa: ['Criolla', 'Francesa', 'Casquitos', 'criolla y francesa', 'criolla y casquitos', 'francesa y casquitos', 'Sin papa' ],
+    cantidad: ['1', '2', '3', '4', '5', '6', '7', '8', '10' ],
     desserts: [
       {
         nombre: 'Comida',
@@ -183,4 +196,17 @@ export default {
 .v-text-field.v-text-field--enclosed .v-text-field__details, .v-text-field.v-text-field--enclosed > .v-input__control > .v-input__slot {
     padding: 6px 179px;
 }
+table.v-table tbody td, table.v-table tbody th {
+    height: 50px;
+    width: 266px;
+}    
+.eliminar{
+  display: inline-block;
+  margin: 8px 0 0 0px;
+}
+.editar{
+  display: inline-block;
+  margin:8px 0 0 40px;
+}
+
 </style>
