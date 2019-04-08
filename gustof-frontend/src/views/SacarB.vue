@@ -70,11 +70,11 @@ export default {
       },
       {
         text: 'AGREGAR',
-        to: '/agregar'
+        to: '/Agregar'
       },
       {
         text: 'SACAR',
-        to: '/sacar'
+        to: '/Sacar'
       },
       {
         text: 'SALIR',
