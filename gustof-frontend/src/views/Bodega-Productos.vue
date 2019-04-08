@@ -18,9 +18,9 @@
             <v-list-tile-tile>{{ bodepro.text }}</v-list-tile-tile>
           </v-list-tile-content>
 
-        </v-list-tile>
-      </v-list>
-   </v-navigation-drawer>
+      </v-list-tile>
+    </v-list>
+    </v-navigation-drawer>
     <v-toolbar app fixed clipped-left>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>Gustof-Bodega</v-toolbar-title>
@@ -52,7 +52,7 @@
       </v-flex>
 
     <v-footer app fixed>
-      <span>&copy; 2019</span>
+    <span>&copy; 2019</span>
     </v-footer>
   </v-app>
 </div>
@@ -72,11 +72,11 @@ export default {
       },
       {
         text: 'AGREGAR',
-        to: '/agregar'
+        to: '/Agregar'
       },
       {
         text: 'SACAR',
-        to: '/sacar'
+        to: '/Sacar'
       },
       {
         text: 'SALIR',
