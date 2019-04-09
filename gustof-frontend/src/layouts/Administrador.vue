@@ -1,5 +1,6 @@
 <template>
 <div id="app">
+          <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
   <v-app id="inspire" dark>
     <v-navigation-drawer
       clipped
@@ -50,6 +51,7 @@ export default {
       },
       {
         text: 'MI EMPRESA',
+        icon: 'edit',
         to: '/administrador/miempresa'
       },
       {

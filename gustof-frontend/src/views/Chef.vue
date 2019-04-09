@@ -49,7 +49,6 @@
 </div>
     </template>
 
-<<<<<<< HEAD
 
 <script>
 export default {
@@ -76,14 +75,6 @@ methods: {
     this.listaTareas.splice(index,1);
   }
 },
-=======
-<script>
-export default {
-  name: 'Chef',
-  created () {
-    this.$store.commit('SET_LAYOUT', 'administrador-layout')
-  }
->>>>>>> 4904719f1f2cca6522d75450f39c0bc537353142
 }
 </script>
    
