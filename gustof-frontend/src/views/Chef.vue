@@ -52,7 +52,12 @@
     </template>
 
 <script>
-
+export default {
+  name: 'Chef',
+  created () {
+    this.$store.commit('SET_LAYOUT', 'administrador-layout')
+  }
+}
 </script>
 
     <style scoped>

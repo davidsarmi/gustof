@@ -28,6 +28,9 @@ export default {
       logo
     })
   },
+  created () {
+    this.$store.commit('SET_LAYOUT', 'login-layout')
+  },
 
   props: {
     source: String
