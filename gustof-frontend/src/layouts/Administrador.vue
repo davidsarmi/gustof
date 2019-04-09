@@ -69,6 +69,18 @@ export default {
         to: '/administrador/facturacion'
       },
       {
+        text: 'PRODUCTOS DE BODEGA',
+        to: '/bodega_productos'
+      },
+      {
+        text: 'AGREGAR',
+        to: '/agregar'
+      },
+      {
+        text: 'SACAR',
+        to: '/sacar'
+      },
+      {
         text: 'CANDADOS',
         to: '/administrador/candados'
       },

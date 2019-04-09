@@ -35,8 +35,8 @@ export default new Router({
       component: Administrador
     },
     {
-      path: '/Bodega',
-      name: 'Bodega',
+      path: '/bodega',
+      name: 'bodega',
       component: Bodega
     },
     {
@@ -55,8 +55,8 @@ export default new Router({
       component: BodegaProductos
     },
     {
-      path: '/Chef',
-      name: 'Chef',
+      path: '/chef',
+      name: 'chef',
       component: Chef
     },
     {
@@ -91,22 +91,22 @@ export default new Router({
     },
     {
       path: '/sacar',
-      name: 'SacarB',
+      name: 'sacarb',
       component: SacarB
     },
     {
       path: '/agregar',
-      name: 'AgregarB',
+      name: 'agregarb',
       component: AgregarB
     },
     {
-      path: '/ProductosPorAgotar',
-      name: 'ProductosPorAgotar',
+      path: '/productos_por_agotar',
+      name: 'productos_por_agotar',
       component: Productosporagotar
     },
     {
-      path: '/ProductosAgotados',
-      name: 'ProductosAgotados',
+      path: '/productos_agotados',
+      name: 'productos_agotados',
       component: Productosagotados
     },
     {
