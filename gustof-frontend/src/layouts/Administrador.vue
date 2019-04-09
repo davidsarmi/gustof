@@ -69,6 +69,10 @@ export default {
         to: '/administrador/facturacion'
       },
       {
+        text: 'BODEGA',
+        to: '/bodega'
+      },
+      {
         text: 'PRODUCTOS DE BODEGA',
         to: '/bodega_productos'
       },

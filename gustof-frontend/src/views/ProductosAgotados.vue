@@ -5,10 +5,8 @@
         <v-select
           :items="Productos"
           label="Productos agotados"
-
         ></v-select>
       </v-flex>
-   
 </div>
 </template>
 <script>
@@ -39,7 +37,7 @@ export default {
     ]
 
   }),
-created () {
+  created () {
     this.$store.commit('SET_LAYOUT', 'administrador-layout')
   },
   props: {
