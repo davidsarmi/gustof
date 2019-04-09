@@ -91,13 +91,12 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 img{
     border-style: none;
     width: 120px;
     left: 612px;
 }
-
 p{
 
   font-size: 29px;

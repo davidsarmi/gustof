@@ -94,14 +94,12 @@
       <td class="valor" style="padding: 0px 0px 0px 200px">{{ props.item.valor }}</td>
      <v-btn class="editar"  color="warning">Editar</v-btn>
     <v-btn  class="eliminar" color="error">Eliminar</v-btn>
-    
+
     </template>
 
   </v-data-table>
  </table>
  </v-flex >
-
-
 
     <v-footer app fixed>
       <span>&copy; 2017</span>
@@ -192,14 +190,14 @@ export default {
 }
 
 </script>
-<style>
+<style scoped>
 .v-text-field.v-text-field--enclosed .v-text-field__details, .v-text-field.v-text-field--enclosed > .v-input__control > .v-input__slot {
     padding: 6px 179px;
 }
 table.v-table tbody td, table.v-table tbody th {
     height: 50px;
     width: 266px;
-}    
+}
 .eliminar{
   display: inline-block;
   margin: 8px 0 0 0px;

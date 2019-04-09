@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-import {mapState} from 'vuex'
+import { mapState } from 'vuex'
 import AdministradorLayout from '@/layouts/Administrador.vue'
 import LoginLayout from '@/layouts/Login.vue'
 export default {
@@ -17,3 +17,6 @@ export default {
   computed: mapState(['layout'])
 }
 </script>
+<style lang="stylus">
+  @import url('./styles/main.styl')
+</style>

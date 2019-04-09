@@ -1,11 +1,10 @@
 <template>
   <v-flex xs12 sm8 md4 >
-    <v-card class="elevation-12">
-      <v-img :src="logo" class="gustof"/>
+    <v-card class="elevation-12 transparent">
+        <v-img :src="logo" class="black"/>
       <v-toolbar dark color="black">
         <v-toolbar-title text-center></v-toolbar-title>
         <v-spacer></v-spacer>
-
       </v-toolbar>
       <v-card-text>
         <v-form>
@@ -37,8 +36,5 @@ export default {
 }
 </script>
 <style>
-  .gustof{
-    background-color: transparent !important;
- }
 
 </style>
