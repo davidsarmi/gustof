@@ -105,4 +105,11 @@ p{
 .v-input__control {
   height: 0;
 }
+.container {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    margin: auto;
+    width: 100%;
+}
 </style>
