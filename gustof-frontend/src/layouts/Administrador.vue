@@ -30,8 +30,10 @@
     </v-footer>
     <v-content>
         <v-container fill-height>
-          <v-layout justify-center >
-            <router-view></router-view>
+          <v-layout justify-center align-center>
+            <v-flex shrink>
+              <router-view></router-view>
+            </v-flex>
           </v-layout>
         </v-container>
       </v-content>
@@ -76,7 +78,7 @@ export default {
       },
       {
         text: 'SALIR',
-        to: '/administrador/salir'
+        to: '/'
       }
     ]
   }),

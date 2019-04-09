@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Administrador from '@/layouts/Administrador.vue'
+import Administrador from '@/views/administrador/inicio.vue'
 import Bodega from '@/views/Bodega.vue'
 import mesas from '@/views/Mesas.vue'
 import Chef from '@/views/Chef.vue'
@@ -12,7 +12,6 @@ import facturacion from '@/views/administrador/facturacion.vue'
 import miempresa from '@/views/administrador/miempresa.vue'
 import producto from '@/views/administrador/productos.vue'
 import proveedor from '@/views/administrador/proveedores.vue'
-import salir from '@/views/administrador/salir.vue'
 import BodegaProductos from '@/views/Bodega-Productos.vue'
 import AgregarB from '@/views/AgregarB.vue'
 import SacarB from '@/views/SacarB.vue'
@@ -60,32 +59,32 @@ export default new Router({
       component: Chef
     },
     {
-      path: '/candado',
+      path: '/administrador/candados',
       name: 'candado',
       component: Candado
     },
     {
-      path: '/cliente',
+      path: '/administrador/cliente',
       name: 'cliente',
       component: cliente
     },
     {
-      path: '/facturacion',
+      path: '/administrador/facturacion',
       name: 'facturacion',
       component: facturacion
     },
     {
-      path: '/miempresa',
+      path: '/administrador/miempresa',
       name: 'miempresa',
       component: miempresa
     },
     {
-      path: '/productos',
+      path: '/administrador/productos',
       name: 'productos',
       component: producto
     },
     {
-      path: '/proveedores',
+      path: '/administrador/proveedores',
       name: 'proveedores',
       component: proveedor
     },
@@ -108,11 +107,6 @@ export default new Router({
       path: '/ProductosAgotados',
       name: 'ProductosAgotados',
       component: Productosagotados
-    },
-    {
-      path: '/administrador/salir',
-      name: 'salir',
-      component: salir
     }
   ]
 })
