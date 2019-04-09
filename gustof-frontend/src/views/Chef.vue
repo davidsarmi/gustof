@@ -3,8 +3,9 @@
   <div id="app">
     <v-app id="inspire">
       <v-toolbar app fixed clipped-left>
-        <img src="../assets/gustof.png">
-        <v-toolbar-title></v-toolbar-title>
+        <v-toolbar-title>
+          <img src="../assets/gustof.png">
+        </v-toolbar-title>
       </v-toolbar>
       <v-menu
         ref="menu"
@@ -28,14 +29,22 @@
           @change="save"
         ></v-date-picker>
       </v-menu>
-      <div id="appTareas">
-        <input type="text" placeholder="integrar tarea" v-model="txtTareas">
-        <button v-on:click="agregarTarea">agregar tarea</button>
+      <div id="appTareas" style="margin: 0px 0px 355px 0px;
+">
+        <input
+          style=" width: 1000px; display: inline-block;"
+          type="text"
+          placeholder="integrar tarea"
+          v-model="txtTareas"
+        >
+        <button v-on:click="agregarTarea">AGREGAR</button>
         <ul>
           <li v-for="(tarea , i) in listaTareas" :key="i">
-            <input type="checkbox" name id v-model="tarea.checked">
-            <label>{{tarea.texto}}</label>
-            <button v-on:click="EliminarTarea(tarea)">eliminar</button>
+            <div class="conte" style=" background-color: aqua;">
+              <input class="txtpedidos" type="checkbox" name id v-model="tarea.checked">
+              <label>{{tarea.texto}}</label>
+              <button v-on:click="EliminarTarea(tarea)">eliminar</button>
+            </div>
           </li>
         </ul>
       </div>
@@ -45,30 +54,30 @@
 
 <script>
 export default {
-  el: '#appTareas',
-  data () {
+  el: "#appTareas",
+  data() {
     return {
-      txtTareas: '...',
+      txtTareas: "",
       listaTareas: []
-    }
+    };
   },
   methods: {
-    agregarTarea () {
-      var tarea = this.txtTareas
+    agregarTarea() {
+      var tarea = this.txtTareas;
       if (tarea) {
         this.listaTareas.push({
           texto: tarea,
           checked: false
-        })
+        });
       }
-      this.txtTareas = '...'
+      this.txtTareas = "";
     },
-    EliminarTarea: function () {
-      var index = this.listaTareas.indexof(tarea)
-      this.listaTareas.splice(index, 1)
+    EliminarTarea: function() {
+      var index = this.listaTareas.indexof(tarea);
+      this.listaTareas.splice(index, 1);
     }
   }
-}
+};
 </script>
 
     <style scoped>
@@ -122,5 +131,13 @@ pre {
 }
 img {
   width: 150px;
+  margin: 0 0 0 650px;
+}
+button {
+  background-color: red;
+  height: 45px;
+  width: 100px;
+  margin: 0 0 0 900px;
+  display: inline-block;
 }
 </style>
