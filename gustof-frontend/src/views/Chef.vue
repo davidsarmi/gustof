@@ -4,8 +4,8 @@
   <v-app id="inspire">
 
     <v-toolbar app fixed clipped-left>
-      <img src="../assets/gustof.png" style="margin:0 0 0 70px;">
-      <v-toolbar-title  style="margin:0px 0px 0px 800px; background-color:black;"></v-toolbar-title>
+      <img src="../assets/gustof.png">
+      <v-toolbar-title></v-toolbar-title>
     </v-toolbar>
     <v-menu
       ref="menu"
@@ -34,26 +34,52 @@
         @change="save"
       ></v-date-picker>
     </v-menu>
-
-  <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 1 LISTO</v-btn></pre>
-  <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 2 LISTO</v-btn></pre>
-  <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 3 LISTO</v-btn></pre>
-  <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 4 LISTO</v-btn></pre>
-  <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 5 LISTO</v-btn></pre>
-  <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 6 LISTO</v-btn></pre>
-  <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 7 LISTO</v-btn></pre>
-  <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 8 LISTO</v-btn></pre>
-  <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 9 LISTO</v-btn></pre>
-  <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 10 LISTO</v-btn></pre>
-  <pre href=""> 1 HAMBURGUESA ARTESANAL    PAPA FRANCESA                -QUESO +JAMON <br> 4 PERRO CASERITO         SIN PAPA<br> 1 PATACON MEXICANO                                     -QUESO  <v-btn class="botonesverdes" color="success">PEDIDO 11 LISTO</v-btn></pre>
-
+    <div id="appTareas">
+      <input type="text" placeholder="integrar tarea" v-model="txtTarea">
+      <button v-on:click="agregarTarea">agregar tarea</button>
+  <ul v-for=" tarea in listaTareas">
+    <li>
+      <input type="checkbox"  name="" id="" v-model="tarea.checked">
+      <label>{{tarea.texto}}</label>
+      <button v-on:click="EliminarTarea(tarea)">eliminar</button>
+    </li>
+  </ul>
+</div>
   </v-app>
 </div>
     </template>
 
-<script>
 
+<script>
+export default {
+   el:"#appTareas",
+    data:{
+      txtTareas:"...",
+      listaTareas:[]
+    },
+methods: {
+  agregarTarea:function(){
+    var tarea=this.txtTareas.trim();
+    if(tarea){
+      this.listaTareas.push({
+        texto:tarea,
+        checked:false
+      });
+    }
+    this.txtTareas="";
+    alert("tarea agregada");
+    console.log(this.listaTareas);
+  },
+  EliminarTarea:function(){
+    var index= this.listaTareas.indexof(tarea);
+    this.listaTareas.splice(index,1);
+  }
+},
+}
 </script>
+   
+
+
 
     <style scoped>
     .v-toolbar__content > *:last-child, .v-toolbar__extension > *:last-child {
@@ -102,4 +128,11 @@ margin: -28px 0px 0 950px;
        margin: 45px 150px 0px 150px ;
 }
 
+  .v-toolbar{
+     background-color:black;
+  }
+  img{
+    width:150px;
+    
+  }
    </style>
