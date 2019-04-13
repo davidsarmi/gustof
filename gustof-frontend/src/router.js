@@ -34,7 +34,7 @@ export default new Router({
       component: Administrador
     },
     {
-      path: '/bodega',
+      path: '/administrador/bodega',
       name: 'bodega',
       component: Bodega
     },
@@ -49,7 +49,7 @@ export default new Router({
       component: asdasd
     },
     {
-      path: '/bodega_productos',
+      path: 'administrador/bodega_productos',
       name: 'bodega_productos',
       component: BodegaProductos
     },
@@ -89,12 +89,12 @@ export default new Router({
       component: proveedor
     },
     {
-      path: '/sacar',
+      path: 'administrador/sacar',
       name: 'sacarb',
       component: SacarB
     },
     {
-      path: '/agregar',
+      path: '/administrador/agregar',
       name: 'agregarb',
       component: AgregarB
     },
