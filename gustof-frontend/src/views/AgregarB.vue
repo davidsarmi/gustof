@@ -2,7 +2,7 @@
 <div id="app">
   <v-flex xs12 sm6 d-flex>
     <v-select
-      :items="Productos"
+      :items="Producto"
       label="Agregar Productos"
 
     ></v-select>
@@ -14,7 +14,7 @@ export default {
   el: '#app',
   data: () => ({
     drawer: true,
-    Productos: ['Salchicha', 'Jamon', 'Queso', 'Carne plancha', 'Pollo desmechado', 'Mazorca', 'Tocineta'],
+    Producto: ['Salchicha', 'Jamon', 'Queso', 'Carne plancha', 'Pollo desmechado', 'Mazorca', 'Tocineta'],
     agregar: [
 
       {
@@ -55,6 +55,8 @@ img {
 font-size:14px;
 font-weight: 500;
 margin:20px 401px;
-
+}
+.d-flex{
+  width: 400px;
 }
 </style>

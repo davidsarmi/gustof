@@ -56,5 +56,10 @@ font-size:14px;
 font-weight: 500;
 margin:20px 401px;
 }
-
+.d-flex{
+  width: 400px;
+}
+.d-flex{
+  width: 400px;
+}
 </style>
