@@ -1,5 +1,6 @@
 <template>
 <div id="app">
+          <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
   <v-app id="inspire" dark>
     <v-navigation-drawer
       clipped
@@ -29,8 +30,10 @@
     </v-footer>
     <v-content>
         <v-container fill-height>
-          <v-layout justify-center >
-            <router-view></router-view>
+          <v-layout justify-center align-center>
+            <v-flex shrink>
+              <router-view></router-view>
+            </v-flex>
           </v-layout>
         </v-container>
       </v-content>
@@ -50,6 +53,7 @@ export default {
       },
       {
         text: 'MI EMPRESA',
+        icon: 'edit',
         to: '/administrador/miempresa'
       },
       {
@@ -69,6 +73,10 @@ export default {
         to: '/administrador/facturacion'
       },
       {
+        text: 'BODEGA',
+        to: '/bodega'
+      },
+      {
         text: 'PRODUCTOS DE BODEGA',
         to: '/bodega_productos'
       },
@@ -86,7 +94,7 @@ export default {
       },
       {
         text: 'SALIR',
-        to: '/administrador/salir'
+        to: '/'
       }
     ]
   }),
