@@ -54,30 +54,30 @@
 
 <script>
 export default {
-  el: "#appTareas",
-  data() {
+  el: '#appTareas',
+  data () {
     return {
-      txtTareas: "",
+      txtTareas: '',
       listaTareas: []
-    };
+    }
   },
   methods: {
-    agregarTarea() {
-      var tarea = this.txtTareas;
+    agregarTarea () {
+      var tarea = this.txtTareas
       if (tarea) {
         this.listaTareas.push({
           texto: tarea,
           checked: false
-        });
+        })
       }
-      this.txtTareas = "";
+      this.txtTareas = ''
     },
-    EliminarTarea: function() {
-      var index = this.listaTareas.indexof(tarea);
-      this.listaTareas.splice(index, 1);
+    EliminarTarea: function () {
+      var index = this.listaTareas.indexof(tarea)
+      this.listaTareas.splice(index, 1)
     }
   }
-};
+}
 </script>
 
     <style scoped>

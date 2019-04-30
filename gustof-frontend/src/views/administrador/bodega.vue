@@ -12,7 +12,7 @@ export default {
 
       {
         text: 'PRODUCTOS',
-        to: 'bodega_productos'
+        to: '/bodega_productos'
       },
       {
         text: 'AGREGAR',

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Administrador from '@/views/administrador/inicio.vue'
-import Bodega from '@/views/Bodega.vue'
+import bodega from '@/views/administrador/bodega.vue'
 import mesas from '@/views/Mesas.vue'
 import Chef from '@/views/Chef.vue'
 import Login from '@/views/Login.vue'
@@ -12,9 +12,9 @@ import facturacion from '@/views/administrador/facturacion.vue'
 import miempresa from '@/views/administrador/miempresa.vue'
 import producto from '@/views/administrador/productos.vue'
 import proveedor from '@/views/administrador/proveedores.vue'
-import BodegaProductos from '@/views/Bodega-Productos.vue'
-import AgregarB from '@/views/AgregarB.vue'
-import SacarB from '@/views/SacarB.vue'
+import BodegaProductos from '@/views/administrador/Bodega-Productos.vue'
+import AgregarB from '@/views/administrador/AgregarB.vue'
+import SacarB from '@/views/administrador/SacarB.vue'
 import Productosporagotar from '@/views/ProductosPorAgotar.vue'
 import Productosagotados from '@/views/ProductosAgotados.vue'
 Vue.use(Router)
@@ -36,7 +36,7 @@ export default new Router({
     {
       path: '/administrador/bodega',
       name: 'bodega',
-      component: Bodega
+      component: bodega
     },
     {
       path: '/mesas',

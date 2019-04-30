@@ -1,6 +1,5 @@
 <template>
 <div id="app">
-
         <p> Todos los productos de bodega </p>
     <v-flex xs12 sm6 d-flex>
       <v-select
@@ -8,7 +7,6 @@
           label="Productos"
      ></v-select>
     </v-flex>
-
 </div>
 </template>
 <script>
