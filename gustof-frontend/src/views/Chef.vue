@@ -29,55 +29,18 @@
           @change="save"
         ></v-date-picker>
       </v-menu>
-      <div id="appTareas" style="margin: 0px 0px 355px 0px;
-">
-        <input
-          style=" width: 1000px; display: inline-block;"
-          type="text"
-          placeholder="integrar tarea"
-          v-model="txtTareas"
-        >
-        <button v-on:click="agregarTarea">AGREGAR</button>
-        <ul>
-          <li v-for="(tarea , i) in listaTareas" :key="i">
-            <div class="conte" style=" background-color: aqua;">
-              <input class="txtpedidos" type="checkbox" name id v-model="tarea.checked">
-              <label>{{tarea.texto}}</label>
-              <button v-on:click="EliminarTarea(tarea)">eliminar</button>
-            </div>
-          </li>
-        </ul>
+
+      <div class="cartelera" style="background-color:red; margin: 0px 0px 300px 0px; padding:10px; height: 70px;
+    width: 11                                         00px;">
+        <pre class="pedido">hamburguesa artesanal </pre>
+        <pre class="receta">-pepinillos +jamon + pollo jehfjshfjkdjfkjkdz</pre>
+        <pre class="papa">papa francesa</pre>
       </div>
     </v-app>
   </div>
 </template>
 
 <script>
-export default {
-  el: "#appTareas",
-  data() {
-    return {
-      txtTareas: "",
-      listaTareas: []
-    };
-  },
-  methods: {
-    agregarTarea() {
-      var tarea = this.txtTareas;
-      if (tarea) {
-        this.listaTareas.push({
-          texto: tarea,
-          checked: false
-        });
-      }
-      this.txtTareas = "";
-    },
-    EliminarTarea: function() {
-      var index = this.listaTareas.indexof(tarea);
-      this.listaTareas.splice(index, 1);
-    }
-  }
-};
 </script>
 
     <style scoped>
@@ -109,7 +72,7 @@ div.elevation-1 {
 
 .theme--light.v-table {
   background-color: #fff;
-  margin: 59px 0 0 0px;
+  margin: 50px 0 0 0px;
   color: rgba(0, 0, 0, 0.87);
 }
 
@@ -121,9 +84,7 @@ pre {
   text-decoration: none;
   display: inline-block;
   background-color: rgb(0, 0, 0);
-  padding: 15px 15px;
-  display: inline-block;
-  margin: 45px 150px 0px 150px;
+    margin: 11px 50px 0px -0;
 }
 
 .v-toolbar {
@@ -132,12 +93,5 @@ pre {
 img {
   width: 150px;
   margin: 0 0 0 650px;
-}
-button {
-  background-color: red;
-  height: 45px;
-  width: 100px;
-  margin: 0 0 0 900px;
-  display: inline-block;
 }
 </style>
