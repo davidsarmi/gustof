@@ -26,7 +26,7 @@
       <v-toolbar-title>administrador</v-toolbar-title>
     </v-toolbar>
     <v-footer app fixed>
-      <span>&copy; 2017</span>
+      <span>&copy; 2019</span>
     </v-footer>
     <v-content>
         <v-container fill-height>
@@ -74,19 +74,19 @@ export default {
       },
       {
         text: 'BODEGA',
-        to: '/bodega'
+        to: '/administrador/bodega'
       },
       {
         text: 'PRODUCTOS DE BODEGA',
-        to: '/bodega_productos'
+        to: '/administrador/bodega_productos'
       },
       {
         text: 'AGREGAR',
-        to: '/agregar'
+        to: '/administrador/agregar'
       },
       {
         text: 'SACAR',
-        to: '/sacar'
+        to: '/administrador/sacar'
       },
       {
         text: 'CANDADOS',
