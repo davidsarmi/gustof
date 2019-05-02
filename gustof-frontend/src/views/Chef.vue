@@ -30,8 +30,10 @@
         ></v-date-picker>
       </v-menu>
 
-      <div class="cartelera" style="background-color:red; margin: 0px 0px 300px 0px; padding:10px; height: 70px;
-    width: 11                                         00px;">
+      <div
+        class="cartelera"
+        style="background-color:red; margin: 0px 0px 300px 0px; padding:10px; height: 70px; width: 1100px;"
+      >
         <pre class="pedido">hamburguesa artesanal </pre>
         <pre class="receta">-pepinillos +jamon + pollo jehfjshfjkdjfkjkdz</pre>
         <pre class="papa">papa francesa</pre>
@@ -41,34 +43,6 @@
 </template>
 
 <script>
-<<<<<<< HEAD
-=======
-export default {
-  el: '#appTareas',
-  data () {
-    return {
-      txtTareas: '',
-      listaTareas: []
-    }
-  },
-  methods: {
-    agregarTarea () {
-      var tarea = this.txtTareas
-      if (tarea) {
-        this.listaTareas.push({
-          texto: tarea,
-          checked: false
-        })
-      }
-      this.txtTareas = ''
-    },
-    EliminarTarea: function () {
-      var index = this.listaTareas.indexof(tarea)
-      this.listaTareas.splice(index, 1)
-    }
-  }
-}
->>>>>>> 7a9df09959f6dfe5fb2c69c110f34acfbd04e58b
 </script>
 
     <style scoped>
@@ -112,7 +86,7 @@ pre {
   text-decoration: none;
   display: inline-block;
   background-color: rgb(0, 0, 0);
-    margin: 11px 50px 0px -0;
+  margin: 11px 50px 0px -0;
 }
 
 .v-toolbar {
