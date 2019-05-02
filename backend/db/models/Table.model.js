@@ -5,20 +5,15 @@ const setupDatabase = require('../lib/db')
 
 module.exports = function setupMetricModel (config) {
   const sequelize = setupDatabase(config)
-  return sequelize.define('detail_entry', {
+  return sequelize.define('Table', {
     uuid: {
       type: Sequelize.CHAR(36),
       defaultValue: Sequelize.UUIDV4
     },
-    producto: {
-      type: Sequelize.TEXT,
-      allowNull: false
-    },
-    cantidad: {
+    numero: {
       type: Sequelize.TEXT,
       allowNull: false
     }
-    
+   
   })
 }
-
