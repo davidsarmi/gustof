@@ -41,6 +41,34 @@
 </template>
 
 <script>
+<<<<<<< HEAD
+=======
+export default {
+  el: '#appTareas',
+  data () {
+    return {
+      txtTareas: '',
+      listaTareas: []
+    }
+  },
+  methods: {
+    agregarTarea () {
+      var tarea = this.txtTareas
+      if (tarea) {
+        this.listaTareas.push({
+          texto: tarea,
+          checked: false
+        })
+      }
+      this.txtTareas = ''
+    },
+    EliminarTarea: function () {
+      var index = this.listaTareas.indexof(tarea)
+      this.listaTareas.splice(index, 1)
+    }
+  }
+}
+>>>>>>> 7a9df09959f6dfe5fb2c69c110f34acfbd04e58b
 </script>
 
     <style scoped>
