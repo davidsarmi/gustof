@@ -17,6 +17,9 @@ import AgregarB from '@/views/administrador/AgregarB.vue'
 import SacarB from '@/views/administrador/SacarB.vue'
 import Productosporagotar from '@/views/ProductosPorAgotar.vue'
 import Productosagotados from '@/views/ProductosAgotados.vue'
+import CajaFactura from '@/views/CajaFactura.vue'
+import CajaPedido from '@/views/CajaPedido.vue'
+
 Vue.use(Router)
 
 export default new Router({
@@ -107,6 +110,16 @@ export default new Router({
       path: '/productos_agotados',
       name: 'productos_agotados',
       component: Productosagotados
+    },
+    {
+      path: '/cajapedido',
+      name: 'cajapedido',
+      component: CajaPedido
+    },
+    {
+      path: '/cajafactura',
+      name: 'cajafactura',
+      component: CajaFactura
     }
   ]
 })

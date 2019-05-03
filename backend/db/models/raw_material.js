@@ -1,24 +1,23 @@
+'use strict'
+
 const Sequelize = require('sequelize')
 const setupDatabase = require('../lib/db')
 
 module.exports = function setupMetricModel (config) {
   const sequelize = setupDatabase(config)
-  return sequelize.define('Bill', {
+  return sequelize.define('raw_material', {
     uuid: {
       type: Sequelize.CHAR(36),
       defaultValue: Sequelize.UUIDV4
     },
-    pedido: {
+    nombre: {
       type: Sequelize.TEXT,
       allowNull: false
     },
-    fecha: {
-      type: Sequelize.DATE,
-      allowNull: false
-    },
-    forma_pago: {
-      type: Sequelize.ENUM('efectivo', 'tarjeta'),
+    cantidad: {
+      type: Sequelize.TEXT,
       allowNull: false
     }
+    
   })
 }

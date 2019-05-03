@@ -30,8 +30,10 @@
         ></v-date-picker>
       </v-menu>
 
-      <div class="cartelera" style="background-color:red; margin: 0px 0px 300px 0px; padding:10px; height: 70px;
-    width: 11                                         00px;">
+      <div
+        class="cartelera"
+        style="background-color:red; margin: 0px 0px 300px 0px; padding:10px; height: 70px; width: 1100px;"
+      >
         <pre class="pedido">hamburguesa artesanal </pre>
         <pre class="receta">-pepinillos +jamon + pollo jehfjshfjkdjfkjkdz</pre>
         <pre class="papa">papa francesa</pre>
@@ -112,7 +114,7 @@ pre {
   text-decoration: none;
   display: inline-block;
   background-color: rgb(0, 0, 0);
-    margin: 11px 50px 0px -0;
+  margin: 11px 50px 0px -0;
 }
 
 .v-toolbar {
