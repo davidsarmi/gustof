@@ -14,8 +14,7 @@
             <v-icon>dashboard</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Mesas</v-list-tile-title>
-            <img src="/img/gustof.5ab63673.png" style="margin: 0px 0px 0px 70px;">
+            <v-list-tile-title>Mesas</v-list-tile-title>     
           </v-list-tile-content>
         </v-list-tile>
         <v-list-tile>
@@ -31,9 +30,8 @@
     <v-toolbar app fixed clipped-left>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>mesas</v-toolbar-title>
-       <img src="/img/gustof.5ab63673.png" style="margin: 0px 0px 0px 70px;">
+      <img data-v-097a1800="" src="/img/gustof.5ab63673.png">
     </v-toolbar>
-
          <v-container fluid grid-list-xl>
     <v-layout wrap align-center>
       <v-flex xs12 sm6 d-flex>
@@ -206,5 +204,4 @@ table.v-table tbody td, table.v-table tbody th {
   display: inline-block;
   margin:8px 0 0 40px;
 }
-
 </style>
