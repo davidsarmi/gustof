@@ -12,13 +12,13 @@
         <v-icon dark>check_circle</v-icon>
       </v-snackbar>
       <v-form ref="form" @submit.prevent="submit">
-        <v-container grid-list-xl fluid style="border: solid red 10px">
+        <v-container grid-list-xl fluid style="border: solid #4A148C 10px">
           <v-layout wrap>
             <v-flex xs12 sm4>
               <v-text-field
                 v-model="form.first"
                 :rules="rules.name"
-                color="purple darken-2"
+                color="#4A148C"
                 label="Nombres"
                 required
               ></v-text-field>
@@ -27,7 +27,7 @@
               <v-text-field
                 v-model="form.last"
                 :rules="rules.name"
-                color="blue darken-2"
+                color="#4A148C"
                 label="Apellidos"
                 required
               ></v-text-field>
@@ -36,7 +36,7 @@
               <v-text-field
                 v-model="form.docume"
                 :rules="rules.docume"
-                color="blue darken-2"
+                color="#4A148C"
                 label="Nombre de Empresa"
                 required
               ></v-text-field>
@@ -45,7 +45,7 @@
               <v-text-field
                 v-model="form.telefono"
                 :rules="rules.telefono"
-                color="blue darken-2"
+                color="#4A148C"
                 label="NIT"
                 required
               ></v-text-field>
@@ -54,7 +54,7 @@
               <v-text-field
                 v-model="form.correo"
                 :rules="rules.correo"
-                color="blue darken-2"
+                color="#4A148C"
                 label="Cuenta Bancaria"
                 required
               ></v-text-field>
@@ -63,7 +63,7 @@
               <v-text-field
                 v-model="form.tele"
                 :rules="rules.tele"
-                color="blue darken-2"
+                color="#4A148C"
                 label="Telefono"
                 required
               ></v-text-field>
@@ -71,7 +71,7 @@
             <v-flex xs12>
               <v-checkbox
                 v-model="form.terms"
-                color="green"
+                color="#4A148C"
               >
                 <template v-slot:label>
                   <div @click.stop="">

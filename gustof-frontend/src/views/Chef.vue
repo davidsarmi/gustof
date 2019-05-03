@@ -41,8 +41,8 @@
 </template>
 
 <script>
-<<<<<<< HEAD
-=======
+
+
 export default {
   el: '#appTareas',
   data () {
@@ -68,7 +68,7 @@ export default {
     }
   }
 }
->>>>>>> 7a9df09959f6dfe5fb2c69c110f34acfbd04e58b
+
 </script>
 
     <style scoped>

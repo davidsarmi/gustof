@@ -11,13 +11,13 @@
       <v-icon dark>check_circle</v-icon>
     </v-snackbar>
     <v-form ref="form" @submit.prevent="submit">
-      <v-container grid-list-xl fluid style="border: solid red 10px">
+      <v-container grid-list-xl fluid style="border: solid #4A148C 10px">
         <v-layout wrap>
           <v-flex xs12 sm6>
             <v-text-field
               v-model="form.first"
               :rules="rules.name"
-              color="purple darken-2"
+              color="#4A148C"
               label="Nombres"
               required
             ></v-text-field>
@@ -26,7 +26,7 @@
             <v-text-field
               v-model="form.last"
               :rules="rules.name"
-              color="blue darken-2"
+              color="#4A148C"
               label="Apellidos"
               required
             ></v-text-field>
@@ -36,7 +36,7 @@
               v-model="form.favoriteAnimal"
               :items="animals"
               :rules="rules.animal"
-              color="pink"
+              color="#4A148C"
               label="Cargo"
               required
             ></v-select>
@@ -46,7 +46,7 @@
               v-model="form.documento"
               :items="documento"
               :rules="rules.documento"
-              color="pink"
+              color="#4A148C"
               label="Tipo de Documento"
               required
             ></v-select>
@@ -55,7 +55,7 @@
             <v-text-field
               v-model="form.docume"
               :rules="rules.docume"
-              color="blue darken-2"
+              color="#4A148C"
               label="N° de Documento"
               required
             ></v-text-field>
@@ -64,7 +64,7 @@
             <v-text-field
               v-model="form.telefono"
               :rules="rules.telefono"
-              color="blue darken-2"
+              color="#4A148C"
               label="Telefono"
               required
             ></v-text-field>
@@ -73,7 +73,7 @@
             <v-text-field
               v-model="form.correo"
               :rules="rules.correo"
-              color="blue darken-2"
+              color="#4A148C"
               label="Correo"
               required
             ></v-text-field>
@@ -91,7 +91,7 @@
           <v-flex xs12>
             <v-checkbox
               v-model="form.terms"
-              color="green"
+              color="#4A148C"
             >
               <template v-slot:label>
                 <div @click.stop=" drawer = !drawer">
@@ -111,7 +111,7 @@
         <v-btn
           :disabled="!formIsValid"
           flat
-          color="primary"
+          color="#4A148C"
           type="submit"
         >Register</v-btn>
       </v-card-actions>
@@ -126,7 +126,7 @@
           <v-spacer></v-spacer>
           <v-btn
             flat
-            color="purple"
+            color="#4A148C"
             @click="terms = false"
           >Ok</v-btn>
         </v-card-actions>
@@ -142,7 +142,7 @@
           <v-spacer></v-spacer>
           <v-btn
             flat
-            color="purple"
+            color="#4A148C"
             @click="conditions = false"
           >Ok</v-btn>
         </v-card-actions>

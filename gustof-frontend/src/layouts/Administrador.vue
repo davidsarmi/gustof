@@ -15,7 +15,7 @@
         :to="admin.to"
         >
           <v-list-tile-content>
-            <v-icon v-if="admin.icon"></v-icon>
+            <v-icon v-if="admins.icon"></v-icon>
             <v-list-tile-tile>{{ admin.text }}</v-list-tile-tile>
           </v-list-tile-content>
         </v-list-tile>
@@ -23,7 +23,9 @@
     </v-navigation-drawer>
     <v-toolbar app fixed clipped-left>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title>administrador</v-toolbar-title>
+      <v-btn>
+        <img src="@/assets/gustof.png" class="img-responsive" alt="" style="width:89px">
+      </v-btn>
     </v-toolbar>
     <v-footer app fixed>
       <span>&copy; 2019</span>
