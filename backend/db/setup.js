@@ -3,7 +3,6 @@
 const { getLogger, terminate } = require('@gustof/utils')
 const inquirer = require('inquirer')
 const dbs = require('./')
-const { db } = require('@gustof/config')
 
 const log = getLogger(__dirname, __filename)
 
@@ -17,12 +16,8 @@ async function setup () {
     }
   ])
   if (!answer.setup) return console.log('No pasa nada!')
-  const config = {
-    ...db,
-    logging: s => log.debug(s),
-    setup: true
-  }
-  await dbs(config).catch(terminate(1, 'dbError'))
+  const { setup } = await dbs()
+  await setup().catch(terminate(1, 'dbError'))
   console.log('successs!')
   process.exit(0)
 }

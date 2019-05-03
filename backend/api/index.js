@@ -1,20 +1,20 @@
 'use strict'
 
 const { getLogger } = require('@gustof/utils')
-// const image = require('./image')
-// const media = require('./media')
+const user = require('./user')
+const table = require('./table')
 
 const log = getLogger(__dirname, __filename)
 // prueba
 module.exports = {
   home (req, res) {
     res.send({
-      image: '/image',
-      media: '/media'
+      user: '/user',
+      table: '/table'
     })
   },
-  // image,
-  // media,
+  user,
+  table,
   errorHandler (err, req, res, next) {
     if (err) {
       let code = err.code || 500

@@ -1,4 +1,12 @@
 'use strict'
+//congig de la bade de datos
+const { db:config } = require('@gustof/config')
+
+//controladores
+const setupUser = require('./lib/users')
+const setupTable = require('./lib/table')
+
+//modelos
 const setupDatabase = require('./lib/db')
 const setupUserModel = require('./models/User.model')
 const setupBillModel = require('./models/Bill.model')
@@ -8,14 +16,14 @@ const setupDetail_EntryModel= require('./models/DetailEntry.model')
 const setupDetail_OrderModel= require('./models/DetailOrder.model')
 const setupEntryModel= require('./models/Entry.model')
 const setupOrderModel= require('./models/Order.model')
-const setupIngredientsModel= require('./models/model.model')
+const setupIngredientsModel= require('./models/Ingredients.model')
 const setupProductModel= require('./models/Product.model')
 const setupRaw_MaterialModel= require('./models/RawMaterial.model')
 const setupTableModel= require('./models/Table.model')
 
 // const setupAgent = require('./lib/agent')
 
-module.exports = async function (config) {
+module.exports = async function () {
   const sequelize = setupDatabase(config)
   const UserModel = setupUserModel(config)
   const BillModel = setupBillModel(config)
@@ -69,18 +77,16 @@ module.exports = async function (config) {
   DetailOrderModel.hasMany(AddOrderModel)
   AddOrderModel.belongsTo(DetailOrderModel)
   
-
   await sequelize.authenticate()
 
-  if (config.setup) {
-    await sequelize.sync({ force: true })
-  }
-
-  const Agent = {}
-  const Metric = {}
+  const User = setupUser(UserModel)
+  const Table = setupTable(TableModel)
 
   return {
-    Agent,
-    Metric
+    async setup() {
+      await sequelize.sync({ force: true })
+    },
+    User,
+    Table
   }
 }
