@@ -14,8 +14,10 @@
         :key="admin.admins"
         :to="admin.to"
         >
+        <v-list-tile-action v-if="admin.icon">
+          <v-icon>{{ admin.icon }}</v-icon>
+        </v-list-tile-action>
           <v-list-tile-content>
-            <v-icon v-if="admins.icon"></v-icon>
             <v-list-tile-tile>{{ admin.text }}</v-list-tile-tile>
           </v-list-tile-content>
         </v-list-tile>
@@ -50,52 +52,62 @@ export default {
     admins: [
       {
         text: 'PERFIL',
-        icon: 'home',
+        icon: 'group',
         to: '/administrador/perfil'
       },
       {
         text: 'MI EMPRESA',
-        icon: 'edit',
+        icon: 'store',
         to: '/administrador/miempresa'
       },
       {
         text: 'CLIENTE',
+        icon: 'perm_identity',
         to: '/administrador/cliente'
       },
       {
         text: 'PROVEEDORES',
+        icon: 'contacts',
         to: '/administrador/proveedores'
       },
       {
         text: 'PRODUCTOS',
+        icon: 'restaurant',
         to: '/administrador/productos'
       },
       {
         text: 'FACTURACIÒN',
+        icon: 'list',
         to: '/administrador/facturacion'
       },
       {
         text: 'BODEGA',
+        icon: 'reorder',
         to: '/administrador/bodega'
       },
       {
         text: 'PRODUCTOS DE BODEGA',
+        icon: 'restaurant',
         to: '/administrador/bodega_productos'
       },
       {
         text: 'AGREGAR',
+        icon: 'plus_one',
         to: '/administrador/agregar'
       },
       {
         text: 'SACAR',
+        icon: 'plus_one',
         to: '/administrador/sacar'
       },
       {
         text: 'CANDADOS',
+        icon: 'no_encryption',
         to: '/administrador/candados'
       },
       {
         text: 'SALIR',
+        icon: 'contacts',
         to: '/'
       }
     ]
