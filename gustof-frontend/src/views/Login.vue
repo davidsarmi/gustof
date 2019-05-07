@@ -2,10 +2,6 @@
   <v-flex xs12 sm8 md4 >
     <v-card class="elevation-12 transparent">
         <v-img :src="logo" class="black"/>
-      <v-toolbar dark color="black">
-        <v-toolbar-title text-center></v-toolbar-title>
-        <v-spacer></v-spacer>
-      </v-toolbar>
       <v-card-text>
         <v-form>
           <v-text-field prepend-icon="person" name="login" label="Nombre" type="text"></v-text-field>
