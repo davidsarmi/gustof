@@ -1,7 +1,14 @@
 <template>
   <div>
+     <v-avatar 
+        color="red red--after"
+      >
+        <v-icon dark>notifications</v-icon>
+      </v-avatar>
+ 
     Bodega
   </div>
+  
 </template>
 <script>
 export default {
@@ -13,6 +20,7 @@ export default {
     source: String
   }
 }
+
 </script>
 <style scoped>
 img {
@@ -26,5 +34,10 @@ font-size:14px;
 font-weight: 500;
 margin:20px 401px;
 
+}
+.v-avatar {
+  position: absolute;
+  top: 5px;
+  right: 15px;
 }
 </style>

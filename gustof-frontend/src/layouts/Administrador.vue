@@ -28,6 +28,7 @@
       <v-btn>
         <img src="@/assets/gustof.png" class="img-responsive" alt="" style="width:89px">
       </v-btn>
+     
     </v-toolbar>
     <v-footer app fixed>
       <span>&copy; 2019</span>
