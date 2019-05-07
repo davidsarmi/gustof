@@ -15,9 +15,7 @@ export default {
   created () {
     this.$store.commit('SET_LAYOUT', 'administrador-layout')
   },
-  props: {
-    source: String
-  }
+ 
 }
 </script>
 <style scoped>
