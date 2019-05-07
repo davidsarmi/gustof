@@ -20,6 +20,7 @@ app.use(logHandler)
 app.get('/', home)
 app.use('/user', user)
 app.use('/table', table)
+app.use('/order', order)
 app.use(errorHandler)
 
 module.exports = server
