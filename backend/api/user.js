@@ -7,7 +7,7 @@ const db = require('@gustof/db')
 const log = getLogger(__dirname, __filename)
 const router = new Router()
 
-router.post('/', async function(req, res, next) {
+router.post('/', async function (req, res, next) {
   try {
     const { userNew } = req.body
     const { User } = await db()
@@ -18,19 +18,18 @@ router.post('/', async function(req, res, next) {
   }
 })
 
-router.put('/:uuid', async function(req, res, next) {
+router.put('/:uuid', async function (req, res, next) {
   try {
     const { uuid } = req.params
     const { userUpdate } = req.body
     const { User } = await db()
     const result = await User.updateUser(uuid, userUpdate)
     res.send(result)
-    
   } catch (err) {
     next(err)
   }
 })
-router.delete('/:uuid', async function(req, res, next) {
+router.delete('/:uuid', async function (req, res, next) {
   try {
     const { uuid } = req.params
     const { User } = await db()
@@ -40,7 +39,7 @@ router.delete('/:uuid', async function(req, res, next) {
     next(err)
   }
 })
-router.get('/', async function(req, res, next) {
+router.get('/', async function (req, res, next) {
   try {
     const { User } = await db()
     const result = await User.findAllUser()
@@ -49,7 +48,7 @@ router.get('/', async function(req, res, next) {
     next(err)
   }
 })
-router.get('/:uuid', async function(req, res, next) {
+router.get('/:uuid', async function (req, res, next) {
   try {
     const { uuid } = req.params
     const { User } = await db()

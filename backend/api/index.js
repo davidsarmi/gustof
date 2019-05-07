@@ -3,6 +3,7 @@
 const { getLogger } = require('@gustof/utils')
 const user = require('./user')
 const table = require('./table')
+const order = require('./order')
 
 const log = getLogger(__dirname, __filename)
 // prueba
@@ -10,11 +11,13 @@ module.exports = {
   home (req, res) {
     res.send({
       user: '/user',
-      table: '/table'
+      table: '/table',
+      order: '/order'
     })
   },
   user,
   table,
+  order,
   errorHandler (err, req, res, next) {
     if (err) {
       let code = err.code || 500

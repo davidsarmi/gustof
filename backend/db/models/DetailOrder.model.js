@@ -13,8 +13,7 @@ module.exports = function setupMetricModel (config) {
     cantidad: {
       type: Sequelize.TEXT,
       allowNull: false
-    
+
     }
   })
 }
-
