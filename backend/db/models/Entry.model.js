@@ -14,6 +14,6 @@ module.exports = function setupMetricModel (config) {
       type: Sequelize.DATE,
       allowNull: false
     }
-    
+
   })
 }
