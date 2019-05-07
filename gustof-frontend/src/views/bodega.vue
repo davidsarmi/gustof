@@ -5,29 +5,7 @@
 </template>
 <script>
 export default {
-  el: '#app',
-  data: () => ({
-    drawer: true,
-    bodegas: [
 
-      {
-        text: 'PRODUCTOS',
-        to: '/bodega_productos'
-      },
-      {
-        text: 'AGREGAR',
-        to: '/Agregar'
-      },
-      {
-        text: 'SACAR',
-        to: '/Sacar'
-      },
-      {
-        text: 'SALIR',
-        to: '/'
-      }
-    ]
-  }),
   created () {
     this.$store.commit('SET_LAYOUT', 'administrador-layout')
   },
