@@ -83,22 +83,22 @@ export default {
       {
         text: 'BODEGA',
         icon: 'reorder',
-        to: '/administrador/bodega'
+        to: '/bodega'
       },
       {
         text: 'PRODUCTOS DE BODEGA',
         icon: 'restaurant',
-        to: '/administrador/bodega_productos'
+        to: '/bodega_productos'
       },
       {
         text: 'AGREGAR',
         icon: 'plus_one',
-        to: '/administrador/agregar'
+        to: '/agregar'
       },
       {
         text: 'SACAR',
         icon: 'plus_one',
-        to: '/administrador/sacar'
+        to: '/sacar'
       },
       {
         text: 'CANDADOS',

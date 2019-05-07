@@ -10,13 +10,10 @@ module.exports = function setupMetricModel (config) {
       type: Sequelize.CHAR(36),
       defaultValue: Sequelize.UUIDV4
     },
-     materia: {
+    cantidad: {
         type: Sequelize.TEXT,
         allowNull: false
       },
-      receta: {
-        type: Sequelize.TEXT,
-        allowNull: false
-      },
+   
   })
 }

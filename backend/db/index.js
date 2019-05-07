@@ -16,10 +16,11 @@ const setupDetail_EntryModel = require("./models/DetailEntry.model");
 const setupDetail_OrderModel = require("./models/DetailOrder.model");
 const setupEntryModel = require("./models/Entry.model");
 const setupOrderModel = require("./models/Order.model");
-const setupIngredientsModel = require("./models/Ingredients.model");
+const setupRecipeModel = require("./models/Recipe.model");
 const setupProductModel = require("./models/Product.model");
 const setupRaw_MaterialModel = require("./models/RawMaterial.model");
 const setupTableModel = require("./models/Table.model");
+const setupIngredientsModel = require("./models/Ingredients.model");
 
 // const setupAgent = require('./lib/agent')
 
@@ -33,10 +34,11 @@ module.exports = async function() {
   const DetailOrderModel = setupDetail_OrderModel(config);
   const EntryModel = setupEntryModel(config);
   const OrderModel = setupOrderModel(config);
-  const IngredientsModel = setupIngredientsModel(config);
+  const RecipeModel = setupRecipeModel(config);
   const ProductModel = setupProductModel(config);
   const RawMaterialModel = setupRaw_MaterialModel(config);
   const TableModel = setupTableModel(config);
+  const Ingredients = setupIngredientsModel(config);
 
   UserModel.hasMany(BillModel);
   BillModel.belongsTo(UserModel);
@@ -50,32 +52,38 @@ module.exports = async function() {
   TableModel.hasMany(OrderModel);
   OrderModel.belongsTo(TableModel);
 
-  DetailEntryModel.hasMany(EntryModel);
-  EntryModel.belongsTo(DetailEntryModel);
+  EntryModel.hasMany(DetailEntryModel);
+  DetailEntryModel.belongsTo(EntryModel);
 
   RawMaterialModel.hasMany(DetailEntryModel);
   DetailEntryModel.belongsTo(RawMaterialModel);
 
-  DetailEntryModel.hasMany(ProductModel);
-  ProductModel.belongsTo(DetailEntryModel);
+  ProductModel.hasMany(DetailEntryModel);
+  DetailEntryModel.belongsTo(ProductModel);
 
-  RawMaterialModel.hasMany(IngredientsModel);
-  IngredientsModel.belongsTo(RawMaterialModel);
+  RawMaterialModel.hasMany(RecipeModel);
+  RecipeModel.belongsTo(RawMaterialModel);
 
-  IngredientsModel.hasMany(ProductModel);
-  ProductModel.belongsTo(IngredientsModel);
+  ProductModel.hasMany(RecipeModel);
+  RecipeModel.belongsTo(ProductModel);
 
   OrderModel.hasMany(DetailOrderModel);
   DetailOrderModel.belongsTo(OrderModel);
 
-  DetailOrderModel.hasMany(ProductModel);
-  ProductModel.belongsTo(DetailOrderModel);
+  ProductModel.hasMany(DetailOrderModel);
+  DetailOrderModel.belongsTo(ProductModel);
 
-  AddOrderModel.hasMany(ProductModel);
-  ProductModel.belongsTo(AddOrderModel);
+  ProductModel.hasMany(AddOrderModel);
+  AddOrderModel.belongsTo(ProductModel);
 
   DetailOrderModel.hasMany(AddOrderModel);
   AddOrderModel.belongsTo(DetailOrderModel);
+
+  RecipeModel.hasMany(IngredientsModel);
+  IngredientsModel.belongsTo(RecipeModel);
+
+  RawMaterialModel.hasMany(IngredientsModel);
+  IngredientsModel.belongsTo(RecipeModel);
 
   await sequelize.authenticate();
 
