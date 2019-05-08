@@ -11,7 +11,7 @@ router.post("/", async function(req, res, next) {
   try {
     const { OrderNew } = req.body;
     const { Order } = await db();
-    const resul = await Order.createOrder(OrderNew);
+    const result = await Order.createOrder(OrderNew);
     res.send(result);
   } catch (err) {
     next(err);

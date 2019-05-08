@@ -18,17 +18,6 @@ router.post("/", async function(req, res, next) {
   }
 });
 
-router.put("/:uuid", async function(req, res, next) {
-  try {
-    const { uuid } = req.params;
-    const { companyUpdate } = req.body;
-    const { Company } = await db();
-    const result = await Company.updateCompany(uuid, companyUpdate);
-    res.send(result);
-  } catch (err) {
-    next(err);
-  }
-});
 router.delete("/:uuid", async function(req, res, next) {
   try {
     const { uuid } = req.params;
