@@ -84,7 +84,7 @@ module.exports = async function() {
   IngredientsModel.belongsTo(RecipeModel);
 
   RawMaterialModel.hasMany(IngredientsModel);
-  IngredientsModel.belongsTo(RecipeModel);
+  IngredientsModel.belongsTo(RawMaterialModel);
 
   await sequelize.authenticate();
 
