@@ -1,34 +1,37 @@
-'use strict'
+"use strict";
 
-const { getLogger } = require('@gustof/utils')
-const user = require('./user')
-const table = require('./table')
-const order = require('./order')
+const { getLogger } = require("@gustof/utils");
+const user = require("./user");
+const table = require("./table");
+const order = require("./order");
+const company = require("./company");
 
-const log = getLogger(__dirname, __filename)
+const log = getLogger(__dirname, __filename);
 // prueba
 module.exports = {
-  home (req, res) {
+  home(req, res) {
     res.send({
-      user: '/user',
-      table: '/table',
-      order: '/order'
-    })
+      user: "/user",
+      table: "/table",
+      order: "/order",
+      company: "/company"
+    });
   },
   user,
   table,
   order,
-  errorHandler (err, req, res, next) {
+  company,
+  errorHandler(err, req, res, next) {
     if (err) {
-      let code = err.code || 500
-      const { id } = req
-      const { message, stack } = err
-      log.debug({ id, message: stack })
-      log.error({ id, message })
-      res.status(code).send({ error: message })
-      return
+      let code = err.code || 500;
+      const { id } = req;
+      const { message, stack } = err;
+      log.debug({ id, message: stack });
+      log.error({ id, message });
+      res.status(code).send({ error: message });
+      return;
     }
 
-    next()
+    next();
   }
-}
+};

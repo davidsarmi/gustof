@@ -4,7 +4,14 @@ const http = require("http");
 const express = require("express");
 const helmet = require("helmet");
 const cors = require("cors");
-const { errorHandler, home, user, table, order } = require("@gustof/api");
+const {
+  errorHandler,
+  home,
+  user,
+  table,
+  order,
+  company
+} = require("@gustof/api");
 const { getLogger, logHandler, terminate } = require("@gustof/utils");
 
 const app = express();
@@ -21,6 +28,7 @@ app.get("/", home);
 app.use("/user", user);
 app.use("/table", table);
 app.use("/order", order);
+app.use("/company", company);
 app.use(errorHandler);
 
 module.exports = server;

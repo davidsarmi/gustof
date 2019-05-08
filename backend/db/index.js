@@ -6,6 +6,7 @@ const { db: config } = require("@gustof/config");
 const setupUser = require("./lib/users");
 const setupTable = require("./lib/table");
 const setupOrder = require("./lib/order");
+const setupCompany = require("./lib/company");
 
 // modelos
 const setupDatabase = require("./lib/db");
@@ -91,6 +92,7 @@ module.exports = async function() {
   const User = setupUser(UserModel);
   const Table = setupTable(TableModel);
   const Order = setupOrder(OrderModel);
+  const Company = setupCompany(CompanyModel);
 
   return {
     async setup() {
@@ -98,6 +100,7 @@ module.exports = async function() {
     },
     User,
     Table,
-    Order
+    Order,
+    Company
   };
 };
