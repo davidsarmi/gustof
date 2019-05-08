@@ -1,14 +1,31 @@
 <template>
   <div>
-     <v-avatar 
-        color="red red--after"
+<v-badge left color="orange">
+      <template v-slot:badge>
+        <span>!</span>
+      </template>
+      <v-icon
+        large
+        color="grey lighten-1"
       >
-        <v-icon dark>notifications</v-icon>
-      </v-avatar>
- 
+        mail
+      </v-icon>
+    </v-badge>
+
+    <v-badge color="orange">
+      <template v-slot:badge>
+        <span>!</span>
+      </template>
+      <v-icon
+        large
+        color="grey"
+      >
+        mail
+      </v-icon>
+    </v-badge>
     Bodega
   </div>
-  
+
 </template>
 <script>
 export default {
@@ -39,5 +56,10 @@ margin:20px 401px;
   position: absolute;
   top: 5px;
   right: 15px;
+}
+.v-badge{
+  position: relative;
+  top: -225px;
+  left: 480px;
 }
 </style>

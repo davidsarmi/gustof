@@ -82,20 +82,20 @@
 </template>
 <script>
 export default {
-  el: "#app",
-  data() {
+  el: '#app',
+  data () {
     return {
       desserts: [
         {
-          pedido: "PEDIDO",
-          codigo: "CODIGO",
-          cantidad: "CANTIDAD",
-          iva: "IVA",
-          valorUnidad: "VALOR UNIDAD",
-          valorTotal: "VALOR TOTAL"
+          pedido: 'PEDIDO',
+          codigo: 'CODIGO',
+          cantidad: 'CANTIDAD',
+          iva: 'IVA',
+          valorUnidad: 'VALOR UNIDAD',
+          valorTotal: 'VALOR TOTAL'
         },
         {
-          pedido: "HAMBURGUESA ARTESANAL",
+          pedido: 'HAMBURGUESA ARTESANAL',
           codigo: 323,
           cantidad: 2,
           iva: 0.05,
@@ -103,7 +103,7 @@ export default {
           valorTotal: 25000
         },
         {
-          pedido: "SALCHICHA GUAGUU",
+          pedido: 'SALCHICHA GUAGUU',
           codigo: 324,
           cantidad: 1,
           iva: 0.05,
@@ -111,13 +111,13 @@ export default {
           valorTotal: 14000
         },
         {
-          pedido: "VALOR TOTAL",
+          pedido: 'VALOR TOTAL',
           valorTotal: 39000
         }
       ]
-    };
+    }
   }
-};
+}
 </script>
 <style scoped>
 .application--wrap {

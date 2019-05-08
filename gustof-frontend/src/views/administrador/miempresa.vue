@@ -1,5 +1,5 @@
 <template>
-  <v-container grid-list-md 
+  <v-container grid-list-md
   class="nombre"
   >
     <h1>Mi Empresa</h1>
@@ -19,5 +19,3 @@
   margin-top: -300px !important
 }
 </style>
-
-
