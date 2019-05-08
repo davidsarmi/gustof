@@ -7,6 +7,7 @@ const setupUser = require("./lib/users");
 const setupTable = require("./lib/table");
 const setupOrder = require("./lib/order");
 const setupCompany = require("./lib/company");
+const setupBill = require("./lib/bill");
 
 // modelos
 const setupDatabase = require("./lib/db");
@@ -93,6 +94,7 @@ module.exports = async function() {
   const Table = setupTable(TableModel);
   const Order = setupOrder(OrderModel);
   const Company = setupCompany(CompanyModel);
+  const Bill = setupBill(BillModel);
 
   return {
     async setup() {
@@ -101,6 +103,7 @@ module.exports = async function() {
     User,
     Table,
     Order,
-    Company
+    Company,
+    Bill
   };
 };

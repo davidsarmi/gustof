@@ -5,6 +5,7 @@ const user = require("./user");
 const table = require("./table");
 const order = require("./order");
 const company = require("./company");
+const bill = require("./bill");
 
 const log = getLogger(__dirname, __filename);
 // prueba
@@ -14,13 +15,15 @@ module.exports = {
       user: "/user",
       table: "/table",
       order: "/order",
-      company: "/company"
+      company: "/company",
+      bill: "/bill"
     });
   },
   user,
   table,
   order,
   company,
+  bill,
   errorHandler(err, req, res, next) {
     if (err) {
       let code = err.code || 500;
