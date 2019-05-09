@@ -6,6 +6,8 @@ const table = require("./table");
 const order = require("./order");
 const company = require("./company");
 const bill = require("./bill");
+const entry = require("./entry")
+const detailEntry=require("./detailEntry")
 
 const log = getLogger(__dirname, __filename);
 // prueba
@@ -16,7 +18,9 @@ module.exports = {
       table: "/table",
       order: "/order",
       company: "/company",
-      bill: "/bill"
+      bill: "/bill",
+      entry:"/entry",
+      detailEntry:"/detailEntry"
     });
   },
   user,
@@ -24,6 +28,8 @@ module.exports = {
   order,
   company,
   bill,
+  entry,
+  detailEntry,
   errorHandler(err, req, res, next) {
     if (err) {
       let code = err.code || 500;
