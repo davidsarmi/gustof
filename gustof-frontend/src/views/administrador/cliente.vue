@@ -1,4 +1,4 @@
-<template>
+<template background-color: white>
   <v-card flat>
     <v-snackbar
       v-model="snackbar"

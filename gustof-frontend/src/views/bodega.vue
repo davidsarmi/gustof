@@ -1,14 +1,14 @@
 <template>
   <div>
-     <v-avatar 
+     <v-avatar
         color="red red--after"
       >
         <v-icon dark>notifications</v-icon>
       </v-avatar>
- 
+
     Bodega
   </div>
-  
+
 </template>
 <script>
 export default {

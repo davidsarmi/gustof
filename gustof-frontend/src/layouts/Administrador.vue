@@ -119,3 +119,9 @@ export default {
   }
 }
 </script>
+<style>
+  .theme--dark.v-icon {
+    color: #4A148C;
+}
+</style>
+

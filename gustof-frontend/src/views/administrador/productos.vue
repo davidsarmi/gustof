@@ -1,5 +1,5 @@
 <template>
     <div>
-    didier boom
+        <h1>productos</h1>
     </div>
 </template>
