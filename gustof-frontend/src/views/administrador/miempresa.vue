@@ -4,7 +4,7 @@
   >
     <div class="text-xs-center">
       <v-btn fab dark large color="purple">
-        <img class="img1"src="@/assets/gustofimagen.jpg" style="">
+        <img src="@/assets/gustofimagen.jpg" class="img1">
       </v-btn>
       <v-dialog
         v-model="dialog"

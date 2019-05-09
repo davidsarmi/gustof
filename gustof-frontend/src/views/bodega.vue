@@ -1,5 +1,6 @@
 <template>
   <div>
+<<<<<<< HEAD
      <v-avatar
         color="red red--after"
       >
@@ -7,6 +8,48 @@
       </v-avatar>
 
     Bodega
+=======
+   <v-container fluid class="text-xs-center">
+      <v-layout
+        justify-space-between
+        row
+        wrap
+      >
+
+  
+        <v-flex xs12 class="mt-5">
+          <v-badge
+            v-model="show"
+            color="cyan"
+            left
+          >
+            <template v-slot:badge>
+              <span>6</span>
+            </template>
+            <v-icon @click="prueba"
+              large
+              color="grey lighten-1"
+            >shopping_cart</v-icon>
+          </v-badge>
+
+          <v-badge
+            v-model="show"
+            color="purple"
+            left
+          >
+            <template v-slot:badge>
+              <span>6</span>
+            </template>
+            <v-icon @click="prueba2"
+            large 
+            color="grey"
+            >mail</v-icon>
+          </v-badge>
+
+        </v-flex>
+      </v-layout>
+    </v-container>
+>>>>>>> 67a5806fa70829c028fea88d6f337c6246ce0f47
   </div>
 
 </template>
@@ -18,7 +61,16 @@ export default {
   },
   props: {
     source: String
-  }
+  },
+  methods: {
+    prueba() {
+      
+    },
+    prueba2() {
+      
+    }
+  },
+  
 }
 
 </script>
@@ -39,5 +91,10 @@ margin:20px 401px;
   position: absolute;
   top: 5px;
   right: 15px;
+}
+.v-badge{
+  position: relative;
+  top: -205px;
+  left: 480px;
 }
 </style>

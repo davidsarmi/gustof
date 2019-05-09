@@ -6,6 +6,8 @@ const { db: config } = require("@gustof/config");
 const setupUser = require("./lib/users");
 const setupTable = require("./lib/table");
 const setupOrder = require("./lib/order");
+const setupCompany = require("./lib/company");
+const setupBill = require("./lib/bill");
 
 // modelos
 const setupDatabase = require("./lib/db");
@@ -84,13 +86,15 @@ module.exports = async function() {
   IngredientsModel.belongsTo(RecipeModel);
 
   RawMaterialModel.hasMany(IngredientsModel);
-  IngredientsModel.belongsTo(RecipeModel);
+  IngredientsModel.belongsTo(RawMaterialModel);
 
   await sequelize.authenticate();
 
   const User = setupUser(UserModel);
   const Table = setupTable(TableModel);
   const Order = setupOrder(OrderModel);
+  const Company = setupCompany(CompanyModel);
+  const Bill = setupBill(BillModel);
 
   return {
     async setup() {
@@ -98,6 +102,8 @@ module.exports = async function() {
     },
     User,
     Table,
-    Order
+    Order,
+    Company,
+    Bill
   };
 };

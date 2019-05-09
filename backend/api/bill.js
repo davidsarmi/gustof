@@ -9,20 +9,21 @@ const router = new Router();
 
 router.post("/", async function(req, res, next) {
   try {
-    const { OrderNew } = req.body;
-    const { Order } = await db();
-    const result = await Order.createOrder(OrderNew);
+    const { billNew } = req.body;
+    const { Bill } = await db();
+    const result = await Bill.createBill(billNew);
     res.send(result);
   } catch (err) {
     next(err);
   }
 });
+
 router.put("/:uuid", async function(req, res, next) {
   try {
     const { uuid } = req.params;
-    const { orderUpdate } = req.body;
-    const { Order } = await db();
-    const result = await Order.updateOrder(uuid, orderUpdate);
+    const { billUpdate } = req.body;
+    const { Bill } = await db();
+    const result = await Bill.updateBill(uuid, billUpdate);
     res.send(result);
   } catch (err) {
     next(err);
@@ -31,8 +32,8 @@ router.put("/:uuid", async function(req, res, next) {
 router.delete("/:uuid", async function(req, res, next) {
   try {
     const { uuid } = req.params;
-    const { Order } = await db();
-    const result = await Order.deletOrder(uuid);
+    const { Bill } = await db();
+    const result = await Bill.deletBill(uuid);
     res.send(result);
   } catch (err) {
     next(err);
@@ -40,8 +41,8 @@ router.delete("/:uuid", async function(req, res, next) {
 });
 router.get("/", async function(req, res, next) {
   try {
-    const { Order } = await db();
-    const result = await Order.findAllOrder();
+    const { Bill } = await db();
+    const result = await Bill.findAllBill();
     res.send(result);
   } catch (err) {
     next(err);
@@ -50,8 +51,8 @@ router.get("/", async function(req, res, next) {
 router.get("/:uuid", async function(req, res, next) {
   try {
     const { uuid } = req.params;
-    const { Order } = await db();
-    const result = await Order.findOrderUuid(uuid);
+    const { Bill } = await db();
+    const result = await Bill.findBillUuid(uuid);
     res.send(result);
   } catch (err) {
     next(err);
