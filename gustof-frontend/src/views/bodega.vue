@@ -1,5 +1,6 @@
 <template>
   <div>
+    Bodega
       <v-badge class="pa"
           v-model="show"
             color="purple"
@@ -7,7 +8,7 @@
           <template v-slot:badge>
               <span>!</span>
           </template>
-          <v-icon @click="prueba"
+          <v-icon @click="productosA('/productos_agotados')"
               large
               color="grey lighten-1">
               notifications
@@ -17,11 +18,11 @@
       <v-badge class="pp"
             v-model="show"
             color="purple"
-            left>
+            left>          
           <template v-slot:badge>
               <span>!</span>
           </template>
-          <v-icon @click="prueba2"
+          <v-icon @click="productosP('/productos_por_agotar')"
             large 
             color="grey lighten-1">
             notifications
@@ -43,12 +44,11 @@ export default {
   },
   
   methods: {
-    prueba() {
-
-  
+    productosA (value) {
+       this.$router.push(value)
     },
-    prueba2 () {
-
+     productosP (value) {
+       this.$router.push(value)
     }
   }
 
