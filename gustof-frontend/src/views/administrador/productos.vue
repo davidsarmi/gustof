@@ -93,7 +93,7 @@
               v-model="form.terms"
               color="#4A148C"
             >
-            
+
               <template v-slot:label>
                 <div @click.stop=" drawer = !drawer">
                   Do you accept the

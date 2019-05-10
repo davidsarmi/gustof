@@ -1,69 +1,76 @@
 <template>
-  <v-container grid-list-md
-  class="nombre"
-  >
-    <div class="text-xs-center">
-      <v-btn fab dark large color="purple">
-        <img src="@/assets/gustofimagen.jpg" class="img1">
-      </v-btn>
-      <v-dialog
-        v-model="dialog"
-        width="500"
-      >
-        <template v-slot:activator="{ on }">
-          <v-btn
-            color="red lighten-2"
-            dark
-            v-on="on"
-          >
-            nombre boton
-          </v-btn>
-        </template>
-
-        <v-card>
-          <v-card-title
-            class="headline grey lighten-2"
-            primary-title
-          >
-            Titulo de la carta
-          </v-card-title>
-
-          <v-card-text>
-            contenido de la carta
-          </v-card-text>
-
-          <v-divider></v-divider>
-
-          <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn
-              color="primary"
-              flat
-              @click="dialog = false"
-            >
-              I accept
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-dialog>
-    </div>
-  </v-container>
+  <v-layout>
+    <v-flex xs5 order-lg2>
+            <v-card-text  class="transparent text-xs-center">
+              <h1 class="color"><strong>MI EMPRESA</strong></h1><br>
+            </v-card-text>
+             <br>
+            <material-card class="v-card-profile">
+              <v-avatar class=" text--center mx-auto d-block" >
+                <img class="imagenq" :src="imgUrl" >
+              </v-avatar>
+              <v-card-text class="margen text-xs-center">
+                  <v-form name="formulario" method="post" enctype="form-data">
+                    <v-btn  @click='pickFile' v-model='imageName' prepend-icon='attach_file'>Selecciona tu foto de perfil</v-btn>
+                      <input type="file" style="display: none" ref="image" accept="image/*" @change="onFilePicked">
+                  </v-form>
+              </v-card-text>
+            </material-card>
+        </v-flex>
+  </v-layout>
 </template>
 <script>
 export default {
-  data () {
-    return {
-      dialog: false
+  data: () => ({
+    imageName: ''
+
+  }),
+  created () {
+    this.$store.commit('SET_LAYOUT', 'administrador-layout')
+  },
+  methods: {
+    pickFile () {
+      this.$refs.image.click()
+    },
+    onFilePicked (e) {
+      const files = e.target.files
+      if (files[0] !== undefined) {
+        this.imageName = files[0].name
+        if (this.imageName.lastIndexOf('.') <= 0) {
+          return
+        }
+        const fr = new FileReader()
+        fr.readAsDataURL(files[0])
+        fr.addEventListener('load', () => {
+          this.imgUrl = fr.result
+        })
+      } else {
+        this.imageName = ''
+        this.imageUrl = ''
+      }
     }
   }
 }
 </script>
-<style lang="stylus" scoped>
-.nombre{
-  margin-top: -300px !important
+<style lang="stylus">
+  .imagenq{
+  width 200px !important
+  height 200px !important
 }
-.img1{
-  width 400px
-  height 300px
+.margen{
+  margin 50px 0px
+}
+</style>>
+<style scoped>
+.headline{
+  vertical-align: top;
+  margin-top: -100px;
+}
+.layout{
+  vertical-align: top;
+}
+.color{
+  color: red;
+  size: 25px;
 }
 </style>
