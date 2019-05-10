@@ -1,14 +1,5 @@
 <template>
   <div>
-<<<<<<< HEAD
-     <v-avatar
-        color="red red--after"
-      >
-        <v-icon dark>notifications</v-icon>
-      </v-avatar>
-
-    Bodega
-=======
    <v-container fluid class="text-xs-center">
       <v-layout
         justify-space-between
@@ -49,7 +40,6 @@
         </v-flex>
       </v-layout>
     </v-container>
->>>>>>> 67a5806fa70829c028fea88d6f337c6246ce0f47
   </div>
 
 </template>
