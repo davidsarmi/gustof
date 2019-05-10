@@ -2,7 +2,7 @@
   <div>
       <v-badge class="pa"
           v-model="show"
-            color="cyan"
+            color="purple"
             left>
           <template v-slot:badge>
               <span>!</span>
@@ -16,7 +16,7 @@
 
       <v-badge class="pp"
             v-model="show"
-            color="cyan"
+            color="purple"
             left>
           <template v-slot:badge>
               <span>!</span>
