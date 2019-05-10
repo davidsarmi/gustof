@@ -17,7 +17,7 @@
         <v-list-tile-action v-if="admin.icon">
           <v-icon>{{ admin.icon }}</v-icon>
         </v-list-tile-action>
-          <v-list-tile-content>
+          <v-list-tile-content class=".font-weight-medium.font-italic">
             <v-list-tile-tile>{{ admin.text }}</v-list-tile-tile>
           </v-list-tile-content>
         </v-list-tile>
@@ -122,5 +122,11 @@ export default {
   .theme--dark.v-icon {
     color: #4A148C;
 }
+.v-list__tile__content{
+  color: black;
+}
+.v-list--dense .v-list__tile{
+  font-size: 15px;
+  font-family:fantasy;
+}
 </style>
-

@@ -1,6 +1,5 @@
 <template>
   <div>
-<<<<<<< HEAD
      <v-avatar
         color="red red--after"
       >
@@ -8,7 +7,6 @@
       </v-avatar>
 
     Bodega
-=======
    <v-container fluid class="text-xs-center">
       <v-layout
         justify-space-between
@@ -16,7 +14,6 @@
         wrap
       >
 
-  
         <v-flex xs12 class="mt-5">
           <v-badge
             v-model="show"
@@ -41,7 +38,7 @@
               <span>6</span>
             </template>
             <v-icon @click="prueba2"
-            large 
+            large
             color="grey"
             >mail</v-icon>
           </v-badge>
@@ -49,7 +46,6 @@
         </v-flex>
       </v-layout>
     </v-container>
->>>>>>> 67a5806fa70829c028fea88d6f337c6246ce0f47
   </div>
 
 </template>
@@ -63,14 +59,14 @@ export default {
     source: String
   },
   methods: {
-    prueba() {
-      
+    prueba () {
+
     },
-    prueba2() {
-      
+    prueba2 () {
+
     }
-  },
-  
+  }
+
 }
 
 </script>
