@@ -1,51 +1,34 @@
 <template>
   <div>
-     <v-avatar
-        color="red red--after"
-      >
-        <v-icon dark>notifications</v-icon>
-      </v-avatar>
+      <v-badge class="pa"
+          v-model="show"
+            color="cyan"
+            left>
+          <template v-slot:badge>
+              <span>!</span>
+          </template>
+          <v-icon @click="prueba"
+              large
+              color="grey lighten-1">
+              notifications
+          </v-icon>
+      </v-badge>
 
-    Bodega
-   <v-container fluid class="text-xs-center">
-      <v-layout
-        justify-space-between
-        row
-        wrap
-      >
-
-        <v-flex xs12 class="mt-5">
-          <v-badge
+      <v-badge class="pp"
             v-model="show"
             color="cyan"
-            left
-          >
-            <template v-slot:badge>
-              <span>6</span>
-            </template>
-            <v-icon @click="prueba"
-              large
-              color="grey lighten-1"
-            >shopping_cart</v-icon>
-          </v-badge>
+            left>
+          <template v-slot:badge>
+              <span>!</span>
+          </template>
+          <v-icon @click="prueba2"
+            large 
+            color="grey lighten-1">
+            notifications
+          </v-icon>
+      </v-badge>
 
-          <v-badge
-            v-model="show"
-            color="purple"
-            left
-          >
-            <template v-slot:badge>
-              <span>6</span>
-            </template>
-            <v-icon @click="prueba2"
-            large
-            color="grey"
-            >mail</v-icon>
-          </v-badge>
-
-        </v-flex>
-      </v-layout>
-    </v-container>
+     
   </div>
 
 </template>
@@ -58,9 +41,11 @@ export default {
   props: {
     source: String
   },
+  
   methods: {
-    prueba () {
+    prueba() {
 
+  
     },
     prueba2 () {
 
@@ -88,9 +73,12 @@ margin:20px 401px;
   top: 5px;
   right: 15px;
 }
-.v-badge{
-  position: relative;
-  top: -205px;
+.pa{
+  top:-300px;
+  left: 465px;
+}
+.pp{
+  top:-300px;
   left: 480px;
 }
 </style>

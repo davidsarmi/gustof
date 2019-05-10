@@ -12,8 +12,16 @@ module.exports = function setupMetricModel (config) {
       type: Sequelize.TEXT,
       allowNull: false
     },
+    cliente: {
+      type: Sequelize.TEXT,
+      allowNull: false
+    },
     fecha: {
       type: Sequelize.DATE,
+      allowNull: false
+    },
+    empresa: {
+      type: Sequelize.TEXT,
       allowNull: false
     },
     forma_pago: {
