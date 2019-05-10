@@ -110,6 +110,6 @@ module.exports = async function() {
     Company,
     Bill,
     Entry,
-    detailEntry
+    DetailEntry
   };
 };
