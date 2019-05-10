@@ -74,11 +74,13 @@ margin:20px 401px;
   right: 15px;
 }
 .pa{
-  top:-300px;
-  left: 465px;
+  position: absolute;
+  top:19px;
+  right: 60px;
 }
 .pp{
-  top:-300px;
-  left: 480px;
+  position: absolute;
+  top:19px;
+  right:10px;
 }
 </style>
