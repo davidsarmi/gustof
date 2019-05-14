@@ -11,7 +11,11 @@
 </template>
 <script>
 export default {
-
+data: () => ({
+    drawer: true,
+    Producto: ['Carne:'+' 2',],
+   
+ }),
   created () {
     this.$store.commit('SET_LAYOUT', 'administrador-layout')
   }

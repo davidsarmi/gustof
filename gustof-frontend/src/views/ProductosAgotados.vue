@@ -3,7 +3,7 @@
 
         <v-flex xs12 sm6 d-flex>
         <v-select
-          :items="Productos"
+          :items="Productosa"
           label="Productos agotados"
         ></v-select>
       </v-flex>
@@ -11,7 +11,11 @@
 </template>
 <script>
 export default {
-
+ data: () => ({
+    drawer: true,
+    Productosa: ['Carne:'+' 2',],
+   
+ }),
   created () {
     this.$store.commit('SET_LAYOUT', 'administrador-layout')
   },

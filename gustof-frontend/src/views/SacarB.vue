@@ -11,6 +11,11 @@
 <script>
 
 export default {
+   data: () => ({
+    drawer: true,
+    PRODUCTOS: ['Carne: '+'2',],
+   
+ }),
   created () {
     this.$store.commit('SET_LAYOUT', 'administrador-layout')
   },
