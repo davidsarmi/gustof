@@ -1,33 +1,21 @@
 <template>
-  <div>
-    Bodega
-  </div>
+<div id="app">
+    <v-flex xs12 sm6 d-flex>
+        <v-select
+          :items="PRODUCTOS"
+          label="Sacar Productos"
+        ></v-select>
+    </v-flex>
+</div>
 </template>
 <script>
-export default {
-  el: '#app',
-  data: () => ({
-    drawer: true,
-    bodegas: [
 
-      {
-        text: 'PRODUCTOS',
-        to: '/bodega_productos'
-      },
-      {
-        text: 'AGREGAR',
-        to: '/Agregar'
-      },
-      {
-        text: 'SACAR',
-        to: '/Sacar'
-      },
-      {
-        text: 'SALIR',
-        to: '/'
-      }
-    ]
-  }),
+export default {
+   data: () => ({
+    drawer: true,
+    PRODUCTOS: ['Carne: '+'2',],
+   
+ }),
   created () {
     this.$store.commit('SET_LAYOUT', 'administrador-layout')
   },
@@ -47,6 +35,11 @@ img {
 font-size:14px;
 font-weight: 500;
 margin:20px 401px;
-
+}
+.d-flex{
+  width: 400px;
+}
+.d-flex{
+  width: 400px;
 }
 </style>

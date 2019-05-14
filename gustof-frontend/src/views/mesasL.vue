@@ -17,7 +17,7 @@
         <v-list-tile-action v-if="admin.icon">
           <v-icon>{{ admin.icon }}</v-icon>
         </v-list-tile-action>
-          <v-list-tile-content class=".font-weight-medium.font-italic">
+          <v-list-tile-content>
             <v-list-tile-tile>{{ admin.text }}</v-list-tile-tile>
           </v-list-tile-content>
         </v-list-tile>
@@ -33,17 +33,12 @@
       <span>&copy; 2019</span>
     </v-footer>
     <v-content>
-        <v-container fill-height>
-          <v-layout justify-center align-center>
-            <v-flex shrink>
-              <router-view></router-view>
-            </v-flex>
-          </v-layout>
-        </v-container>
-      </v-content>
+        <img data-v-097a1800="" src="/img/gustof.5ab63673.png">g
+    </v-content>
   </v-app>
 </div>
 </template>
+
 <script>
 export default {
   el: '#app',
@@ -83,22 +78,22 @@ export default {
       {
         text: 'BODEGA',
         icon: 'reorder',
-        to: '/bodega'
+        to: '/administrador/bodega'
       },
       {
         text: 'PRODUCTOS DE BODEGA',
         icon: 'restaurant',
-        to: '/bodega_productos'
+        to: '/administrador/bodega_productos'
       },
       {
         text: 'AGREGAR',
         icon: 'plus_one',
-        to: '/agregar'
+        to: '/administrador/agregar'
       },
       {
         text: 'SACAR',
         icon: 'plus_one',
-        to: '/sacar'
+        to: '/administrador/sacar'
       },
       {
         text: 'CANDADOS',
@@ -118,15 +113,3 @@ export default {
   }
 }
 </script>
-<style>
-  .theme--dark.v-icon {
-    color: #4A148C;
-}
-.v-list__tile__content{
-  color: black;
-}
-.v-list--dense .v-list__tile{
-  font-size: 15px;
-  font-family:fantasy;
-}
-</style>

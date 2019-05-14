@@ -3,7 +3,7 @@
 
         <v-flex xs12 sm6 d-flex>
         <v-select
-          :items="Productos"
+          :items="Productosa"
           label="Productos agotados"
         ></v-select>
       </v-flex>
@@ -11,32 +11,11 @@
 </template>
 <script>
 export default {
-  el: '#app',
-  data: () => ({
+ data: () => ({
     drawer: true,
-    Productos: ['Salchicha', 'Jamon', 'Queso', 'Carne plancha', 'Pollo desmechado', 'Mazorca', 'Tocineta'],
-    bodeguis: [
-
-      {
-        text: 'PRODUCTOS',
-        icon: 'store',
-        to: '/bodega_productos'
-      },
-      {
-        text: 'AGREGAR',
-        to: '/Agregar'
-      },
-      {
-        text: 'SACAR',
-        to: '/Sacar'
-      },
-      {
-        text: 'SALIR',
-        to: '/'
-      }
-    ]
-
-  }),
+    Productosa: ['Carne:'+' 2',],
+   
+ }),
   created () {
     this.$store.commit('SET_LAYOUT', 'administrador-layout')
   },

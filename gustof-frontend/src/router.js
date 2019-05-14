@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Administrador from '@/views/administrador/inicio.vue'
-import bodega from '@/views/administrador/bodega.vue'
+import Administrador from '@/layouts/Administrador.vue'
+import bodega from '@/views/bodega.vue'
 import mesas from '@/views/Mesas.vue'
+import mesasLogin from '@/views/mesasL.vue'
 import Chef from '@/views/Chef.vue'
 import Login from '@/views/Login.vue'
 import asdasd from '@/views/administrador/perfil.vue'
@@ -12,9 +13,9 @@ import facturacion from '@/views/administrador/facturacion.vue'
 import miempresa from '@/views/administrador/miempresa.vue'
 import producto from '@/views/administrador/productos.vue'
 import proveedor from '@/views/administrador/proveedores.vue'
-import BodegaProductos from '@/views/administrador/Bodega-Productos.vue'
-import AgregarB from '@/views/administrador/AgregarB.vue'
-import SacarB from '@/views/administrador/SacarB.vue'
+import BodegaProductos from '@/views/Bodega-Productos.vue'
+import AgregarB from '@/views/AgregarB.vue'
+import SacarB from '@/views/SacarB.vue'
 import Productosporagotar from '@/views/ProductosPorAgotar.vue'
 import Productosagotados from '@/views/ProductosAgotados.vue'
 import CajaFactura from '@/views/CajaFactura.vue'
@@ -37,7 +38,7 @@ export default new Router({
       component: Administrador
     },
     {
-      path: '/administrador/bodega',
+      path: '/bodega',
       name: 'bodega',
       component: bodega
     },
@@ -47,12 +48,17 @@ export default new Router({
       component: mesas
     },
     {
+      path: '/mesaslogin',
+      name: 'mesaslogin',
+      component: mesasLogin
+    },
+    {
       path: '/administrador/perfil',
       name: 'perfil',
       component: asdasd
     },
     {
-      path: 'administrador/bodega_productos',
+      path: '/bodega_productos',
       name: 'bodega_productos',
       component: BodegaProductos
     },
@@ -92,12 +98,12 @@ export default new Router({
       component: proveedor
     },
     {
-      path: 'administrador/sacar',
+      path: '/sacar',
       name: 'sacarb',
       component: SacarB
     },
     {
-      path: '/administrador/agregar',
+      path: '/agregar',
       name: 'agregarb',
       component: AgregarB
     },
@@ -120,6 +126,6 @@ export default new Router({
       path: '/cajafactura',
       name: 'cajafactura',
       component: CajaFactura
-    }
+    }    
   ]
 })

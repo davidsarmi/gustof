@@ -11,37 +11,15 @@
 </template>
 <script>
 export default {
-  el: '#app',
-  data: () => ({
+data: () => ({
     drawer: true,
-    Producto: ['Salchicha', 'Jamon', 'Queso', 'Carne plancha', 'Pollo desmechado', 'Mazorca', 'Tocineta'],
-    agregar: [
-
-      {
-        text: 'PRODUCTOS',
-        icon: 'store',
-        to: '/bodega_productos'
-      },
-      {
-        text: 'AGREGAR',
-        to: '/Agregar'
-      },
-      {
-        text: 'SACAR',
-        to: '/Sacar'
-      },
-      {
-        text: 'SALIR',
-        to: '/'
-      }
-    ]
-  }),
+    Producto: ['Carne:'+' 2',],
+   
+ }),
   created () {
     this.$store.commit('SET_LAYOUT', 'administrador-layout')
-  },
-  props: {
-    source: String
   }
+
 }
 </script>
 <style scoped>

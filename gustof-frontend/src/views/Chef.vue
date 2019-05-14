@@ -44,7 +44,6 @@
 
 <script>
 
-
 export default {
   el: '#appTareas',
   data () {
