@@ -98,6 +98,7 @@
   </v-data-table>
  </table>
  </v-flex >
+ <v-btn color="success">Enviar</v-btn>
 
     <v-footer app fixed>
       <span>&copy; 2017</span>
@@ -203,5 +204,13 @@ table.v-table tbody td, table.v-table tbody th {
 .editar{
   display: inline-block;
   margin:8px 0 0 40px;
+}
+container {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    margin: auto;
+    padding: 0pxw;
+    width: 100%;
 }
 </style>

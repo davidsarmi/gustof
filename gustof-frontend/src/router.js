@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Administrador from '@/views/administrador/inicio.vue'
 import bodega from '@/views/administrador/bodega.vue'
 import mesas from '@/views/Mesas.vue'
+import mesasLogin from '@/views/mesasL.vue'
 import Chef from '@/views/Chef.vue'
 import Login from '@/views/Login.vue'
 import asdasd from '@/views/administrador/perfil.vue'
@@ -45,6 +46,11 @@ export default new Router({
       path: '/mesas',
       name: 'mesas',
       component: mesas
+    },
+    {
+      path: '/mesaslogin',
+      name: 'mesaslogin',
+      component: mesasLogin
     },
     {
       path: '/administrador/perfil',
@@ -120,6 +126,6 @@ export default new Router({
       path: '/cajafactura',
       name: 'cajafactura',
       component: CajaFactura
-    }
+    }    
   ]
 })
