@@ -9,9 +9,9 @@ const router = new Router()
 
 router.post('/', async function (req, res, next) {
   try {
-    const { userNew } = req.body
-    const { User } = await db()
-    const result = await User.createUser(userNew)
+    const { detailEntryNew } = req.body
+    const { DetailEntry } = await db()
+    const result = await DetailEntry.createDetailEntry(detailEntryNew)
     res.send(result)
   } catch (err) {
     next(err)
@@ -21,9 +21,9 @@ router.post('/', async function (req, res, next) {
 router.put('/:uuid', async function (req, res, next) {
   try {
     const { uuid } = req.params
-    const { userUpdate } = req.body
-    const { User } = await db()
-    const result = await User.updateUser(uuid, userUpdate)
+    const {detailEntryUpdate } = req.body
+    const { DetailEntry } = await db()
+    const result = await DetailEntry.updateDetailEntry(uuid, detailEntryUpdate)
     res.send(result)
   } catch (err) {
     next(err)
@@ -32,8 +32,8 @@ router.put('/:uuid', async function (req, res, next) {
 router.delete('/:uuid', async function (req, res, next) {
   try {
     const { uuid } = req.params
-    const { User } = await db()
-    const result = await User.deletUser(uuid)
+    const { DetailEntry } = await db()
+    const result = await DetailEntry.deletDetailEntry(uuid)
     res.send(result)
   } catch (err) {
     next(err)
@@ -41,8 +41,8 @@ router.delete('/:uuid', async function (req, res, next) {
 })
 router.get('/', async function (req, res, next) {
   try {
-    const { User } = await db()
-    const result = await User.findAllUser()
+    const { DetailEntry } = await db()
+    const result = await DetailEntry.findAllDetailEntry()
     res.send(result)
   } catch (err) {
     next(err)
@@ -51,8 +51,8 @@ router.get('/', async function (req, res, next) {
 router.get('/:uuid', async function (req, res, next) {
   try {
     const { uuid } = req.params
-    const { User } = await db()
-    const result = await User.findUserUuid(uuid)
+    const { DetailEntry } = await db()
+    const result = await DetailEntry.findDetailEntryUuid(uuid)
     res.send(result)
   } catch (err) {
     next(err)

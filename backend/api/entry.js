@@ -9,9 +9,9 @@ const router = new Router()
 
 router.post('/', async function (req, res, next) {
   try {
-    const { userNew } = req.body
-    const { User } = await db()
-    const result = await User.createUser(userNew)
+    const { entryNew } = req.body
+    const { Entry } = await db()
+    const result = await Entry.createEntry(entryNew)
     res.send(result)
   } catch (err) {
     next(err)
@@ -21,9 +21,9 @@ router.post('/', async function (req, res, next) {
 router.put('/:uuid', async function (req, res, next) {
   try {
     const { uuid } = req.params
-    const { userUpdate } = req.body
-    const { User } = await db()
-    const result = await User.updateUser(uuid, userUpdate)
+    const { entryUpdate } = req.body
+    const { Entry } = await db()
+    const result = await Entry.updateEntry(uuid, entryUpdate)
     res.send(result)
   } catch (err) {
     next(err)
@@ -32,8 +32,8 @@ router.put('/:uuid', async function (req, res, next) {
 router.delete('/:uuid', async function (req, res, next) {
   try {
     const { uuid } = req.params
-    const { User } = await db()
-    const result = await User.deletUser(uuid)
+    const { Entry } = await db()
+    const result = await Entry.deletEntry(uuid)
     res.send(result)
   } catch (err) {
     next(err)
@@ -41,8 +41,8 @@ router.delete('/:uuid', async function (req, res, next) {
 })
 router.get('/', async function (req, res, next) {
   try {
-    const { User } = await db()
-    const result = await User.findAllUser()
+    const { Entry } = await db()
+    const result = await Entry.findAllEntry()
     res.send(result)
   } catch (err) {
     next(err)
@@ -51,8 +51,8 @@ router.get('/', async function (req, res, next) {
 router.get('/:uuid', async function (req, res, next) {
   try {
     const { uuid } = req.params
-    const { User } = await db()
-    const result = await User.findUserUuid(uuid)
+    const { Entry} = await db()
+    const result = await Entry.findEntryUuid(uuid)
     res.send(result)
   } catch (err) {
     next(err)

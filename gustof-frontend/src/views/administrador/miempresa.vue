@@ -1,23 +1,76 @@
 <template>
-  <v-container grid-list-md 
-  class="nombre"
-  >
-    <h1>Mi Empresa</h1>
-    <v-layout row wrap>
-      <v-flex xs3 sm3 md>
-        <img src="@/assets/gustofimagen.jpg" class="img-responsive" alt="" style="width:400px ">
-      </v-flex>
-      <v-btn color="success">Success</v-btn>
-    </v-layout>
-  </v-container>
+  <v-layout>
+    <v-flex xs5 order-lg2>
+            <v-card-text  class="transparent text-xs-center">
+              <h1 class="color"><strong>MI EMPRESA</strong></h1><br>
+            </v-card-text>
+             <br>
+            <material-card class="v-card-profile">
+              <v-avatar class=" text--center mx-auto d-block" >
+                <img class="imagenq" :src="imgUrl" >
+              </v-avatar>
+              <v-card-text class="margen text-xs-center">
+                  <v-form name="formulario" method="post" enctype="form-data">
+                    <v-btn  @click='pickFile' v-model='imageName' prepend-icon='attach_file'>Selecciona tu foto de perfil</v-btn>
+                      <input type="file" style="display: none" ref="image" accept="image/*" @change="onFilePicked">
+                  </v-form>
+              </v-card-text>
+            </material-card>
+        </v-flex>
+  </v-layout>
 </template>
 <script>
+export default {
+  data: () => ({
+    imageName: ''
 
+  }),
+  created () {
+    this.$store.commit('SET_LAYOUT', 'administrador-layout')
+  },
+  methods: {
+    pickFile () {
+      this.$refs.image.click()
+    },
+    onFilePicked (e) {
+      const files = e.target.files
+      if (files[0] !== undefined) {
+        this.imageName = files[0].name
+        if (this.imageName.lastIndexOf('.') <= 0) {
+          return
+        }
+        const fr = new FileReader()
+        fr.readAsDataURL(files[0])
+        fr.addEventListener('load', () => {
+          this.imgUrl = fr.result
+        })
+      } else {
+        this.imageName = ''
+        this.imageUrl = ''
+      }
+    }
+  }
+}
 </script>
-<style lang="stylus" scoped>
-.nombre{
-  margin-top: -300px !important
+<style lang="stylus">
+  .imagenq{
+  width 200px !important
+  height 200px !important
+}
+.margen{
+  margin 50px 0px
+}
+</style>>
+<style scoped>
+.headline{
+  vertical-align: top;
+  margin-top: -100px;
+}
+.layout{
+  vertical-align: top;
+}
+.color{
+  color: red;
+  size: 25px;
 }
 </style>
-
-
