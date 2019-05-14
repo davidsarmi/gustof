@@ -25,7 +25,6 @@ module.exports = {
       res.status(code).send({ error: message })
       return
     }
-
     next()
   }
 }
