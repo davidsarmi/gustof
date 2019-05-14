@@ -13,7 +13,13 @@ const {
   company,
   bill,
   entry,
-  detailEntry
+  detailEntry,
+  addOrder,
+  detailOrder,
+  ingredients,
+  product,
+  rawMaterial,
+  recipe
 } = require("@gustof/api");
 const { getLogger, logHandler, terminate } = require("@gustof/utils");
 
@@ -34,7 +40,14 @@ app.use("/order", order);
 app.use("/company", company);
 app.use("/bill", bill);
 app.use("/entry", entry);
-app.use("/detailEntry", detailEntry)
+app.use("/detailEntry", detailEntry);
+app.use("/addOrder", addOrder);
+app.use("/detailOrder", detailOrder);
+app.use("/ingredients", ingredients);
+app.use("/product", product);
+app.use("/rawMaterial", rawMaterial);
+app.use("/recipe", recipe);
+
 app.use(errorHandler);
 
 module.exports = server;

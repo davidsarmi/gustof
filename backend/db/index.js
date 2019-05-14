@@ -8,8 +8,14 @@ const setupTable = require("./lib/table");
 const setupOrder = require("./lib/order");
 const setupCompany = require("./lib/company");
 const setupBill = require("./lib/bill");
-const setupEntry=require("./lib/entry")
-const setupDetailEntry =require("./detailEntry")
+const setupEntry = require("./lib/entry");
+const setupDetailEntry = require("./lib/detailEntry");
+const setupAddOrder = require("./lib/addOrder");
+const setupDetailOrder = require("./lib/detailOrder");
+const setupIngredients = require("./lib/ingredients");
+const setupProduct = require("./lib/product");
+const setupRawMaterial = require("./lib/rawMaterial");
+const setupRecipe = require("./lib/recipe");
 
 // modelos
 const setupDatabase = require("./lib/db");
@@ -97,8 +103,14 @@ module.exports = async function() {
   const Order = setupOrder(OrderModel);
   const Company = setupCompany(CompanyModel);
   const Bill = setupBill(BillModel);
-  const Entry = setupEntry(EntryModel)
-  const DetailEntry=setupDetailEntry(DetailEntryModel)
+  const Entry = setupEntry(EntryModel);
+  const DetailEntry = setupDetailEntry(DetailEntryModel);
+  const AddOrder = setupAddOrder(AddOrderModel);
+  const DetailOrder = setupDetailOrder(DetailOrderModel);
+  const Ingredients = setupIngredients(IngredientsModel);
+  const Product = setupProduct(ProductModel);
+  const RawMaterial = setupRawMaterial(RawMaterialModel);
+  const Recipe = setupRecipe(RecipeModel);
 
   return {
     async setup() {
@@ -110,6 +122,12 @@ module.exports = async function() {
     Company,
     Bill,
     Entry,
-    DetailEntry
+    DetailEntry,
+    AddOrder,
+    DetailOrder,
+    Ingredients,
+    Product,
+    RawMaterial,
+    Recipe
   };
 };

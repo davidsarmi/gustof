@@ -6,8 +6,14 @@ const table = require("./table");
 const order = require("./order");
 const company = require("./company");
 const bill = require("./bill");
-const entry = require("./entry")
-const detailEntry=require("./detailEntry")
+const entry = require("./entry");
+const detailEntry = require("./detailEntry");
+const addOrder = require("./addOrder");
+const detailOrder = require("./detailOrder");
+const ingredients = require("./ingredients");
+const product = require("./product");
+const rawMaterial = require("./rawMaterial");
+const recipe = require("./recipe");
 
 const log = getLogger(__dirname, __filename);
 // prueba
@@ -19,8 +25,14 @@ module.exports = {
       order: "/order",
       company: "/company",
       bill: "/bill",
-      entry:"/entry",
-      detailEntry:"/detailEntry"
+      entry: "/entry",
+      detailEntry: "/detailEntry",
+      addOrder: "/addOrder",
+      detailOrder: "/detailOrder",
+      ingredients: "/ingredients",
+      product: "/product",
+      rawMaterial: "/rawMaterial",
+      recipe: "/recipe"
     });
   },
   user,
@@ -30,6 +42,13 @@ module.exports = {
   bill,
   entry,
   detailEntry,
+  addOrder,
+  detailOrder,
+  ingredients,
+  product,
+  rawMaterial,
+  recipe,
+
   errorHandler(err, req, res, next) {
     if (err) {
       let code = err.code || 500;
