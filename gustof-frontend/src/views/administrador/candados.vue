@@ -12,12 +12,13 @@
     </v-snackbar>
     <v-form ref="form" @submit.prevent="submit">
       <v-container grid-list-xl fluid style="border: solid #4A148C 10px">
+        <v-btn color="#4A148C " class="" >Registrar Empleado</v-btn>
         <v-layout wrap>
           <v-flex xs12 sm6>
             <v-text-field
               v-model="form.first"
               :rules="rules.name"
-              color=#4A148C
+              color="#4A148C"
               label="Nombres"
               required
             ></v-text-field>
@@ -26,16 +27,16 @@
             <v-text-field
               v-model="form.last"
               :rules="rules.name"
-              color=#4A148C
+              color="#4A148C"
               label="Apellidos"
               required
             ></v-text-field>
           </v-flex>
           <v-flex xs12 sm6>
             <v-select
-              v-model="form.Cargo"
-              :items="Cargo"
-              :rules="rules.Cargo"
+              v-model="form.favoriteAnimal"
+              :items="animals"
+              :rules="rules.animal"
               color="#4A148C"
               label="Cargo"
               required
@@ -111,7 +112,7 @@
         <v-btn
           :disabled="!formIsValid"
           flat
-          color="primary"
+          color="#4A148C"
           type="submit"
         >Register</v-btn>
       </v-card-actions>
@@ -159,7 +160,7 @@ export default {
     const defaultForm = Object.freeze({
       first: '',
       last: '',
-      Cargo: '',
+      favoriteAnimal: '',
       documento: '',
       docume: '',
       telefono: '',
@@ -172,16 +173,16 @@ export default {
       form: Object.assign({}, defaultForm),
       rules: {
         show1: false,
+        animal: [val => (val || '').length > 0 || 'This field is required'],
         name: [val => (val || '').length > 0 || 'This field is required'],
-        Cargo: [val => (val || '').length > 0 || 'This field is required'],
         documento: [val => (val || '').length > 0 || 'This field is required'],
         docume: [val => (val || '').length > 0 || 'This field is required'],
         telefono: [val => (val || '').length > 0 || 'This field is required'],
         correo: [ v => !!v || 'E-mail is required', v => /.+@.+/.test(v) || 'E-mail must be valid'],
         contraseña: [val => (val || '').length > 0 || 'This field is required']
       },
-      Cargo: ['Administrador', 'Mesero', 'Administrador de Caja', 'Cheff'],
-      documento: ['CC EXTRAJERA', 'CC'],
+      documento: ['CC', 'TI'],
+      animals: ['Administrador', 'Mesero', 'Chef', 'Administrador de Caja'],
       conditions: false,
       content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.`,
       snackbar: false,
@@ -195,7 +196,8 @@ export default {
       return (
         this.form.first &&
           this.form.last &&
-          this.form.Cargo &&
+          this.form.favoriteAnimal &&
+          this.form.documento &&
           this.form.docume &&
           this.form.telefono &&
           this.form.contraseña &&
