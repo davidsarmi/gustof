@@ -7,9 +7,9 @@
           <v-text-field
             prepend-icon="person"
             name="login"
-            label="Nombre"
+            label="Cedula"
             type="text"
-            v-model="nombre"
+            v-model="cedula"
           ></v-text-field>
           <v-text-field
             prepend-icon="lock"
@@ -17,7 +17,7 @@
             label="Contraseña"
             id="password"
             type="password"
-            v-model="password"
+            v-model="contrasena"
           ></v-text-field>
         </v-form>
       </v-card-text>
@@ -36,6 +36,8 @@ export default {
     return {
       nombre: '',
       password: '',
+      cedula: "",
+      contrasena: "",
       drawer: null,
       logo
     }
@@ -53,6 +55,13 @@ export default {
         }
       })
       console.log(res.data)
+    async registro() {
+      const res = await api.post("/user/singin", { cedula: this.cedula, contrasena: this.contrasena })
+      console.log(res.data)
+      if(res.data.user.rol === 'chef'){
+        this.$router.push('mesas')
+      }
+      this.$router.push('mesas')
     }
   },
   created () {

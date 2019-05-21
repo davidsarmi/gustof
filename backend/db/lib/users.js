@@ -1,7 +1,9 @@
 'use strict'
+const { password } = require('@gustof/utils')
 
 function setupUser (userModel) {
   async function createUser (user) {
+    user.contrasena = password.generateHash(user.contrasena)
     const result = await userModel.create(user)
     return result.toJSON()
   }
@@ -22,13 +24,37 @@ function setupUser (userModel) {
     const cond = { where: { uuid } }
     return userModel.findOne(cond)
   }
+  async function singin(credentials){
+    let dataFail = 'datos incorrectos'
+    const cond = { where : { cedula: credentials.cedula } }
+    const user = await userModel.findOne(cond)
+    if (!user) {
+      return {
+        message: dataFail,
+        login: false
+      }
+    }
+    if (!(password.compareHash(credentials.contrasena, user.contrasena))) {
+      return {
+        message: dataFail,
+        login: false
+      }
+    }
+    return {
+      message: `Bienvenido`,
+      user,
+      login: true
+    }
+
+  }
 
   return {
     createUser,
     updateUser,
     deletUser,
     findAllUser,
-    findUserUuid
+    findUserUuid,
+    singin
   }
 }
 
