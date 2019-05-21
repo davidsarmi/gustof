@@ -43,6 +43,7 @@
 </template>
 
 <script>
+import api from '@/plugins/service'
 
 export default {
   el: '#appTareas',
@@ -66,8 +67,15 @@ export default {
     EliminarTarea: function () {
       var index = this.listaTareas.indexof(tarea)
       this.listaTareas.splice(index, 1)
+    },
+    async getOrders() {
+      const { data } = await api.get('/order')
+      console.log(data)
     }
-  }
+  },
+  created() {
+    this.getOrders()
+  },
 }
 
 </script>

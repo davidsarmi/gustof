@@ -17,6 +17,17 @@ router.post('/', async function (req, res, next) {
     next(err)
   }
 })
+router.post('/singin', async function (req, res, next) {
+  try {
+    const singin = req.body
+    console.log(singin)
+    const { User } = await db()
+    const result = await User.singin(singin)
+    res.send(result)
+  } catch (err) {
+    next(err)
+  }
+})
 
 router.put('/:uuid', async function (req, res, next) {
   try {

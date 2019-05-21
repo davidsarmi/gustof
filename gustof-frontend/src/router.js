@@ -126,6 +126,6 @@ export default new Router({
       path: '/cajafactura',
       name: 'cajafactura',
       component: CajaFactura
-    }    
+    }  
   ]
 })

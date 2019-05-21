@@ -7,9 +7,9 @@
           <v-text-field
             prepend-icon="person"
             name="login"
-            label="Nombre"
+            label="Cedula"
             type="text"
-            v-model="nombre"
+            v-model="cedula"
           ></v-text-field>
           <v-text-field
             prepend-icon="lock"
@@ -17,7 +17,7 @@
             label="Contraseña"
             id="password"
             type="password"
-            v-model="password"
+            v-model="contrasena"
           ></v-text-field>
         </v-form>
       </v-card-text>
@@ -34,25 +34,20 @@ import logo from "@/assets/gustof.png";
 export default {
   data: function() {
     return {
-      nombre: "",
-      password: "",
+      cedula: "",
+      contrasena: "",
       drawer: null,
       logo
     };
   },
   methods: {
     async registro() {
-      const res = await api.post("/user", {
-        userNew: {
-          nombre: this.nombre,
-          sexo: "f",
-          apellido: "quiroga",
-          cedula: "12344534",
-          email: "dcds",
-          contrasena: this.password
-        }
-      });
-      console.log(res.data);
+      const res = await api.post("/user/singin", { cedula: this.cedula, contrasena: this.contrasena })
+      console.log(res.data)
+      if(res.data.user.rol === 'chef'){
+        this.$router.push('mesas')
+      }
+      this.$router.push('mesas')
     }
   },
   created() {
