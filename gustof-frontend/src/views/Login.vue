@@ -1,11 +1,24 @@
 <template>
-  <v-flex xs12 sm8 md4 >
+  <v-flex xs12 sm8 md4>
     <v-card class="elevation-12 transparent">
-        <v-img :src="logo" class="black"/>
+      <v-img :src="logo" class="black"/>
       <v-card-text>
         <v-form>
-          <v-text-field prepend-icon="person" name="login" label="Nombre" type="text" v-model="nombre"></v-text-field>
-          <v-text-field  prepend-icon="lock" name="password" label="Contraseña" id="password" type="password" v-model="password"></v-text-field>
+          <v-text-field
+            prepend-icon="person"
+            name="login"
+            label="Cedula"
+            type="text"
+            v-model="cedula"
+          ></v-text-field>
+          <v-text-field
+            prepend-icon="lock"
+            name="password"
+            label="Contraseña"
+            id="password"
+            type="password"
+            v-model="contrasena"
+          ></v-text-field>
         </v-form>
       </v-card-text>
       <v-card-actions>
@@ -20,26 +33,35 @@ import api from '@/plugins/service'
 import logo from '@/assets/gustof.png'
 export default {
   data: function () {
-    return ({
+    return {
       nombre: '',
-      password:'',
+      password: '',
+      cedula: "",
+      contrasena: "",
       drawer: null,
       logo
-    })
+    }
   },
   methods: {
-    async registro() {
-      const res = await api.post('/user',{
+    async registro () {
+      const res = await api.post('/user', {
         userNew: {
           nombre: this.nombre,
-          sexo: "f",
-          apellido: "quiroga",
-          cedula: "12344534",
-          email: "dcds",
+          sexo: 'f',
+          apellido: 'quiroga',
+          cedula: '12344534',
+          email: 'dcds',
           contrasena: this.password
         }
       })
       console.log(res.data)
+    async registro() {
+      const res = await api.post("/user/singin", { cedula: this.cedula, contrasena: this.contrasena })
+      console.log(res.data)
+      if(res.data.user.rol === 'chef'){
+        this.$router.push('mesas')
+      }
+      this.$router.push('mesas')
     }
   },
   created () {
@@ -48,9 +70,7 @@ export default {
   props: {
     source: String
   }
-
 }
 </script>
 <style>
-
 </style>

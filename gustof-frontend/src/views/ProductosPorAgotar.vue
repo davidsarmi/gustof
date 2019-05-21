@@ -11,11 +11,11 @@
 </template>
 <script>
 export default {
-   data: () => ({
+  data: () => ({
     drawer: true,
-    ProductosporA: ['Carne:'+' 2',],
-   
- }),
+    ProductosporA: ['Carne:' + ' 2']
+
+  }),
   created () {
     this.$store.commit('SET_LAYOUT', 'administrador-layout')
   },
