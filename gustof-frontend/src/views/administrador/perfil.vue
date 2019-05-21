@@ -27,6 +27,9 @@
           <v-flex xs12 sm6>
             <v-text-field v-model="password" type="password" label="Contraseña"></v-text-field>
           </v-flex>
+          <v-flex xs12 sm6>
+            <v-text-field v-model="rol" color="#4A148C" label="rol" type="text"></v-text-field>
+          </v-flex>
           <v-flex xs12>
             <v-checkbox v-model="form.terms" color="#4A148C">
               <template v-slot:label>
@@ -86,8 +89,7 @@ export default {
       cedula: "",
       email: "",
       password: "",
-
-      drawer: null
+      rol: ""
     };
   },
   methods: {
@@ -107,7 +109,8 @@ export default {
           apellido: this.apellido,
           cedula: this.cedula,
           email: this.email,
-          contrasena: this.password
+          contrasena: this.password,
+          rol: this.rol
         }
       });
       console.log(res.data);
