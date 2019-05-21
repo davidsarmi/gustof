@@ -18,18 +18,17 @@
       <v-badge class="pp"
             v-model="show"
             color="purple"
-            left>          
+            left>
           <template v-slot:badge>
               <span>!</span>
           </template>
           <v-icon @click="productosP('/productos_por_agotar')"
-            large 
+            large
             color="grey lighten-1">
             notifications
           </v-icon>
       </v-badge>
 
-     
   </div>
 
 </template>
@@ -42,13 +41,13 @@ export default {
   props: {
     source: String
   },
-  
+
   methods: {
     productosA (value) {
-       this.$router.push(value)
+      this.$router.push(value)
     },
-     productosP (value) {
-       this.$router.push(value)
+    productosP (value) {
+      this.$router.push(value)
     }
   }
 
