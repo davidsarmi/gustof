@@ -3,7 +3,7 @@
           <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
   <v-app id="inspire" dark>
     <v-navigation-drawer
-      clipped
+      clippedgit 
       fixed
       v-model="drawer"
       app
