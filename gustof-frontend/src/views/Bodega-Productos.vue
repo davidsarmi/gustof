@@ -10,13 +10,13 @@
 </div>
 </template>
 <script>
-export default { 
-  
- data: () => ({
+export default {
+
+  data: () => ({
     drawer: true,
-    Productos: ['Carne: '+'2',],
-   
- }),
+    Productos: ['Carne: ' + '2']
+
+  }),
   created () {
     this.$store.commit('SET_LAYOUT', 'administrador-layout')
   },

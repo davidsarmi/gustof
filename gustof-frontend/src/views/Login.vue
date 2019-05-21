@@ -29,39 +29,39 @@
   </v-flex>
 </template>
 <script>
-import api from "@/plugins/service";
-import logo from "@/assets/gustof.png";
+import api from '@/plugins/service'
+import logo from '@/assets/gustof.png'
 export default {
-  data: function() {
+  data: function () {
     return {
-      nombre: "",
-      password: "",
+      nombre: '',
+      password: '',
       drawer: null,
       logo
-    };
-  },
-  methods: {
-    async registro() {
-      const res = await api.post("/user", {
-        userNew: {
-          nombre: this.nombre,
-          sexo: "f",
-          apellido: "quiroga",
-          cedula: "12344534",
-          email: "dcds",
-          contrasena: this.password
-        }
-      });
-      console.log(res.data);
     }
   },
-  created() {
-    this.$store.commit("SET_LAYOUT", "login-layout");
+  methods: {
+    async registro () {
+      const res = await api.post('/user', {
+        userNew: {
+          nombre: this.nombre,
+          sexo: 'f',
+          apellido: 'quiroga',
+          cedula: '12344534',
+          email: 'dcds',
+          contrasena: this.password
+        }
+      })
+      console.log(res.data)
+    }
+  },
+  created () {
+    this.$store.commit('SET_LAYOUT', 'login-layout')
   },
   props: {
     source: String
   }
-};
+}
 </script>
 <style>
 </style>

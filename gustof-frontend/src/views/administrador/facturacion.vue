@@ -91,7 +91,7 @@ export default {
   created () {
     this.$store.commit('SET_LAYOUT', 'administrador-layout')
   },
-   data () {
+  data () {
     return {
       desserts: [
         {

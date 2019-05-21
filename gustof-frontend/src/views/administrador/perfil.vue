@@ -73,34 +73,34 @@
   </v-card>
 </template>
 <script>
-import api from "@/plugins/service";
+import api from '@/plugins/service'
 
 export default {
-  data: function() {
-    const defaultForm = Object.freeze({});
+  data: function () {
+    const defaultForm = Object.freeze({})
     return {
       form: Object.assign({}, defaultForm),
-      nombre: "",
-      sexo: "",
-      apellido: "",
-      cedula: "",
-      email: "",
-      password: "",
+      nombre: '',
+      sexo: '',
+      apellido: '',
+      cedula: '',
+      email: '',
+      password: '',
 
       drawer: null
-    };
+    }
   },
   methods: {
-    resetForm() {
-      this.form = Object.assign({}, this.defaultForm);
-      this.$refs.form.reset();
+    resetForm () {
+      this.form = Object.assign({}, this.defaultForm)
+      this.$refs.form.reset()
     },
-    submit() {
-      this.snackbar = true;
-      this.resetForm();
+    submit () {
+      this.snackbar = true
+      this.resetForm()
     },
-    async registrar() {
-      const res = await api.post("/user", {
+    async registrar () {
+      const res = await api.post('/user', {
         userNew: {
           nombre: this.nombre,
           sexo: this.sexo,
@@ -109,19 +109,19 @@ export default {
           email: this.email,
           contrasena: this.password
         }
-      });
-      console.log(res.data);
+      })
+      console.log(res.data)
     }
   },
-  created() {
-    this.$store.commit("SET_LAYOUT", "administrador-layout");
+  created () {
+    this.$store.commit('SET_LAYOUT', 'administrador-layout')
   },
   props: {
     source: String
   },
 
   computed: {
-    formIsValid() {
+    formIsValid () {
       return (
         this.form.first &&
         this.form.last &&
@@ -131,8 +131,8 @@ export default {
         this.form.telefono &&
         this.form.contraseña &&
         this.form.terms
-      );
+      )
     }
   }
-};
+}
 </script>

@@ -1,12 +1,13 @@
 <template>
 <div id="app">
           <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
-  <v-app id="inspire" dark>
+  <v-app id="inspire" ligth>
     <v-navigation-drawer
       clipped
       fixed
       v-model="drawer"
       app
+      dark
     >
       <v-list dense>
         <v-list-tile
@@ -123,10 +124,20 @@ export default {
     color: #4A148C;
 }
 .v-list__tile__content{
-  color: black;
+  color: rgb(143, 109, 156);
 }
 .v-list--dense .v-list__tile{
   font-size: 15px;
   font-family:fantasy;
+}
+.v-btn .v-btn__content .v-icon{
+  color: white;
+}
+.v-toolbar__content, .v-toolbar__extension{
+  background-color: black;
+}
+.theme--light.v-footer {
+    background: darkgray;
+    color: white;
 }
 </style>
