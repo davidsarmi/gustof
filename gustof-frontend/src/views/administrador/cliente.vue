@@ -12,6 +12,7 @@
     </v-snackbar>
     <v-form ref="form" @submit.prevent="submit">
       <v-container grid-list-xl fluid style="border: solid #4A148C 10px">
+        <v-btn color="#4A148C " class="" >Registrar Cliente</v-btn>
         <v-layout wrap>
           <v-flex xs12 sm6>
             <v-text-field
