@@ -27,15 +27,13 @@
           <v-flex xs12 sm6>
             <v-text-field v-model="password" type="password" label="Contraseña"></v-text-field>
           </v-flex>
-           <v-autocomplete
-              ref="Rol"
-              v-model="rol"
-              :rules="[() => !!rol || '']"
-              :items="roles"
-              label="rol"
-              placeholder="Select..."
-              required
-            ></v-autocomplete>
+         <v-flex xs12 sm6 d-flex>
+        <v-select
+          :items="rol"
+          label="Rol"
+          solo
+        ></v-select>
+      </v-flex>
         </v-layout>
       </v-container>
       <v-card-actions>
@@ -71,6 +69,7 @@ import api from '@/plugins/service'
 
 export default {
   data: function () {
+    
     const defaultForm = Object.freeze({})
     return {
       form: Object.assign({}, defaultForm),
@@ -83,7 +82,14 @@ export default {
       rol: ''
     }
     
+    
   },
+  data: () => ({
+    drawer: true,
+   rol:['Administrador','Caja','Mesero','Chef'],
+
+  }),
+  
   methods: {
     resetForm () {
       this.form = Object.assign({}, this.defaultForm)
