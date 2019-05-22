@@ -193,7 +193,4 @@ export default {
   height: fit-content;
   width: fit-content
 }
-.v-toolbar__content > *:first-child, .v-toolbar__extension > *:first-child{
-  color: white;
-}
 </style>
