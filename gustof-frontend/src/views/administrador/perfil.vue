@@ -27,24 +27,15 @@
           <v-flex xs12 sm6>
             <v-text-field v-model="password" type="password" label="Contraseña"></v-text-field>
           </v-flex>
-          <v-flex xs12 sm6>
-            <v-text-field v-model="rol" color="#4A148C" label="rol" type="text"></v-text-field>
-          </v-flex>
-          <v-flex xs12>
-            <v-checkbox v-model="form.terms" color="#4A148C">
-              <template v-slot:label>
-                <div @click.stop=" drawer = !drawer">
-                  Do you accept the
-                  <a href="javascript:;" @click.stop="terms = true">terms</a>
-                  and
-                  <a
-                    href="javascript:;"
-                    @click.stop="conditions = true"
-                  >conditions?</a>
-                </div>
-              </template>
-            </v-checkbox>
-          </v-flex>
+           <v-autocomplete
+              ref="Rol"
+              v-model="rol"
+              :rules="[() => !!rol || '']"
+              :items="roles"
+              label="rol"
+              placeholder="Select..."
+              required
+            ></v-autocomplete>
         </v-layout>
       </v-container>
       <v-card-actions>
@@ -91,6 +82,7 @@ export default {
       password: '',
       rol: ''
     }
+    
   },
   methods: {
     resetForm () {
@@ -139,3 +131,4 @@ export default {
   }
 }
 </script>
+ 
