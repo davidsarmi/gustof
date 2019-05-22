@@ -1,11 +1,11 @@
-'use strict'
+"use strict";
 
-const Sequelize = require('sequelize')
-const setupDatabase = require('../lib/db')
+const Sequelize = require("sequelize");
+const setupDatabase = require("../lib/db");
 
-module.exports = function setupMetricModel (config) {
-  const sequelize = setupDatabase(config)
-  return sequelize.define('User', {
+module.exports = function setupMetricModel(config) {
+  const sequelize = setupDatabase(config);
+  return sequelize.define("User", {
     uuid: {
       type: Sequelize.CHAR(36),
       defaultValue: Sequelize.UUIDV4
@@ -15,7 +15,7 @@ module.exports = function setupMetricModel (config) {
       allowNull: false
     },
     sexo: {
-      type: Sequelize.ENUM('F', 'M'),
+      type: Sequelize.ENUM("F", "M"),
       allowNull: false
     },
     apellido: {
@@ -33,6 +33,10 @@ module.exports = function setupMetricModel (config) {
     contrasena: {
       type: Sequelize.TEXT,
       allowNull: false
+    },
+    rol: {
+      type: Sequelize.TEXT,
+      allowNull: false
     }
-  })
-}
+  });
+};

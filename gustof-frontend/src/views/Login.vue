@@ -31,6 +31,7 @@
 <script>
 import api from "@/plugins/service";
 import logo from "@/assets/gustof.png";
+import CajaFacturaVue from "./CajaFactura.vue";
 export default {
   data: function() {
     return {
@@ -42,12 +43,20 @@ export default {
   },
   methods: {
     async registro() {
-      const res = await api.post("/user/singin", { cedula: this.cedula, contrasena: this.contrasena })
-      console.log(res.data)
-      if(res.data.user.rol === 'chef'){
-        this.$router.push('mesas')
+      const res = await api.post("/user/singin", {
+        cedula: this.cedula,
+        contrasena: this.contrasena
+      });
+      console.log(res.data);
+      if (res.data.user.rol === "chef") {
+        this.$router.push("chef");
+      } else if (res.data.user.rol == "mesero") {
+        this.$router.push("mesas");
+      } else if (res.data.user.rol == "caja") {
+        this.$router.push("CajaFactura");
+      } else {
+        this.$router.push("administrador");
       }
-      this.$router.push('mesas')
     }
   },
   created() {
