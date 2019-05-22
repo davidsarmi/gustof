@@ -31,7 +31,7 @@
       </v-btn>
     </v-toolbar>
     <v-footer app fixed>
-      <span>&copy; 2019</span>
+      <span>&copy; GUSTOF</span>
     </v-footer>
     <v-content>
         <v-container fill-height>
