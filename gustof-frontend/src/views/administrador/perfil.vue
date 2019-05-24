@@ -5,7 +5,7 @@
       <v-icon dark>check_circle</v-icon>
     </v-snackbar>
     <v-form ref="form" @submit.prevent="submit">
-      <v-container grid-list-xl fluid style="border: solid #4A148C 10px">
+      <v-container grid-list-xl fluid style="border: solid #000 10px">
         <v-layout wrap>
           <v-flex xs12 sm6>
             <v-text-field v-model="nombre" color="#4A148C" label="Nombres" type="text"></v-text-field>
@@ -27,21 +27,13 @@
           <v-flex xs12 sm6>
             <v-text-field v-model="password" type="password" label="Contraseña"></v-text-field>
           </v-flex>
-          <v-flex xs12>
-            <v-checkbox v-model="form.terms" color="#4A148C">
-              <template v-slot:label>
-                <div @click.stop=" drawer = !drawer">
-                  Do you accept the
-                  <a href="javascript:;" @click.stop="terms = true">terms</a>
-                  and
-                  <a
-                    href="javascript:;"
-                    @click.stop="conditions = true"
-                  >conditions?</a>
-                </div>
-              </template>
-            </v-checkbox>
-          </v-flex>
+         <v-flex xs12 sm6 d-flex>
+        <v-select
+          :items="rol"
+          label="Rol"
+          solo
+        ></v-select>
+      </v-flex>
         </v-layout>
       </v-container>
       <v-card-actions>
@@ -77,6 +69,7 @@ import api from '@/plugins/service'
 
 export default {
   data: function () {
+    
     const defaultForm = Object.freeze({})
     return {
       form: Object.assign({}, defaultForm),
@@ -86,10 +79,17 @@ export default {
       cedula: '',
       email: '',
       password: '',
-
-      drawer: null
+      rol: ''
     }
+    
+    
   },
+  data: () => ({
+    drawer: true,
+   rol:['administrador','caja','mesero','chef'],
+
+  }),
+  
   methods: {
     resetForm () {
       this.form = Object.assign({}, this.defaultForm)
@@ -107,7 +107,8 @@ export default {
           apellido: this.apellido,
           cedula: this.cedula,
           email: this.email,
-          contrasena: this.password
+          contrasena: this.password,
+          rol: this.rol
         }
       })
       console.log(res.data)
@@ -136,3 +137,4 @@ export default {
   }
 }
 </script>
+ 

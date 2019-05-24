@@ -3,7 +3,7 @@
           <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
   <v-app id="inspire" ligth>
     <v-navigation-drawer
-      clippedgit 
+      clippedgit
       fixed
       v-model="drawer"
       app
@@ -31,7 +31,7 @@
       </v-btn>
     </v-toolbar>
     <v-footer app fixed>
-      <span>&copy; 2019</span>
+      <span>&copy; GUSTOF</span>
     </v-footer>
     <v-content>
         <v-container fill-height>
@@ -51,6 +51,11 @@ export default {
   data: () => ({
     drawer: true,
     admins: [
+      {
+        text: '',
+        icon: '',
+        to: ''
+      },
       {
         text: 'PERFIL',
         icon: 'group',
@@ -121,14 +126,17 @@ export default {
 </script>
 <style>
   .theme--dark.v-icon {
-    color: #4A148C;
+    color: white;
 }
 .v-list__tile__content{
-  color: rgb(143, 109, 156);
+  color: white;
 }
 .v-list--dense .v-list__tile{
   font-size: 15px;
   font-family:fantasy;
+}
+.v-toolbar__content{
+  height: 45px !important
 }
 .v-btn .v-btn__content .v-icon{
   color: white;

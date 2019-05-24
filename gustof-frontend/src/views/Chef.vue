@@ -68,14 +68,14 @@ export default {
       var index = this.listaTareas.indexof(tarea)
       this.listaTareas.splice(index, 1)
     },
-    async getOrders() {
+    async getOrders () {
       const { data } = await api.get('/order')
       console.log(data)
     }
   },
-  created() {
+  created () {
     this.getOrders()
-  },
+  }
 }
 
 </script>

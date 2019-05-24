@@ -1,6 +1,6 @@
 <template>
   <v-layout>
-    <v-flex >
+    <v-flex class="carta">
         <v-card-text  class="transparent text-xs-center">
           <h1 class="color"><strong>MI EMPRESA</strong></h1><br>
         </v-card-text>
@@ -37,7 +37,6 @@
                 outline
               ></v-text-field>
             </v-flex>
-
           </v-layout>
         </v-container>
       </v-form>
@@ -99,7 +98,7 @@ export default {
   vertical-align: top;
 }
 .color{
-  color: red;
+  color: black;
   size: 25px;
 }
 .v-avatar img, .v-avatar .v-icon, .v-avatar .v-image {
@@ -109,5 +108,24 @@ export default {
     display: inline-flex;
     height: inherit;
     width: inherit;
+}
+.flex.carta[data-v-853b481e] {
+  background-color: red;
+}
+.flex, .child-flex > * {
+  background-color: blanchedalmond;
+}
+.v-avatar img[data-v-853b481e], .v-avatar .v-icon[data-v-853b481e], .v-avatar .v-image[data-v-853b481e]{
+  background-color: black;
+  margin: auto;
+  margin-top: -57px;
+  margin-left: -74px;
+}
+.theme--light.v-btn:not(.v-btn--icon):not(.v-btn--flat){
+  background-color: black;
+  margin-top: 10px;
+}
+.v-btn__content {
+  color: white;
 }
 </style>

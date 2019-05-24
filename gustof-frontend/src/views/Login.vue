@@ -29,47 +29,45 @@
   </v-flex>
 </template>
 <script>
-import api from '@/plugins/service'
-import logo from '@/assets/gustof.png'
+import api from "@/plugins/service";
+import logo from "@/assets/gustof.png";
+import CajaFacturaVue from "./CajaFactura.vue";
 export default {
-  data: function () {
+  data: function() {
     return {
-      nombre: '',
-      password: '',
       cedula: "",
       contrasena: "",
       drawer: null,
       logo
-    }
+    };
   },
   methods: {
-    async registro () {
-      const res = await api.post('/user', {
-        userNew: {
-          nombre: this.nombre,
-          sexo: 'f',
-          apellido: 'quiroga',
-          cedula: '12344534',
-          email: 'dcds',
-          contrasena: this.password
-        }
-      })
     async registro() {
-      const res = await api.post("/user/singin", { cedula: this.cedula, contrasena: this.contrasena })
-      console.log(res.data)
-      if(res.data.user.rol === 'chef'){
-        this.$router.push('mesas')
+      const res = await api.post("/user/singin", {
+        cedula: this.cedula,
+        contrasena: this.contrasena
+      });
+
+      console.log(res.data);
+      if (res.data.user.rol === "chef") {
+        this.$router.push("chef");
+      } else if (res.data.user.rol == "mesero") {
+        this.$router.push("mesas");
+      } else if (res.data.user.rol == "caja") {
+        this.$router.push("CajaFactura");
+      } else {
+        this.$router.push("administrador");
       }
-      this.$router.push('mesas')
     }
   },
-  created () {
-    this.$store.commit('SET_LAYOUT', 'login-layout')
+
+  created() {
+    this.$store.commit("SET_LAYOUT", "login-layout");
   },
   props: {
     source: String
   }
-}
+};
 </script>
 <style>
 </style>
