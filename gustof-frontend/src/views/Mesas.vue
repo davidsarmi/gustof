@@ -88,24 +88,74 @@ export default {
       'sandwich',
       'mazorca',
       'patocones',
-      'alitas'
+      'alitas',
+      'choripan'
     ],
     tipos: [
-      'Artesanal',
-      'Deli tocino',
-      'Espacial',
-      'Pechugona',
-      'Master',
-      'Maxima',
-      'chilanga'
+      {
+        perros:[
+          'Queso',
+          'Perolero',
+          'Especial',
+          'Peligro de muerte',
+          'Chilango'
+        ],
+        hamburguesas: [
+          'Artesanal',
+          'Deli tocino',
+          'Espacial',
+          'Pechugona',
+          'Master',
+          'Maxima',
+          'chilanga'
+        ],
+        picada_mixta:[
+          'sencilla',
+          'especial',
+          'pitiguao'
+        ],
+        salchicha_gua_gua:[
+          'sencilla',
+          'especial'
+        ],
+        sandwich:[
+          'meloso',
+          'pollo tocino',
+          'Especial',
+          'chicamocha',
+          'vegetariano'
+        ],
+        mazorca:[
+          'surrona',
+          'sangileña'
+        ],
+        patacon:[
+          'especial',
+          'patacon'
+        ],
+        alitas:[
+          '6 porciones',
+          '12 porciones'
+        ],
+        choripan:[
+          'sencillo',
+          'choripanzaso'
+        ]
+      }
+      
     ],
     receta: [
-      'Pan',
-      'Vegetales(Lechuga, tomate)',
-      'Pepinillos',
-      'Cebolla caramelisada',
-      'carne al carbon',
-      'Queso'
+      {
+        queso:[
+          'Pan',
+          'Vegetales(Lechuga, tomate)',
+          'Pepinillos',
+          'Cebolla caramelisada',
+          'carne al carbon',
+          'Queso'
+        ]
+      }
+      
     ],
     papa: [
       'Criolla',
@@ -211,5 +261,8 @@ container {
   margin: auto;
   padding: 0pxw;
   width: 100%;
+}
+.v-list__tile__content {
+  color: #B2CDB2;
 }
 </style>
