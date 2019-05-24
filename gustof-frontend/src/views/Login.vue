@@ -54,7 +54,6 @@ export default {
           contrasena: this.password
         }
       })
-      console.log(res.data)
     async registro() {
       const res = await api.post("/user/singin", { cedula: this.cedula, contrasena: this.contrasena })
       console.log(res.data)
