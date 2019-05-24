@@ -119,7 +119,7 @@ export default {
   color: white;
 }
 .v-list__tile__content {
-  color: white;
+  color: black;
 }
 .v-list--dense .v-list__tile {
   font-size: 15px;
@@ -129,7 +129,7 @@ export default {
   height: 45px !important;
 }
 .v-btn .v-btn__content .v-icon {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .v-toolbar__content,
 .v-toolbar__extension {
@@ -137,6 +137,6 @@ export default {
 }
 .theme--light.v-footer {
   background: darkgray;
-  color: white;
+  color: rgb(112, 216, 235);
 }
 </style>
