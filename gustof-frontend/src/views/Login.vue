@@ -32,6 +32,7 @@
 import api from "@/plugins/service";
 import logo from "@/assets/gustof.png";
 import CajaFacturaVue from "./CajaFactura.vue";
+import Swal from "sweetalert2";
 export default {
   data: function() {
     return {
@@ -47,12 +48,16 @@ export default {
         cedula: this.cedula,
         contrasena: this.contrasena
       });
+      if (!res.data.login) {
+        Swal.fire("Usuario Incorrecto!", "intentalo de nuevo!", "error");
+        return;
+      }
 
       console.log(res.data);
       if (res.data.user.rol === "chef") {
         this.$router.push("chef");
       } else if (res.data.user.rol == "mesero") {
-        this.$router.push("mesas");
+        this.$router.push("mesaslogin");
       } else if (res.data.user.rol == "caja") {
         this.$router.push("CajaFactura");
       } else {
