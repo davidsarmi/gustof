@@ -152,6 +152,7 @@
   </v-card>
 </template>
 <script>
+
 export default {
   created () {
     this.$store.commit('SET_LAYOUT', 'administrador-layout')
@@ -181,7 +182,7 @@ export default {
         correo: [ v => !!v || 'E-mail is required', v => /.+@.+/.test(v) || 'E-mail must be valid'],
         contraseña: [val => (val || '').length > 0 || 'This field is required']
       },
-      documento: ['CC', 'TI'],
+      documento: ['CC',],
       animals: ['Administrador', 'Mesero', 'Chef', 'Administrador de Caja'],
       conditions: false,
       content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.`,
