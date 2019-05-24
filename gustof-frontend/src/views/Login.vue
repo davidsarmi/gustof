@@ -47,6 +47,7 @@ export default {
         cedula: this.cedula,
         contrasena: this.contrasena
       });
+
       console.log(res.data);
       if (res.data.user.rol === "chef") {
         this.$router.push("chef");
@@ -59,6 +60,7 @@ export default {
       }
     }
   },
+
   created() {
     this.$store.commit("SET_LAYOUT", "login-layout");
   },
