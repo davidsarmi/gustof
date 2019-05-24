@@ -81,102 +81,102 @@ export default {
   data: () => ({
     drawer: true,
     comidas: [
-      "hamburguesa",
-      "perros calientes",
-      "picada mixta",
-      "salchicha gua gua",
-      "sandwich",
-      "mazorca",
-      "patocones",
-      "alitas"
+      'hamburguesa',
+      'perros calientes',
+      'picada mixta',
+      'salchicha gua gua',
+      'sandwich',
+      'mazorca',
+      'patocones',
+      'alitas'
     ],
     tipos: [
-      "Artesanal",
-      "Deli tocino",
-      "Espacial",
-      "Pechugona",
-      "Master",
-      "Maxima",
-      "chilanga"
+      'Artesanal',
+      'Deli tocino',
+      'Espacial',
+      'Pechugona',
+      'Master',
+      'Maxima',
+      'chilanga'
     ],
     receta: [
-      "Pan",
-      "Vegetales(Lechuga, tomate)",
-      "Pepinillos",
-      "Cebolla caramelisada",
-      "carne al carbon",
-      "Queso"
+      'Pan',
+      'Vegetales(Lechuga, tomate)',
+      'Pepinillos',
+      'Cebolla caramelisada',
+      'carne al carbon',
+      'Queso'
     ],
     papa: [
-      "Criolla",
-      "Francesa",
-      "Casquitos",
-      "criolla y francesa",
-      "criolla y casquitos",
-      "francesa y casquitos",
-      "Sin papa"
+      'Criolla',
+      'Francesa',
+      'Casquitos',
+      'criolla y francesa',
+      'criolla y casquitos',
+      'francesa y casquitos',
+      'Sin papa'
     ],
-    cantidad: ["1", "2", "3", "4", "5", "6", "7", "8", "10"],
+    cantidad: ['1', '2', '3', '4', '5', '6', '7', '8', '10'],
     desserts: [
       {
-        nombre: "Comida",
-        cantidad: "cantidad",
-        descripcion: "Descripcion",
-        valor: "Precio"
+        nombre: 'Comida',
+        cantidad: 'cantidad',
+        descripcion: 'Descripcion',
+        valor: 'Precio'
       },
       {
-        nombre: "",
-        cantidad: "",
-        descripcion: "",
-        valor: ""
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
       },
       {
-        nombre: "",
-        cantidad: "",
-        descripcion: "",
-        valor: ""
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
       },
       {
-        nombre: "",
-        cantidad: "",
-        descripcion: "",
-        valor: ""
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
       },
       {
-        nombre: "",
-        cantidad: "",
-        descripcion: "",
-        valor: ""
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
       },
       {
-        nombre: "",
-        cantidad: "",
-        descripcion: "",
-        valor: ""
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
       },
       {
-        nombre: "",
-        cantidad: "",
-        descripcion: "",
-        valor: ""
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
       },
       {
-        nombre: "",
-        cantidad: "",
-        descripcion: "",
-        valor: ""
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
       },
       {
-        nombre: "",
-        cantidad: "",
-        descripcion: "",
-        valor: ""
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
       },
       {
-        nombre: "",
-        cantidad: "",
-        descripcion: "",
-        valor: ""
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
       }
     ]
   }),
@@ -184,7 +184,7 @@ export default {
   props: {
     source: String
   }
-};
+}
 </script>
 <style scoped>
 .v-text-field.v-text-field--enclosed .v-text-field__details,
