@@ -1,115 +1,119 @@
 <template>
-<div id="app">
-          <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
-  <v-app id="inspire" dark>
+  <div id="app">
+  <v-app id="inspire">
     <v-navigation-drawer
-      clipped
       fixed
       v-model="drawer"
       app
     >
       <v-list dense>
-        <v-list-tile
-        v-for="admin in admins"
-        :key="admin.admins"
-        :to="admin.to"
-        >
-        <v-list-tile-action v-if="admin.icon">
-          <v-icon>{{ admin.icon }}</v-icon>
-        </v-list-tile-action>
+        <v-list-tile >
+          <v-list-tile-action>
+            <v-icon>home</v-icon>
+          </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-tile>{{ admin.text }}</v-list-tile-tile>
+            <v-list-tile-title>Home</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile >
+          <v-list-tile-action>
+            <v-icon>contact_mail</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>Contact</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar app fixed clipped-left>
+    <v-toolbar color="indigo" dark fixed app>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-btn>
-        <img src="@/assets/gustof.png" class="img-responsive" alt="" style="width:89px">
-      </v-btn>
+      <v-toolbar-title>Mesas</v-toolbar-title>
     </v-toolbar>
-    <v-footer app fixed>
-      <span>&copy; 2019</span>
+    <h1 style="margin:auto; color:red;">MESAS</h1>
+    <!-- container de izquierda -->
+    <v-container class="container_izquierda">
+    
+       <div id="app">
+        <v-app id="inspire">
+          <v-container fluid>
+            <v-layout justify-space-around>
+              <v-flex xs5>
+                <div class="title mb-1"></div>
+                <v-layout column>
+                  <div class="subheading">Mesa 1</div>
+                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.7"></v-img>
+                  <div class="subheading pt-3">Mesa 2</div>
+                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="2"></v-img>
+                  <div class="subheading pt-3">Mesa 3</div>
+                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
+                  <div class="subheading pt-3">Mesa 4</div>
+                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
+                  <div class="subheading pt-3">Mesa 5</div>
+                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
+                </v-layout>
+              </v-flex>
+
+              <v-flex xs5>
+                <div class="title mb-1"></div>
+                <v-layout column>
+                  <div class="subheading">Mesa 6</div>
+                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.7"></v-img>
+                  <div class="subheading pt-3">Mesa 7</div>
+                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="2"></v-img>
+                  <div class="subheading pt-3">Mesa 8</div>
+                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
+                  <div class="subheading pt-3">Mesa 9</div>
+                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
+                  <div class="subheading pt-3">Mesa 10</div>
+                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
+                </v-layout>
+              </v-flex>
+
+
+              <v-flex xs5>
+                <div class="title mb-1"></div>
+                <v-layout column>
+                  <div class="subheading">Mesa 11</div>
+                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.7"></v-img>
+                  <div class="subheading pt-3">Mesa 12</div>
+                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="2"></v-img>
+                  <div class="subheading pt-3">Mesa 13</div>
+                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
+                  <div class="subheading pt-3">Mesa 14</div>
+                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
+                  <div class="subheading pt-3">Mesa 15</div>
+                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
+                </v-layout>
+              </v-flex>
+        
+              
+            </v-layout>
+          </v-container>
+        </v-app>
+      </div>
+    </v-container>
+  
+    <v-footer color="indigo" app inset>
+      <span class="white--text">&copy; 2017</span>
     </v-footer>
-    <v-content>
-        <img data-v-097a1800="" src="/img/gustof.5ab63673.png">g
-    </v-content>
   </v-app>
 </div>
 </template>
-
 <script>
 export default {
+  
   el: '#app',
   data: () => ({
-    drawer: true,
-    admins: [
-      {
-        text: 'PERFIL',
-        icon: 'group',
-        to: '/administrador/perfil'
-      },
-      {
-        text: 'MI EMPRESA',
-        icon: 'store',
-        to: '/administrador/miempresa'
-      },
-      {
-        text: 'CLIENTE',
-        icon: 'perm_identity',
-        to: '/administrador/cliente'
-      },
-      {
-        text: 'PROVEEDORES',
-        icon: 'contacts',
-        to: '/administrador/proveedores'
-      },
-      {
-        text: 'PRODUCTOS',
-        icon: 'restaurant',
-        to: '/administrador/productos'
-      },
-      {
-        text: 'FACTURACIÒN',
-        icon: 'list',
-        to: '/administrador/facturacion'
-      },
-      {
-        text: 'BODEGA',
-        icon: 'reorder',
-        to: '/administrador/bodega'
-      },
-      {
-        text: 'PRODUCTOS DE BODEGA',
-        icon: 'restaurant',
-        to: '/administrador/bodega_productos'
-      },
-      {
-        text: 'AGREGAR',
-        icon: 'plus_one',
-        to: '/administrador/agregar'
-      },
-      {
-        text: 'SACAR',
-        icon: 'plus_one',
-        to: '/administrador/sacar'
-      },
-      {
-        text: 'CANDADOS',
-        icon: 'no_encryption',
-        to: '/administrador/candados'
-      },
-      {
-        text: 'SALIR',
-        icon: 'contacts',
-        to: '/'
-      }
-    ]
-  }),
-
-  props: {
-    source: String
-  }
+    drawer: null
+  })
 }
 </script>
+<style>
+.container_izquierda {
+    width: 500px;
+    margin: 0px 0px 0px -500px;
+    display: inline-block;
+}
+</style>
+
+

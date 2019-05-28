@@ -6,6 +6,7 @@
     </v-snackbar>
     <v-form ref="form" @submit.prevent="submit">
       <v-container grid-list-xl fluid style="border: solid #000 10px">
+        <v-btn color="#4A148C " class>Crear Perfil Empleado</v-btn>
         <v-layout wrap>
           <v-flex xs12 sm6>
             <v-text-field v-model="nombre" color="#4A148C" label="Nombres" type="text"></v-text-field>
@@ -27,13 +28,9 @@
           <v-flex xs12 sm6>
             <v-text-field v-model="password" type="password" label="Contraseña"></v-text-field>
           </v-flex>
-         <v-flex xs12 sm6 d-flex>
-        <v-select
-          :items="rol"
-          label="Rol"
-          solo
-        ></v-select>
-      </v-flex>
+          <v-flex xs12 sm6 d-flex>
+            <v-select v-model="rol" :items="rol" label="Rol"></v-select>
+          </v-flex>
         </v-layout>
       </v-container>
       <v-card-actions>
@@ -65,42 +62,38 @@
   </v-card>
 </template>
 <script>
-import api from '@/plugins/service'
+import api from "@/plugins/service";
 
 export default {
-  data: function () {
-    
-    const defaultForm = Object.freeze({})
+  data: function() {
+    const defaultForm = Object.freeze({});
     return {
       form: Object.assign({}, defaultForm),
-      nombre: '',
-      sexo: '',
-      apellido: '',
-      cedula: '',
-      email: '',
-      password: '',
-      rol: ''
-    }
-    
-    
+      nombre: "",
+      sexo: "",
+      apellido: "",
+      cedula: "",
+      email: "",
+      password: "",
+      rol: ""
+    };
   },
   data: () => ({
     drawer: true,
-   rol:['administrador','caja','mesero','chef'],
-
+    rol: ["administrador", "caja", "mesero", "chef"]
   }),
-  
+
   methods: {
-    resetForm () {
-      this.form = Object.assign({}, this.defaultForm)
-      this.$refs.form.reset()
+    resetForm() {
+      this.form = Object.assign({}, this.defaultForm);
+      this.$refs.form.reset();
     },
-    submit () {
-      this.snackbar = true
-      this.resetForm()
+    submit() {
+      this.snackbar = true;
+      this.resetForm();
     },
-    async registrar () {
-      const res = await api.post('/user', {
+    async registrar() {
+      const res = await api.post("/user", {
         userNew: {
           nombre: this.nombre,
           sexo: this.sexo,
@@ -110,19 +103,19 @@ export default {
           contrasena: this.password,
           rol: this.rol
         }
-      })
-      console.log(res.data)
+      });
+      console.log(res.data);
     }
   },
-  created () {
-    this.$store.commit('SET_LAYOUT', 'administrador-layout')
+  created() {
+    this.$store.commit("SET_LAYOUT", "administrador-layout");
   },
   props: {
     source: String
   },
 
   computed: {
-    formIsValid () {
+    formIsValid() {
       return (
         this.form.first &&
         this.form.last &&
@@ -132,9 +125,10 @@ export default {
         this.form.telefono &&
         this.form.contraseña &&
         this.form.terms
-      )
+      );
     }
   }
-}
+};
 </script>
- 
+
+
