@@ -1,19 +1,45 @@
 <template>
 <div id="app">
-  <v-flex xs12 sm6 d-flex>
-    <v-select
-      :items="Producto"
-      label="Agregar Productos"
 
+<form>
+        <v-select
+      v-model="Producto"
+      :items="Producto"
+      :error-messages="selectErrors"
+      label="Producto"
+      required
+      @change="$v.select.$touch()"
+      @blur="$v.select.$touch()"
     ></v-select>
-  </v-flex>
+    <v-text-field
+      v-model="cantidad"
+      :error-messages="emailErrors"
+      label="Cantidad"
+      required
+      @input="$v.email.$touch()"
+      @blur="$v.email.$touch()"
+    ></v-text-field>
+    <v-select
+      v-model="medicion"
+      :items="items"
+      :error-messages="selectErrors"
+      label="Medicion"
+      required
+      @change="$v.select.$touch()"
+      @blur="$v.select.$touch()"
+    ></v-select>
+
+    <v-btn @click="Cancelar">Cancelar</v-btn>
+    <v-btn @click="Aceptar">Aceptar</v-btn>
+  </form>
+
 </div>
 </template>
 <script>
 export default {
   data: () => ({
     drawer: true,
-    Producto: ['Carne:' + ' 2']
+    Producto: ['Carne:']
 
   }),
   created () {
