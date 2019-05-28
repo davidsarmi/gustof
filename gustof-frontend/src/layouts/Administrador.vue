@@ -4,7 +4,7 @@
     <v-app id="inspire" ligth>
       <v-navigation-drawer clippedgit fixed v-model="drawer" app dark>
         <v-list dense>
-          <v-list-tile v-for="admin in admins" :key="admin.admins" :to="admin.to">
+          <v-list-tile v-for="admin in admins" :key="admin.admins" @click="push(admin.to)">
             <v-list-tile-action v-if="admin.icon">
               <v-icon>{{ admin.icon }}</v-icon>
             </v-list-tile-action>
@@ -37,7 +37,6 @@
 </template>
 <script>
 export default {
-  el: "#app",
   data: () => ({
     drawer: true,
     admins: [
@@ -108,7 +107,15 @@ export default {
       }
     ]
   }),
-
+methods: {
+  push(to) {
+    if(to === '/'){
+      this.$store.commit("SET_USER", {})
+      this.$router.push(to)
+    }
+    this.$router.push(to)
+  }
+},
   props: {
     source: String
   }

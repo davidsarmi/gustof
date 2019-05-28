@@ -20,8 +20,13 @@ import Productosporagotar from '@/views/ProductosPorAgotar.vue'
 import Productosagotados from '@/views/ProductosAgotados.vue'
 import CajaFactura from '@/views/CajaFactura.vue'
 import CajaPedido from '@/views/CajaPedido.vue'
+import store from '@/store'
 
 Vue.use(Router)
+
+function authUser(to, from, next) {
+
+}
 
 export default new Router({
   mode: 'history',
@@ -30,7 +35,16 @@ export default new Router({
     {
       path: '/',
       name: 'login',
-      component: Login
+      component: Login,
+      beforeEnter: (to, from, next) => {
+        const { user } = store.state
+        if (Object.keys(user).length !== 0) {
+          console.log(user)
+          user.rol === 'mesero' ? next('/mesaslogin') : user.rol === 'chef' ? next('/chef') : user.rol === 'administrador' ? next('/administrador') : user.rol === 'caja' ? next('/cajafactura') : next()
+        } else {
+          next()
+        }
+      }
     },
     {
       path: '/administrador',
@@ -129,3 +143,5 @@ export default new Router({
     }
   ]
 })
+
+

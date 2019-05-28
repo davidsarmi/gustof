@@ -44,25 +44,30 @@ export default {
   },
   methods: {
     async registro() {
-      const res = await api.post("/user/singin", {
-        cedula: this.cedula,
-        contrasena: this.contrasena
-      });
-      if (!res.data.login) {
-        Swal.fire("Usuario Incorrecto!", "intentalo de nuevo!", "error");
-        return;
+      try {
+        const res = await api.post("/user/singin", {
+          cedula: this.cedula,
+          contrasena: this.contrasena
+        })
+        if (!res.data.login) {
+          Swal.fire("Usuario Incorrecto!", "intentalo de nuevo!", "error");
+          return;
+        }
+        this.$store.commit("SET_USER", res.data.user)
+        if (res.data.user.rol === "chef") {
+          this.$router.push("chef")
+        } else if (res.data.user.rol == "mesero") {
+          this.$router.push("mesaslogin")
+        } else if (res.data.user.rol == "caja") {
+          this.$router.push("CajaFactura")
+        } else {
+          this.$router.push("administrador")
+        }
+      } catch (error) {
+        console.error(error)
       }
 
-      console.log(res.data);
-      if (res.data.user.rol === "chef") {
-        this.$router.push("chef");
-      } else if (res.data.user.rol == "mesero") {
-        this.$router.push("mesaslogin");
-      } else if (res.data.user.rol == "caja") {
-        this.$router.push("CajaFactura");
-      } else {
-        this.$router.push("administrador");
-      }
+      
     }
   },
 
