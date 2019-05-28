@@ -46,7 +46,6 @@
 import api from '@/plugins/service'
 
 export default {
-  el: '#appTareas',
   data () {
     return {
       txtTareas: '',

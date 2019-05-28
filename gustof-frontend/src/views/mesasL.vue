@@ -101,11 +101,12 @@
 </template>
 <script>
 export default {
-  
-  el: '#app',
   data: () => ({
     drawer: null
-  })
+  }),
+  created() {
+    this.$store.commit("SET_LAYOUT", "login-layout");
+  }
 }
 </script>
 <style>
