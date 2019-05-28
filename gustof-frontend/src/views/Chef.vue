@@ -32,6 +32,13 @@
       <div id="app">
         <v-app id="inspire">
           <v-container style="max-width: 500px">
+            <h2 class="display-1 success--text pl-3">
+              Tasks:&nbsp;
+              <v-fade-transition leave-absolute>
+                <span :key="`tasks-${tasks.length}`">{{ tasks.length }}</span>
+              </v-fade-transition>
+            </h2>
+
             <v-divider class="mt-3"></v-divider>
 
             <v-layout my-1 align-center>
