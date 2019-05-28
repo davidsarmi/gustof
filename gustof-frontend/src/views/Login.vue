@@ -44,13 +44,19 @@ export default {
   },
   methods: {
     async registro() {
-      const res = await api.post("/user/singin", {
-        cedula: this.cedula,
-        contrasena: this.contrasena
-      });
-      if (!res.data.login) {
-        Swal.fire("Usuario Incorrecto!", "intentalo de nuevo!", "error");
-        return;
+      try {
+        const res = await api.post("/user/singin", {
+          cedula: this.cedula,
+          contrasena: this.contrasena
+        })
+        localStorage.setItem('user', JSON.stringify(res.data.user))
+        this.$router.push('/mesas')
+        if (!res.data.login) {
+          Swal.fire("Usuario Incorrecto!", "intentalo de nuevo!", "error");
+          return;
+        }
+      } catch (error) {
+        console.error(error)
       }
 
       console.log(res.data);

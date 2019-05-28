@@ -23,7 +23,7 @@ import CajaPedido from '@/views/CajaPedido.vue'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -129,3 +129,12 @@ export default new Router({
     }
   ]
 })
+router.beforeEach((to, from, next) => {
+  console.log(from)
+  if(from.path === '/') {
+    if(localStorage.getItem('user')) {
+      
+    }
+  }
+})
+export default router
