@@ -29,55 +29,99 @@
           @change="save"
         ></v-date-picker>
       </v-menu>
+      <div id="app">
+        <v-app id="inspire">
+          <v-container style="max-width: 500px">
+            <v-divider class="mt-3"></v-divider>
 
-      <div
-        class="cartelera"
-        style="background-color:red; margin: 0px 0px 300px 0px; padding:10px; height: 70px; width: 1100px;"
-      >
-        <pre class="pedido">hamburguesa artesanal </pre>
-        <pre class="receta">-pepinillos +jamon + pollo jehfjshfjkdjfkjkdz</pre>
-        <pre class="papa">papa francesa</pre>
+            <v-layout my-1 align-center>
+              <strong class="mx-3 info--text text--darken-3">Remaining: {{ remainingTasks }}</strong>
+
+              <v-divider vertical></v-divider>
+
+              <strong class="mx-3 black--text">Completed: {{ completedTasks }}</strong>
+
+              <v-spacer></v-spacer>
+
+              <v-progress-circular :value="progress" class="mr-2"></v-progress-circular>
+            </v-layout>
+
+            <v-divider class="mb-3"></v-divider>
+
+            <v-card v-if="tasks.length > 0">
+              <v-slide-y-transition class="py-0" group tag="v-list">
+                <template v-for="(task, i) in tasks">
+                  <v-divider v-if="i !== 0" :key="`${i}-divider`"></v-divider>
+
+                  <v-list-tile :key="`${i}-${task.text}`">
+                    <v-list-tile-action>
+                      <v-checkbox v-model="task.done" color="info darken-3">
+                        <template v-slot:label>
+                          <div
+                            :class="task.done && 'grey--text' || 'text--primary'"
+                            class="ml-3"
+                            v-text="task.text"
+                          ></div>
+                        </template>
+                      </v-checkbox>
+                    </v-list-tile-action>
+
+                    <v-spacer></v-spacer>
+
+                    <v-scroll-x-transition>
+                      <v-icon v-if="task.done" color="success">check</v-icon>
+                    </v-scroll-x-transition>
+                  </v-list-tile>
+                </template>
+              </v-slide-y-transition>
+            </v-card>
+          </v-container>
+        </v-app>
       </div>
     </v-app>
   </div>
 </template>
 
 <script>
-import api from '@/plugins/service'
-
 export default {
-  el: '#appTareas',
-  data () {
-    return {
-      txtTareas: '',
-      listaTareas: []
-    }
-  },
-  methods: {
-    agregarTarea () {
-      var tarea = this.txtTareas
-      if (tarea) {
-        this.listaTareas.push({
-          texto: tarea,
-          checked: false
-        })
+  el: "#app",
+  data: () => ({
+    tasks: [
+      {
+        done: false,
+        text: "Foobar"
+      },
+      {
+        done: false,
+        text: "Fizzbuzz"
       }
-      this.txtTareas = ''
+    ],
+    task: null
+  }),
+
+  computed: {
+    completedTasks() {
+      return this.tasks.filter(task => task.done).length;
     },
-    EliminarTarea: function () {
-      var index = this.listaTareas.indexof(tarea)
-      this.listaTareas.splice(index, 1)
+    progress() {
+      return (this.completedTasks / this.tasks.length) * 100;
     },
-    async getOrders () {
-      const { data } = await api.get('/order')
-      console.log(data)
+    remainingTasks() {
+      return this.tasks.length - this.completedTasks;
     }
   },
-  created () {
-    this.getOrders()
-  }
-}
 
+  methods: {
+    create() {
+      this.tasks.push({
+        done: false,
+        text: this.task
+      });
+
+      this.task = null;
+    }
+  }
+};
 </script>
 
     <style scoped>

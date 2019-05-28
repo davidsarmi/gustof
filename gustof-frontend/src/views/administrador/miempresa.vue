@@ -38,7 +38,7 @@
               <v-text-field
                 style="width: 417px;"
                 v-model="nombre"
-                label="Nombre de la Empresa"
+                label="Nombre del restuarante"
                 outline
               ></v-text-field>
               <v-btn

@@ -80,7 +80,7 @@ export default {
   },
   data: () => ({
     drawer: true,
-    rol: ["administrador", "caja", "mesero", "chef"]
+    rol: ["Administrador", "Caja", "Mesero", "Chef"]
   }),
 
   methods: {
