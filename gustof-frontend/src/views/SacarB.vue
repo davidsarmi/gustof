@@ -6,6 +6,9 @@
           label="Sacar Productos"
         ></v-select>
     </v-flex>
+
+    <v-btn class="boton1" @click="Cancelar">Cancelar</v-btn> 
+    <v-btn class="boton2" @click="Aceptar">Aceptar</v-btn>
 </div>
 </template>
 <script>
@@ -13,7 +16,7 @@
 export default {
   data: () => ({
     drawer: true,
-    PRODUCTOS: ['Carne: ' + '2']
+    PRODUCTOS: ['Carne']
 
   }),
   created () {
@@ -41,5 +44,8 @@ margin:20px 401px;
 }
 .d-flex{
   width: 400px;
+}
+.v-btn{
+  margin: 25px 5px
 }
 </style>
