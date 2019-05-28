@@ -1,14 +1,35 @@
 <template>
 <div id="app">
-    <v-flex xs12 sm6 d-flex>
-        <v-select
-          :items="PRODUCTOS"
-          label="Sacar Productos"
-        ></v-select>
-    </v-flex>
+     <v-select
+      v-model="Producto"
+      :items="Producto"
+      :error-messages="selectErrors"
+      label="Sacar Producto"
+      required
+      @change="$v.select.$touch()"
+      @blur="$v.select.$touch()"
+    ></v-select>
+    <v-text-field
+      v-model="cantidad"
+      :error-messages="emailErrors"
+      label="Cantidad"
+      required
+      @input="$v.email.$touch()"
+      @blur="$v.email.$touch()"
+    ></v-text-field>
+    <v-select
+      v-model="Medicion"
+      :items="Medicion"
+      :error-messages="selectErrors"
+      label="Medicion"
+      required
+      @change="$v.select.$touch()"
+      @blur="$v.select.$touch()"
+    ></v-select>
 
-    <v-btn class="boton1" @click="Cancelar">Cancelar</v-btn> 
-    <v-btn class="boton2" @click="Aceptar">Aceptar</v-btn>
+    <v-btn  @click="Cancelar">Cancelar</v-btn>
+    <v-btn  @click="Aceptar">Aceptar</v-btn>
+  
 </div>
 </template>
 <script>
@@ -16,7 +37,8 @@
 export default {
   data: () => ({
     drawer: true,
-    PRODUCTOS: ['Carne']
+    Producto: ['Carne','Papa','Etc...'],
+      Medicion: ['Gramos','Libras','Kilos']
 
   }),
   created () {
@@ -46,6 +68,8 @@ margin:20px 401px;
   width: 400px;
 }
 .v-btn{
-  margin: 25px 5px
+  margin: 25px 5px;
+  
 }
+
 </style>

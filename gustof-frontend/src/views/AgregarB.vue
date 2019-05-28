@@ -6,7 +6,7 @@
       v-model="Producto"
       :items="Producto"
       :error-messages="selectErrors"
-      label="Producto"
+      label="Agregar Producto"
       required
       @change="$v.select.$touch()"
       @blur="$v.select.$touch()"
@@ -29,8 +29,8 @@
       @blur="$v.select.$touch()"
     ></v-select>
 
-    <v-btn class="boton1" @click="Cancelar">Cancelar</v-btn>
-    <v-btn class="boton2" @click="Aceptar">Aceptar</v-btn>
+    <v-btn  @click="Cancelar">Cancelar</v-btn>
+    <v-btn  @click="Aceptar">Aceptar</v-btn>
   
   </form>
 
@@ -40,7 +40,7 @@
 export default {
   data: () => ({
     drawer: true,
-    Producto: ['Carne','Papa'],
+    Producto: ['Carne','Papa','Etc..'],
     Medicion: ['Gramos','Libras','Kilos']
 
   }),
@@ -66,8 +66,10 @@ margin:20px 401px;
 .d-flex{
   width: 400px;
 }
+
 .v-btn{
-  margin: 25px 5px
+  margin: 25px 5px;
+  
 }
 
 </style>
