@@ -13,7 +13,7 @@
 export default {
   data: () => ({
     drawer: true,
-    Productosa: ['Carne:' + ' 2']
+    Productosa: ['Carne']
 
   }),
   created () {
