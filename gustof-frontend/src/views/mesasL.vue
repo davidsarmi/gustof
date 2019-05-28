@@ -32,7 +32,7 @@
     <h1 style="margin:auto; color:red;">MESAS</h1>
     <!-- container de izquierda -->
     <v-container class="container_izquierda">
-    
+
        <div id="app">
         <v-app id="inspire">
           <v-container fluid>
@@ -69,7 +69,6 @@
                 </v-layout>
               </v-flex>
 
-
               <v-flex xs5>
                 <div class="title mb-1"></div>
                 <v-layout column>
@@ -85,14 +84,13 @@
                   <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
                 </v-layout>
               </v-flex>
-        
-              
+
             </v-layout>
           </v-container>
         </v-app>
       </div>
     </v-container>
-  
+
     <v-footer color="indigo" app inset>
       <span class="white--text">&copy; 2017</span>
     </v-footer>
@@ -104,8 +102,8 @@ export default {
   data: () => ({
     drawer: null
   }),
-  created() {
-    this.$store.commit("SET_LAYOUT", "login-layout");
+  created () {
+    this.$store.commit('SET_LAYOUT', 'login-layout')
   }
 }
 </script>
@@ -116,5 +114,3 @@ export default {
     display: inline-block;
 }
 </style>
-
-

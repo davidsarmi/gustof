@@ -29,7 +29,7 @@
 
     <v-btn  @click="Cancelar">Cancelar</v-btn>
     <v-btn  @click="Aceptar">Aceptar</v-btn>
-  
+
 </div>
 </template>
 <script>
@@ -37,8 +37,8 @@
 export default {
   data: () => ({
     drawer: true,
-    Producto: ['Carne','Papa','Etc...'],
-      Medicion: ['Gramos','Libras','Kilos']
+    Producto: ['Carne', 'Papa', 'Etc...'],
+    Medicion: ['Gramos', 'Libras', 'Kilos']
 
   }),
   created () {
@@ -69,7 +69,7 @@ margin:20px 401px;
 }
 .v-btn{
   margin: 25px 5px;
-  
+
 }
 
 </style>

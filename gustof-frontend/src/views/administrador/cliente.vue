@@ -120,46 +120,46 @@
 </template>
 <script>
 export default {
-  created() {
-    this.$store.commit("SET_LAYOUT", "administrador-layout");
+  created () {
+    this.$store.commit('SET_LAYOUT', 'administrador-layout')
   },
-  data() {
+  data () {
     const defaultForm = Object.freeze({
-      first: "",
-      last: "",
-      documento: "",
-      docume: "",
-      telefono: "",
-      correo: "",
-      contraseña: "",
+      first: '',
+      last: '',
+      documento: '',
+      docume: '',
+      telefono: '',
+      correo: '',
+      contraseña: '',
       terms: false
-    });
+    })
 
     return {
       form: Object.assign({}, defaultForm),
       rules: {
         show1: false,
-        name: [val => (val || "").length > 0 || "This field is required"],
-        documento: [val => (val || "").length > 0 || "This field is required"],
-        docume: [val => (val || "").length > 0 || "This field is required"],
-        telefono: [val => (val || "").length > 0 || "This field is required"],
+        name: [val => (val || '').length > 0 || 'This field is required'],
+        documento: [val => (val || '').length > 0 || 'This field is required'],
+        docume: [val => (val || '').length > 0 || 'This field is required'],
+        telefono: [val => (val || '').length > 0 || 'This field is required'],
         correo: [
-          v => !!v || "E-mail is required",
-          v => /.+@.+/.test(v) || "E-mail must be valid"
+          v => !!v || 'E-mail is required',
+          v => /.+@.+/.test(v) || 'E-mail must be valid'
         ],
-        contraseña: [val => (val || "").length > 0 || "This field is required"]
+        contraseña: [val => (val || '').length > 0 || 'This field is required']
       },
-      documento: ["CC", "TI"],
+      documento: ['CC', 'TI'],
       conditions: false,
       content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.`,
       snackbar: false,
       terms: false,
       defaultForm
-    };
+    }
   },
 
   computed: {
-    formIsValid() {
+    formIsValid () {
       return (
         this.form.first &&
         this.form.last &&
@@ -168,19 +168,19 @@ export default {
         this.form.telefono &&
         this.form.contraseña &&
         this.form.terms
-      );
+      )
     }
   },
 
   methods: {
-    resetForm() {
-      this.form = Object.assign({}, this.defaultForm);
-      this.$refs.form.reset();
+    resetForm () {
+      this.form = Object.assign({}, this.defaultForm)
+      this.$refs.form.reset()
     },
-    submit() {
-      this.snackbar = true;
-      this.resetForm();
+    submit () {
+      this.snackbar = true
+      this.resetForm()
     }
   }
-};
+}
 </script>

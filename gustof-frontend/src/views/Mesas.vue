@@ -81,33 +81,6 @@ export default {
   data: () => ({
     drawer: true,
     comidas: [
-<<<<<<< HEAD
-      "hamburguesa",
-      "perros calientes",
-      "picada mixta",
-      "salchicha gua gua",
-      "sandwich",
-      "mazorca",
-      "patocones",
-      "alitas"
-    ],
-    tipos: [
-      "Artesanal",
-      "Deli tocino",
-      "Espacial",
-      "Pechugona",
-      "Master",
-      "Maxima",
-      "chilanga"
-    ],
-    receta: [
-      "Pan",
-      "Vegetales(Lechuga, tomate)",
-      "Pepinillos",
-      "Cebolla caramelisada",
-      "carne al carbon",
-      "Queso"
-=======
       'hamburguesa',
       'perros calientes',
       'picada mixta',
@@ -120,7 +93,7 @@ export default {
     ],
     tipos: [
       {
-        perros:[
+        perros: [
           'Queso',
           'Perolero',
           'Especial',
@@ -136,44 +109,44 @@ export default {
           'Maxima',
           'chilanga'
         ],
-        picada_mixta:[
+        picada_mixta: [
           'sencilla',
           'especial',
           'pitiguao'
         ],
-        salchicha_gua_gua:[
+        salchicha_gua_gua: [
           'sencilla',
           'especial'
         ],
-        sandwich:[
+        sandwich: [
           'meloso',
           'pollo tocino',
           'Especial',
           'chicamocha',
           'vegetariano'
         ],
-        mazorca:[
+        mazorca: [
           'surrona',
           'sangileña'
         ],
-        patacon:[
+        patacon: [
           'especial',
           'patacon'
         ],
-        alitas:[
+        alitas: [
           '6 porciones',
           '12 porciones'
         ],
-        choripan:[
+        choripan: [
           'sencillo',
           'choripanzaso'
         ]
       }
-      
+
     ],
     receta: [
       {
-        queso:[
+        queso: [
           'Pan',
           'Vegetales(Lechuga, tomate)',
           'Pepinillos',
@@ -182,79 +155,78 @@ export default {
           'Queso'
         ]
       }
-      
->>>>>>> ea4fe0e557e6d4571ec208e1aa076eb13992236d
+
     ],
     papa: [
-      "Criolla",
-      "Francesa",
-      "Casquitos",
-      "criolla y francesa",
-      "criolla y casquitos",
-      "francesa y casquitos",
-      "Sin papa"
+      'Criolla',
+      'Francesa',
+      'Casquitos',
+      'criolla y francesa',
+      'criolla y casquitos',
+      'francesa y casquitos',
+      'Sin papa'
     ],
-    cantidad: ["1", "2", "3", "4", "5", "6", "7", "8", "10"],
+    cantidad: ['1', '2', '3', '4', '5', '6', '7', '8', '10'],
     desserts: [
       {
-        nombre: "Comida",
-        cantidad: "cantidad",
-        descripcion: "Descripcion",
-        valor: "Precio"
+        nombre: 'Comida',
+        cantidad: 'cantidad',
+        descripcion: 'Descripcion',
+        valor: 'Precio'
       },
       {
-        nombre: "",
-        cantidad: "",
-        descripcion: "",
-        valor: ""
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
       },
       {
-        nombre: "",
-        cantidad: "",
-        descripcion: "",
-        valor: ""
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
       },
       {
-        nombre: "",
-        cantidad: "",
-        descripcion: "",
-        valor: ""
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
       },
       {
-        nombre: "",
-        cantidad: "",
-        descripcion: "",
-        valor: ""
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
       },
       {
-        nombre: "",
-        cantidad: "",
-        descripcion: "",
-        valor: ""
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
       },
       {
-        nombre: "",
-        cantidad: "",
-        descripcion: "",
-        valor: ""
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
       },
       {
-        nombre: "",
-        cantidad: "",
-        descripcion: "",
-        valor: ""
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
       },
       {
-        nombre: "",
-        cantidad: "",
-        descripcion: "",
-        valor: ""
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
       },
       {
-        nombre: "",
-        cantidad: "",
-        descripcion: "",
-        valor: ""
+        nombre: '',
+        cantidad: '',
+        descripcion: '',
+        valor: ''
       }
     ]
   }),
@@ -262,7 +234,7 @@ export default {
   props: {
     source: String
   }
-};
+}
 </script>
 <style scoped>
 .v-text-field.v-text-field--enclosed .v-text-field__details,

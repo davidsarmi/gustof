@@ -91,44 +91,44 @@
 
 <script>
 export default {
-  el: "#app",
+  el: '#app',
   data: () => ({
     tasks: [
       {
         done: false,
-        text: "Foobar"
+        text: 'Foobar'
       },
       {
         done: false,
-        text: "Fizzbuzz"
+        text: 'Fizzbuzz'
       }
     ],
     task: null
   }),
 
   computed: {
-    completedTasks() {
-      return this.tasks.filter(task => task.done).length;
+    completedTasks () {
+      return this.tasks.filter(task => task.done).length
     },
-    progress() {
-      return (this.completedTasks / this.tasks.length) * 100;
+    progress () {
+      return (this.completedTasks / this.tasks.length) * 100
     },
-    remainingTasks() {
-      return this.tasks.length - this.completedTasks;
+    remainingTasks () {
+      return this.tasks.length - this.completedTasks
     }
   },
 
   methods: {
-    create() {
+    create () {
       this.tasks.push({
         done: false,
         text: this.task
-      });
+      })
 
-      this.task = null;
+      this.task = null
     }
   }
-};
+}
 </script>
 
     <style scoped>

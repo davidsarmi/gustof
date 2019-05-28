@@ -24,7 +24,7 @@ import store from '@/store'
 
 Vue.use(Router)
 
-function authUser(to, from, next) {
+function authUser (to, from, next) {
 
 }
 
@@ -143,5 +143,3 @@ export default new Router({
     }
   ]
 })
-
-
