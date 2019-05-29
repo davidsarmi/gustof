@@ -1,8 +1,8 @@
 <template>
 <div id="app">
      <v-select
-      v-model="Producto"
-      :items="Producto"
+      v-model="ProductoS"
+      :items="ProductoS"
       :error-messages="selectErrors"
       label="Sacar Producto"
       required
@@ -18,8 +18,8 @@
       @blur="$v.email.$touch()"
     ></v-text-field>
     <v-select
-      v-model="Medicion"
-      :items="Medicion"
+      v-model="MedicionS"
+      :items="MedicionS"
       :error-messages="selectErrors"
       label="Medicion"
       required
@@ -37,8 +37,8 @@
 export default {
   data: () => ({
     drawer: true,
-    Producto: ['Carne', 'Papa', 'Etc...'],
-    Medicion: ['Gramos', 'Libras', 'Kilos']
+    ProductoS: ['Carne', 'Papa', 'Etc...'],
+    MedicionS: ['Gramos', 'Libras', 'Kilos']
 
   }),
   created () {
