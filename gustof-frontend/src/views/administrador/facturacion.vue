@@ -58,13 +58,7 @@
               </v-flex>
             </v-layout>
           </v-container>
-          <v-btn
-            style=" height:40px; width:110px; margin-left:860px;"
-            block
-            color="green"
-            dark
-            @click="snackbar = true"
-          >FACTURAR</v-btn>
+           <v-btn color="green " class="" >Facturar</v-btn>
         </v-card-text>
       </v-card>
 

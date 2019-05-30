@@ -127,7 +127,7 @@ export default {
       headers: [
         {
           align: 'left',
-          sortable: false 
+          sortable: false,
         },
         { text: 'Codigo', value: 'Codigo' },
         { text: 'Cantidad', value: 'Cantidad' },
@@ -148,7 +148,7 @@ export default {
           UnidadIva: '29.200',
           TotalaPagar: '29.200',
           Formadepago: 'Contado'
-        },
+        }
       ],
       select: 'Pago*',
       items: [
@@ -175,5 +175,4 @@ export default {
     color white
     font-size 20px
   }
-  
 </style>
