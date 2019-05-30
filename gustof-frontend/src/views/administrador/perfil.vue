@@ -5,8 +5,8 @@
       <v-icon dark>check_circle</v-icon>
     </v-snackbar>
     <v-form ref="form" @submit.prevent="submit">
+      <v-subheader class="subheader black--text display-1 font-weight-bold" >Crear Perfil </v-subheader>
       <v-container grid-list-xl fluid style="border: solid #000 10px">
-        <v-btn color="#4A148C " class>Crear Perfil Empleado</v-btn>
         <v-layout wrap>
           <v-flex xs12 sm6>
             <v-text-field v-model="nombre" color="#4A148C" label="Nombres" type="text"></v-text-field>

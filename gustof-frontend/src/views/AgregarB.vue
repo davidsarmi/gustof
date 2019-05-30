@@ -1,15 +1,42 @@
 <template>
   <div id="app">
-    <v-flex xs12 sm6 d-flex>
-      <v-select v-model="agregarb" :items="Producto" label="Agregar Productos"></v-select>
-    </v-flex>
+    <v-select
+      v-model="ProductoA"
+      :items="ProductoA"
+      :error-messages="selectErrors"
+      label="Agregar Producto"
+      required
+      @change="$v.select.$touch()"
+      @blur="$v.select.$touch()"
+    ></v-select>
+    <v-text-field
+      v-model="cantidad"
+      :error-messages="emailErrors"
+      label="Cantidad"
+      required
+      @input="$v.email.$touch()"
+      @blur="$v.email.$touch()"
+    ></v-text-field>
+    <v-select
+      v-model="MedicionA"
+      :items="MedicionA"
+      :error-messages="selectErrors"
+      label="Medicion"
+      required
+      @change="$v.select.$touch()"
+      @blur="$v.select.$touch()"
+    ></v-select>
+
+    <v-btn  @click="Cancelar">Cancelar</v-btn>
+    <v-btn  @click="Aceptar">Aceptar</v-btn>
   </div>
 </template>
 <script>
 export default {
   data: () => ({
     drawer: true,
-    Producto: ['Carne:' + ' 2']
+    ProductoA: ['Carne', 'Papa', 'Etc...'],
+    MedicionA: ['Gramos', 'Libras', 'Kilos']
   }),
   created () {
     this.$store.commit('SET_LAYOUT', 'administrador-layout')

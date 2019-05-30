@@ -3,7 +3,7 @@
     <v-app id="inspire">
       <v-card>
         <v-card-text>
-          <v-container grid-list-xl fluid style="border: solid #4A148C 10px">
+          <v-container grid-list-xl fluid style="border: solid  rgb(0, 0, 0) 10px">
             <v-layout row wrap>
                <v-flex xs6 sm3>
                 <h2>NIT</h2>
