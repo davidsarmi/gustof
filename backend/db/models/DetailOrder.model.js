@@ -13,14 +13,6 @@ module.exports = function setupMetricModel(config) {
     cantidad: {
       type: Sequelize.TEXT,
       allowNull: false
-    },
-    pedido: {
-      type: Sequelize.TEXT,
-      allowNull: false
-    },
-    producto: {
-      type: Sequelize.TEXT,
-      allowNull: false
     }
   });
 };

@@ -32,13 +32,6 @@
       <div id="app">
         <v-app id="inspire">
           <v-container style="max-width: 500px">
-            <h2 class="display-1 success--text pl-3">
-              Tasks:&nbsp;
-              <v-fade-transition leave-absolute>
-                <span :key="`tasks-${tasks.length}`">{{ tasks.length }}</span>
-              </v-fade-transition>
-            </h2>
-
             <v-divider class="mt-3"></v-divider>
 
             <v-layout my-1 align-center>
@@ -90,45 +83,60 @@
 </template>
 
 <script>
+import api from "@/plugins/service";
+
 export default {
-  el: '#app',
   data: () => ({
     tasks: [
       {
         done: false,
-        text: 'Foobar'
+        text: "Foobar"
       },
       {
         done: false,
-        text: 'Fizzbuzz'
+        text: "Fizzbuzz"
       }
     ],
     task: null
   }),
 
   computed: {
-    completedTasks () {
-      return this.tasks.filter(task => task.done).length
+    completedTasks() {
+      return this.tasks.filter(task => task.done).length;
     },
-    progress () {
-      return (this.completedTasks / this.tasks.length) * 100
+    progress() {
+      return (this.completedTasks / this.tasks.length) * 100;
     },
-    remainingTasks () {
-      return this.tasks.length - this.completedTasks
+    remainingTasks() {
+      return this.tasks.length - this.completedTasks;
     }
   },
 
   methods: {
-    create () {
+    create() {
       this.tasks.push({
         done: false,
         text: this.task
-      })
+      });
 
-      this.task = null
+      this.task = null;
+    },
+    async getDetailOrder() {
+      const { data: detailsOrder } = await api.get("/detailOrder");
+      const { data: order } = await api.get("/order");
+      const { data: table } = await api.get("/table");
+      this.$store.commit("SET_DETAIL_ORDER", detailsOrder);
+      this.$store.commit("SET_ORDERS", order);
+      this.$store.commit("SET_TABLE", table);
+
+      console.log(detailsOrder, order, table);
     }
+  },
+  created() {
+    this.$store.commit("SET_LAYOUT", "administrador-layout");
+    this.getDetailOrder();
   }
-}
+};
 </script>
 
     <style scoped>
