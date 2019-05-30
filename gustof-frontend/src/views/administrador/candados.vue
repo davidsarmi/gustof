@@ -11,8 +11,8 @@
       <v-icon dark>check_circle</v-icon>
     </v-snackbar>
     <v-form ref="form" @submit.prevent="submit">
-      <v-container grid-list-xl fluid style="border: solid #4A148C 10px">
-        <v-btn color="#4A148C " class="" >Registrar Empleado</v-btn>
+      <v-subheader class="subheader black--text display-1 font-weight-bold" >Registro de Empleado</v-subheader>
+      <v-container grid-list-xl fluid style="border: solid #000 10px">
         <v-layout wrap>
           <v-flex xs12 sm6>
             <v-text-field
@@ -96,10 +96,10 @@
             >
               <template v-slot:label>
                 <div @click.stop=" drawer = !drawer">
-                  Do you accept the
-                  <a href="javascript:;" @click.stop="terms = true">terms</a>
-                  and
-                  <a href="javascript:;" @click.stop="conditions = true">conditions?</a>
+                  Aceptar
+                  <a href="javascript:;" @click.stop="terms = true">Terminos</a>
+                  y
+                  <a href="javascript:;" @click.stop="conditions = true">Condiciones?</a>
                 </div>
               </template>
             </v-checkbox>

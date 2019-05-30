@@ -175,14 +175,5 @@ export default {
     color white
     font-size 20px
   }
-  .v-input{
-    --v-primary-base white
-  }
-  .flex.xs6 {
-    height: 56px;
-    margin: 8px 0px 0px 0px;
-  }
-  .theme--dark.v-label {
-    color white
-  }
+  
 </style>
