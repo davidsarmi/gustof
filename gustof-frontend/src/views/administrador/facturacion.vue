@@ -3,7 +3,7 @@
     <v-app id="inspire">
       <v-card>
         <v-card-text>
-          <v-container grid-list-xl fluid style="border: solid #4A148C 10px">
+          <v-container grid-list-xl fluid style="border: solid  rgb(0, 0, 0) 10px">
             <v-layout row wrap>
                <v-flex xs6 sm3>
                 <h2>NIT</h2>
@@ -58,13 +58,7 @@
               </v-flex>
             </v-layout>
           </v-container>
-          <v-btn
-            style=" height:40px; width:110px; margin-left:860px;"
-            block
-            color="green"
-            dark
-            @click="snackbar = true"
-          >FACTURAR</v-btn>
+           <v-btn color="green " class="" >Facturar</v-btn>
         </v-card-text>
       </v-card>
 

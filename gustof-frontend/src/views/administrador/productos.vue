@@ -1,163 +1,178 @@
+
 <template>
-  <v-card flat>
-    <v-snackbar
-      v-model="snackbar"
-      absolute
-      top
-      right
-      color="success"
-    >
-      <span>Registration successful!</span>
-      <v-icon dark>check_circle</v-icon>
-    </v-snackbar>
-    <v-form ref="form" @submit.prevent="submit">
-      <v-container grid-list-xl fluid>
-        <v-btn color="#4A148C " class="" >Registrar Producto</v-btn>
-        <v-layout wrap>
+  <div>
+    <v-subheader class="subheader black--text display-1 font-weight-bold" >Registro de Producto</v-subheader>
+    <v-form>
+      <v-container>
+        <v-layout row wrap>
+
           <v-flex xs12 sm6>
             <v-text-field
-              v-model="form.first"
-              :rules="rules.name"
-              color="purple darken-2"
-              label="Nombre del Producto"
-              required
+              v-model="message1"
+              box
+              label=" Codigo"
+              clearable
             ></v-text-field>
           </v-flex>
+
           <v-flex xs12 sm6>
             <v-text-field
-              v-model="form.last"
-              :rules="rules.name"
-              color="blue darken-2"
-              label="Last name"
-              required
+              v-model="message2"
+              box
+              label="Can Unidad"
+              clearable
             ></v-text-field>
           </v-flex>
+
           <v-flex xs12 sm6>
-            <v-select
-              v-model="form.favoriteAnimal"
-              :items="animals"
-              :rules="rules.animal"
-              color="pink"
-              label="Categoria"
-              required
-            ></v-select>
+            <v-text-field
+              v-model="message3"
+              box
+              label= "N Productos"
+              clearable
+            ></v-text-field>
           </v-flex>
-          <v-flex xs12>
-            <v-checkbox
-              v-model="form.terms"
-              color="green"
-            >
-              <template v-slot:label>
-                <div @click.stop="">
-                  Do you accept the
-                  <a href="javascript:;" @click.stop="terms = true">terms</a>
-                  and
-                  <a href="javascript:;" @click.stop="conditions = true">conditions?</a>
-                </div>
-              </template>
-            </v-checkbox>
+
+          <v-flex xs12 sm6>
+            <v-text-field
+              v-model="message4"
+              box
+              label="Fecha de Vencimiento"
+              clearable
+            ></v-text-field>
           </v-flex>
+
+          <v-flex xs12 sm6>
+            <v-text-field
+              v-model="message5"
+              box
+              label="Unidad Sin"
+              clearable
+            ></v-text-field>
+          </v-flex>
+
+          <v-flex xs12 sm6>
+            <v-text-field
+              v-model="message6"
+              box
+              label="Unidad Iva"
+              clearable
+            ></v-text-field>
+          </v-flex>
+
+          <v-flex xs12 sm6>
+            <v-text-field
+              v-model="message7"
+              box
+              label="total"
+              clearable
+            ></v-text-field>
+          </v-flex>
+
+            <v-flex xs6>
+              <v-combobox
+                v-model="select"
+                :items="items"
+              ></v-combobox>
+            </v-flex>
+
         </v-layout>
       </v-container>
-      <v-card-actions>
-        <v-btn flat @click="resetForm">Cancel</v-btn>
-        <v-spacer></v-spacer>
-        <v-btn
-          :disabled="!formIsValid"
-          flat
-          color="primary"
-          type="submit"
-        >Register</v-btn>
-      </v-card-actions>
+       <v-btn color="green " class="" >Registrar Producto</v-btn>
+          <v-btn color="red " class="" >Cancelar</v-btn>
     </v-form>
-    <v-dialog v-model="terms" width="70%">
-      <v-card>
-        <v-card-title class="title">Terms</v-card-title>
-        <v-card-text v-for="n in 5" :key="n">
-          {{ content }}
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn
-            flat
-            color="purple"
-            @click="terms = false"
-          >Ok</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
-    <v-dialog v-model="conditions" width="70%">
-      <v-card>
-        <v-card-title class="title">Conditions</v-card-title>
-        <v-card-text v-for="n in 5" :key="n">
-          {{ content }}
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn
-            flat
-            color="purple"
-            @click="conditions = false"
-          >Ok</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
-  </v-card>
-</template>
+    <v-card>
+      <v-card-title>
+        <v-spacer></v-spacer>
+        <v-text-field
+          v-model="search"
+          append-icon="search"
+          label="Buscar"
+          single-line
+          hide-details
+        ></v-text-field>
+      </v-card-title>
+      <v-data-table
+        :headers="headers"
+        :items="desserts"
+        :search="search"
+      >
+        <template v-slot:items="props">
+          <td></td>
+          <td class="text-xs-right">{{ props.item.Codigo }}</td>
+          <td class="text-xs-right">{{ props.item.Cantidad }}</td>
+          <td class="text-xs-right">{{ props.item.NProductos }}</td>
+          <td class="text-xs-right">{{ props.item.FechaVencimiento }}</td>
+          <td class="text-xs-right">{{ props.item.Unidadsin}}</td>
+          <td class="text-xs-right">{{ props.item.UnidadIva}}</td>
+          <td class="text-xs-right">{{ props.item.TotalaPagar}}</td>
+          <td class="text-xs-right">{{ props.item.Formadepago}}</td>
 
+        </template>
+        <v-alert v-slot:no-results :value="true" color="error" icon="warning">
+         Tu busqueda para "{{ search }}" no se encontro
+        </v-alert>
+      </v-data-table>
+    </v-card>
+  </div>
+</template>
 <script>
 export default {
   created () {
     this.$store.commit('SET_LAYOUT', 'administrador-layout')
   },
   data () {
-    const defaultForm = Object.freeze({
-      first: '',
-      last: '',
-      bio: '',
-      favoriteAnimal: '',
-      age: null,
-      terms: false
-    })
-
     return {
-      form: Object.assign({}, defaultForm),
-      rules: {
-        age: [
-          val => val < 10 || `I don't believe you!`
-        ],
-        animal: [val => (val || '').length > 0 || 'This field is required'],
-        name: [val => (val || '').length > 0 || 'This field is required']
-      },
-      animals: ['Carnes', 'Gaseosas', 'Plasticos', 'Verduras', 'Panes', ''],
-      conditions: false,
-      content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.`,
-      snackbar: false,
-      terms: false,
-      defaultForm
-    }
-  },
-
-  computed: {
-    formIsValid () {
-      return (
-        this.form.first &&
-          this.form.last &&
-          this.form.favoriteAnimal &&
-          this.form.terms
-      )
-    }
-  },
-
-  methods: {
-    resetForm () {
-      this.form = Object.assign({}, this.defaultForm)
-      this.$refs.form.reset()
-    },
-    submit () {
-      this.snackbar = true
-      this.resetForm()
+      search: '',
+      headers: [
+        {
+          align: 'left',
+          sortable: false,
+        },
+        { text: 'Codigo', value: 'Codigo' },
+        { text: 'Cantidad', value: 'Cantidad' },
+        { text: 'NProductos', value: 'NProductos' },
+        { text: 'Fecha.Vencimiento', value: 'FechaVencimiento' },
+        { text: 'Unidad.sin', value: 'Unidadsin' },
+        { text: 'Unidad.Iva', value: 'UnidadIva' },
+        { text: 'Total.a.Pagar', value: 'TotalaPagar' },
+        { text: 'Forma.de.pago', value: 'Formadepago' }
+      ],
+      desserts: [
+        {
+          Codigo: '45210',
+          Cantidad: '23',
+          NProductos: 'carne',
+          FechaVencimiento: '27/05/2019',
+          Unidadsin: '28.990',
+          UnidadIva: '29.200',
+          TotalaPagar: '29.200',
+          Formadepago: 'Contado'
+        }
+      ],
+      select: 'Pago*',
+      items: [
+        'Contado',
+        'Credito'
+      ]
     }
   }
+
 }
 </script>
+<style lang="stylus" >
+  .subheader{
+    text-align center !important
+    display 1
+  }
+  .v-text-field.v-text-field--enclosed {
+    --v-primary-base white
+  }
+  .theme--dark.v-text-field--box > .v-input__control > .v-input__slot {
+    background rgba(0,0,0,0.8)
+  }
+  .theme--dark.v-input:not(.v-input--is-disabled) input, .theme--dark.v-input:not(.v-input--is-disabled) textarea {
+    color white
+    font-size 20px
+  }
+</style>

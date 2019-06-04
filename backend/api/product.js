@@ -9,9 +9,9 @@ const router = new Router();
 
 router.post("/", async function(req, res, next) {
   try {
-    const { userNew } = req.body;
-    const { User } = await db();
-    const result = await User.createUser(userNew);
+    const { productNew } = req.body;
+    const { Product } = await db();
+    const result = await Product.createProduct(productNew);
     res.send(result);
   } catch (err) {
     next(err);

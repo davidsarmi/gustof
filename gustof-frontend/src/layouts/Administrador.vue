@@ -145,6 +145,6 @@ export default {
 }
 .theme--light.v-footer {
   background: darkgray;
-  color: rgb(112, 216, 235);
+  color: black;
 }
 </style>
