@@ -93,7 +93,7 @@ export default {
       },
       {
         text: 'SACAR',
-        icon: 'plus_one',
+        icon: 'delete',
         to: '/sacar'
       },
       {
