@@ -58,7 +58,7 @@
               </v-flex>
             </v-layout>
           </v-container>
-           <v-btn color="green " class="" >Facturar</v-btn>
+           <v-btn  color="green " class="bt" >Facturar</v-btn>
         </v-card-text>
       </v-card>
 
@@ -125,5 +125,8 @@ export default {
 .application--wrap {
   height: 455px;
   width: 1344px;
+}
+.bt{
+   right:-940px;
 }
 </style>
