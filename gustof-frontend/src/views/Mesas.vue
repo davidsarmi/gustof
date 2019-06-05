@@ -64,9 +64,8 @@ export default {
   },
   data: () => ({
     drawer: true,
-    
-  
-  comidas: [
+
+    comidas: [
       'hamburguesa',
       'perros calientes',
       'picada mixta',
@@ -219,13 +218,11 @@ export default {
 
   props: {
     source: String
-    
+
   }
 }
 
-  
 </script>
-
 
 <style scoped>
 .v-text-field.v-text-field--enclosed .v-text-field__details,

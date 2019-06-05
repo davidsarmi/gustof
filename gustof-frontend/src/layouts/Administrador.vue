@@ -20,7 +20,7 @@
           <img src="@/assets/gustof.png" class="img-responsive" alt style="width:89px">
         </v-btn>
       </v-toolbar>
-      
+
       <v-footer app fixed>
         <span>&copy; GUSTOF</span>
       </v-footer>
@@ -105,6 +105,37 @@ export default {
         text: 'SALIR',
         icon: 'contacts',
         to: '/'
+      }
+    ],
+    chef:[
+      {
+      text:'SALIR',
+      icon:'store',
+      to:'/'
+      }
+    ],
+    Mesero:[
+      {
+        text:'MESAS',
+        icon:'store',
+        to:'/mesaslogin'
+      },
+      {
+        text:'CONFIGURACION',
+        icon:'store',
+        to:'/configuracion'
+      },
+      {
+        text:'SALIR',
+        icon:'conctacts',
+        to:'/'
+      },
+    ],
+    caja:[
+      {
+        text:'SALIR',
+        icon:'conctacts',
+        to:'/'
       }
     ]
   }),

@@ -90,46 +90,46 @@
   </v-layout>
 </template>
 <script>
-import api from "@/plugins/service";
+import api from '@/plugins/service'
 export default {
   data: () => ({
-    imageName: "",
-    nombre: ""
+    imageName: '',
+    nombre: ''
   }),
-  created() {
-    this.$store.commit("SET_LAYOUT", "administrador-layout");
+  created () {
+    this.$store.commit('SET_LAYOUT', 'administrador-layout')
   },
   methods: {
-    pickFile() {
-      this.$refs.image.click();
+    pickFile () {
+      this.$refs.image.click()
     },
-    onFilePicked(e) {
-      const files = e.target.files;
+    onFilePicked (e) {
+      const files = e.target.files
       if (files[0] !== undefined) {
-        this.imageName = files[0].name;
-        if (this.imageName.lastIndexOf(".") <= 0) {
-          return;
+        this.imageName = files[0].name
+        if (this.imageName.lastIndexOf('.') <= 0) {
+          return
         }
-        const fr = new FileReader();
-        fr.readAsDataURL(files[0]);
-        fr.addEventListener("load", () => {
-          this.imgUrl = fr.result;
-        });
+        const fr = new FileReader()
+        fr.readAsDataURL(files[0])
+        fr.addEventListener('load', () => {
+          this.imgUrl = fr.result
+        })
       } else {
-        this.imageName = "";
-        this.imageUrl = "";
+        this.imageName = ''
+        this.imageUrl = ''
       }
     },
-    async Aceptar() {
-      const res = await api.post("/company", {
+    async Aceptar () {
+      const res = await api.post('/company', {
         companyNew: {
           nombre: this.nombre
         }
-      });
-      console.log(res.data);
+      })
+      console.log(res.data)
     }
   }
-};
+}
 </script>
 
 <style scoped lang="stylus">

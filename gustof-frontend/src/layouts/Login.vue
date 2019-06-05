@@ -11,7 +11,6 @@
 </template>
 <script>
 export default {
-  name: "login-layout"
-};
+  name: 'login-layout'
+}
 </script>
-
