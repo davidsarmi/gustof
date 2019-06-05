@@ -1,22 +1,38 @@
 <template>
-  <v-flex xs12 sm8 md4>
+  <v-flex xs12 sm8 md4 style="margin:auto">
+    <img
+      src="@/assets/fondo.jpg"
+      style="height: 790px;
+    width: 1422px;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    bottom: 0;
+    right: 0;
+"
+    >
     <v-card class="elevation-12 transparent">
       <v-img :src="logo" class="black"/>
+
       <v-card-text>
         <v-form>
           <v-text-field
+            class="letras"
             prepend-icon="person"
             name="login"
             label="Cedula"
             type="text"
             v-model="cedula"
+            style="color: white;"
           ></v-text-field>
           <v-text-field
+            class="letras"
             prepend-icon="lock"
             name="password"
             label="Contraseña"
             id="password"
             type="password"
+            style="color: white;"
             v-model="contrasena"
           ></v-text-field>
         </v-form>
@@ -29,53 +45,65 @@
   </v-flex>
 </template>
 <script>
-import api from '@/plugins/service'
-import logo from '@/assets/gustof.png'
-import CajaFacturaVue from './CajaFactura.vue'
-import Swal from 'sweetalert2'
+import api from "@/plugins/service";
+import logo from "@/assets/gustof.png";
+import CajaFacturaVue from "./CajaFactura.vue";
+import Swal from "sweetalert2";
 export default {
-  data: function () {
+  data: function() {
     return {
-      cedula: '',
-      contrasena: '',
+      cedula: "",
+      contrasena: "",
       drawer: null,
       logo
-    }
+    };
   },
   methods: {
-    async registro () {
+    async registro() {
       try {
-        const res = await api.post('/user/singin', {
+        const res = await api.post("/user/singin", {
           cedula: this.cedula,
           contrasena: this.contrasena
-        })
+        });
         if (!res.data.login) {
-          Swal.fire('Usuario Incorrecto!', 'intentalo de nuevo!', 'error')
-          return
+          Swal.fire("Usuario Incorrecto!", "intentalo de nuevo!", "error");
+          return;
         }
-        this.$store.commit('SET_USER', res.data.user)
-        if (res.data.user.rol === 'chef') {
-          this.$router.push('chef')
-        } else if (res.data.user.rol == 'mesero') {
-          this.$router.push('mesaslogin')
-        } else if (res.data.user.rol == 'caja') {
-          this.$router.push('CajaFactura')
+        this.$store.commit("SET_USER", res.data.user);
+        if (res.data.user.rol === "chef") {
+          this.$router.push("chef");
+        } else if (res.data.user.rol == "mesero") {
+          this.$router.push("mesaslogin");
+        } else if (res.data.user.rol == "caja") {
+          this.$router.push("CajaFactura");
         } else {
-          this.$router.push('administrador')
+          this.$router.push("administrador");
         }
       } catch (error) {
-        console.error(error)
+        console.error(error);
       }
     }
   },
 
-  created () {
-    this.$store.commit('SET_LAYOUT', 'login-layout')
+  created() {
+    this.$store.commit("SET_LAYOUT", "login-layout");
   },
   props: {
     source: String
   }
-}
+};
 </script>
 <style>
+.theme--light.v-label {
+  color: white;
+}
+.v-input__icon {
+  color: white;
+}
+.theme--light.v-icon {
+  color: white;
+}
+.theme--light.v-input {
+  color: white;
+}
 </style>

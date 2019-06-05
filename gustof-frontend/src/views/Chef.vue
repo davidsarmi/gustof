@@ -1,4 +1,3 @@
-
 <template v-slot:items="props">
   <div id="app">
     <v-app id="inspire">
@@ -86,15 +85,18 @@
 import api from "@/plugins/service";
 
 export default {
+  created() {
+    this.getDetailOrder;
+  },
   data: () => ({
     tasks: [
       {
         done: false,
-        text: "Foobar"
+        text: ""
       },
       {
         done: false,
-        text: "Fizzbuzz"
+        text: ""
       }
     ],
     task: null
