@@ -12,7 +12,6 @@ import cliente from '@/views/administrador/cliente.vue'
 import facturacion from '@/views/administrador/facturacion.vue'
 import miempresa from '@/views/administrador/miempresa.vue'
 import producto from '@/views/administrador/productos.vue'
-import precio from '@/views/administrador/precio.vue'
 import proveedor from '@/views/administrador/proveedores.vue'
 import BodegaProductos from '@/views/Bodega-Productos.vue'
 import AgregarB from '@/views/AgregarB.vue'
@@ -112,11 +111,6 @@ export default new Router({
       path: '/administrador/productos',
       name: 'productos',
       component: producto
-    },
-    {
-      path: '/administrador/precio',
-      name: 'precio',
-      component: precio
     },
     {
       path: '/administrador/proveedores',
