@@ -165,10 +165,10 @@ export default {
 </script>
 <style>
 .theme--dark.v-icon {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 .v-list__tile__content {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-size: 16px;
   font-family:Georgia, 'Times New Roman', Times, serif;
 }
@@ -190,5 +190,8 @@ export default {
   background: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   font-size: 15px;
+}
+.theme--dark.v-navigation-drawer {
+    background-color: rgb(67, 146, 185,0.4);
 }
 </style>
