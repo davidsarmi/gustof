@@ -165,10 +165,12 @@ export default {
 </script>
 <style>
 .theme--dark.v-icon {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .v-list__tile__content {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .v-list--dense .v-list__tile {
   font-size: 15px;
