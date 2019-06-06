@@ -168,7 +168,7 @@ export default {
   color: white;
 }
 .v-list__tile__content {
-  color: black;
+  color: rgb(0, 0, 0);
 }
 .v-list--dense .v-list__tile {
   font-size: 15px;
@@ -185,7 +185,8 @@ export default {
   background-color: black;
 }
 .theme--light.v-footer {
-  background: darkgray;
-  color: black;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 15px;
 }
 </style>
