@@ -107,35 +107,45 @@ export default {
         to: '/'
       }
     ],
-    chef:[
+    chef: [
       {
-      text:'SALIR',
-      icon:'store',
-      to:'/'
+        text: 'SALIR',
+        icon: 'store',
+        to: '/'
       }
     ],
-    Mesero:[
+    mesero: [
       {
-        text:'MESAS',
-        icon:'store',
-        to:'/mesaslogin'
+        text: 'MESAS',
+        icon: 'store',
+        to: '/mesaslogin'
       },
       {
-        text:'CONFIGURACION',
-        icon:'store',
-        to:'/configuracion'
-      },
-      {
-        text:'SALIR',
-        icon:'conctacts',
-        to:'/'
-      },
+        text: 'SALIR',
+        icon: 'conctacts',
+        to: '/'
+      }
     ],
-    caja:[
+    caja: [
       {
-        text:'SALIR',
-        icon:'conctacts',
-        to:'/'
+        text:'CLIENTE',
+        icon:'store',
+        to:'/administrador/cliente'
+      },
+      {
+       text:'PROVEEDORES',
+       icon:'store',
+       to:'/administrador/proveedores'
+      },
+      {
+       text:'FACTURACION',
+       icon:'store',
+       to:'/administrador/facturacion'
+      },
+      {
+        text: 'SALIR',
+        icon: 'conctacts',
+        to: '/'
       }
     ]
   }),
