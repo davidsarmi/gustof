@@ -192,6 +192,6 @@ export default {
   font-size: 15px;
 }
 .theme--dark.v-navigation-drawer {
-    background-color: rgb(67, 146, 185,0.4);
+    background-color: rgb(67, 146, 185,0.9);
 }
 </style>
