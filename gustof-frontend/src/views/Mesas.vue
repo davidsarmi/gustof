@@ -1,26 +1,7 @@
 <template>
   <div id="app">
-    <v-app id="inspire" dark>
-      <v-navigation-drawer clipped fixed v-model="drawer" app>
-        <v-list dense>
-          <v-list-tile>
-            <v-list-tile-action>
-              <v-icon>dashboard</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title>Mesas</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-          <v-list-tile>
-            <v-list-tile-action>
-              <v-icon>settings</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title>Configuraciones</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </v-list>
-      </v-navigation-drawer>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+    <v-app id="inspire" ligth>
       <v-toolbar app fixed clipped-left>
         <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
         <v-toolbar-title>mesas</v-toolbar-title>
@@ -69,17 +50,21 @@
         </table>
       </v-flex>
       <v-btn color="success">Enviar</v-btn>
-
-      <v-footer app fixed>
-        <span>&copy; 2017</span>
+            <v-footer app fixed>
+        <span>&copy; 2019</span>
       </v-footer>
     </v-app>
   </div>
 </template>
 <script>
+
 export default {
+  created () {
+    this.$store.commit('SET_LAYOUT', 'administrador-layout')
+  },
   data: () => ({
     drawer: true,
+
     comidas: [
       'hamburguesa',
       'perros calientes',
@@ -233,9 +218,12 @@ export default {
 
   props: {
     source: String
+
   }
 }
+
 </script>
+
 <style scoped>
 .v-text-field.v-text-field--enclosed .v-text-field__details,
 .v-text-field.v-text-field--enclosed > .v-input__control > .v-input__slot {

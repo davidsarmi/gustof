@@ -20,6 +20,7 @@
           <img src="@/assets/gustof.png" class="img-responsive" alt style="width:89px">
         </v-btn>
       </v-toolbar>
+
       <v-footer app fixed>
         <span>&copy; GUSTOF</span>
       </v-footer>
@@ -92,7 +93,7 @@ export default {
       },
       {
         text: 'SACAR',
-        icon: 'plus_one',
+        icon: 'delete',
         to: '/sacar'
       },
       {
@@ -103,6 +104,47 @@ export default {
       {
         text: 'SALIR',
         icon: 'contacts',
+        to: '/'
+      }
+    ],
+    chef: [
+      {
+        text: 'SALIR',
+        icon: 'store',
+        to: '/'
+      }
+    ],
+    mesero: [
+      {
+        text: 'MESAS',
+        icon: 'store',
+        to: '/mesaslogin'
+      },
+      {
+        text: 'SALIR',
+        icon: 'conctacts',
+        to: '/'
+      }
+    ],
+    caja: [
+      {
+        text:'CLIENTE',
+        icon:'store',
+        to:'/administrador/cliente'
+      },
+      {
+       text:'PROVEEDORES',
+       icon:'store',
+       to:'/administrador/proveedores'
+      },
+      {
+       text:'FACTURACION',
+       icon:'store',
+       to:'/administrador/facturacion'
+      },
+      {
+        text: 'SALIR',
+        icon: 'conctacts',
         to: '/'
       }
     ]
@@ -123,10 +165,12 @@ export default {
 </script>
 <style>
 .theme--dark.v-icon {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .v-list__tile__content {
-  color: black;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .v-list--dense .v-list__tile {
   font-size: 15px;
@@ -143,7 +187,11 @@ export default {
   background-color: black;
 }
 .theme--light.v-footer {
-  background: darkgray;
-  color: black;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+}
+.theme--dark.v-navigation-drawer {
+    background-color: rgb(20, 122, 153);
 }
 </style>

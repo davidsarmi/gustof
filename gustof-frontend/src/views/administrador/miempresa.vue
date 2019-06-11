@@ -163,7 +163,7 @@ export default {
 .flex.carta[data-v-853b481e] {
   height: 329px;
   background-color: azure;
-  border: solid #000 10px
+  border: solid #000 10px;
 }
 .flex,
 .child-flex > * {
@@ -172,30 +172,31 @@ export default {
 .v-avatar img[data-v-853b481e],
 .v-avatar .v-icon[data-v-853b481e],
 .v-avatar .v-image[data-v-853b481e] {
-  background-color: #B0BEC5;
+  background-color: #b0bec5;
   margin: auto;
   margin-top: -57px;
   margin-left: -74px;
 }
 .theme--light.v-btn:not(.v-btn--icon):not(.v-btn--flat) {
-  background-color: #B0BEC5;
+  background-color: #b0bec5;
   margin-top: 45px;
   vertical-align: top;
 }
 .v-btn__content {
   color: white;
 }
-.v-card > *:first-child:not(.v-btn):not(.v-chip){
+.v-card > *:first-child:not(.v-btn):not(.v-chip) {
   height: 329px;
   width: 627px;
   background-color: azure;
 }
-.container.fluid{
+.container.fluid {
   height: 330px;
   width: 600px;
-  border: solid #000 10px
+  border: solid #000 10px;
 }
-.flex[data-v-853b481e], .child-flex > *[data-v-853b481e]{
+.flex[data-v-853b481e],
+.child-flex > *[data-v-853b481e] {
   background-color: azure;
 }
 .container.grid-list-xl .layout:only-child{
