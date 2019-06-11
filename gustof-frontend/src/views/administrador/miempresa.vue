@@ -31,73 +31,69 @@
       </material-card>
     </v-flex>
     <v-flex>
-          <v-card flat>
-    <v-snackbar absolute top right color="success">
-      <span>Registration successful!</span>
-      <v-icon dark>check_circle</v-icon>
-    </v-snackbar>
-    <v-form ref="form" @submit.prevent="submit">
-      <v-container grid-list-xl fluid style=" heigth: 350px width: 620px">
-        <v-layout wrap>
-          <v-flex xs12 sm6>
-            <v-text-field v-model="empresa" color="#4A148C" label="Nombre de la Empresa" type="text"></v-text-field>
-          </v-flex>
-          <v-flex xs12 sm6>
-            <v-text-field v-model="nit" color="#4A148C" label="NIT" type="text"></v-text-field>
-          </v-flex>
-          <v-flex xs12 sm6></v-flex>
-          <v-flex xs12 sm6></v-flex>
-          <v-flex xs12 sm6>
-            <v-text-field v-model="password" type="password" label="Contraseña Antigua"></v-text-field>
-          </v-flex>
-          <v-flex xs12 sm6>
-            <v-text-field v-model="password" type="password" label="Contraseña Nueva"></v-text-field>
-          </v-flex>
-        </v-layout>
-      </v-container>
-      <v-card-actions>
-        <v-spacer></v-spacer>
-        <v-btn flat @click="Guardar">Guardar</v-btn>
-      </v-card-actions>
-    </v-form>
-    <v-dialog v-model="terms" width="70%">
-      <v-card>
-        <v-card-title class="title">Terms</v-card-title>
-        <v-card-text v-for="n in 5" :key="n">{{ content }}</v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn flat color="#4A148C" @click="terms = false">Ok</v-btn>
-        </v-card-actions>
+      <v-card flat>
+        <v-snackbar absolute top right color="success">
+          <span>Registration successful!</span>
+          <v-icon dark>check_circle</v-icon>
+        </v-snackbar>
+        <v-form ref="form" @submit.prevent="submit">
+          <v-container grid-list-xl fluid style=" heigth: 350px width: 620px">
+            <v-layout wrap>
+              <v-flex xs12 sm12>
+                <v-text-field v-model="empresa" color="#4A148C" label="Nombre de la Empresa" type="text"></v-text-field>
+              </v-flex>
+              <v-flex xs12 sm12>
+                <v-text-field v-model="nit" color="#4A148C" label="NIT" type="text"></v-text-field>
+              </v-flex>
+              <v-flex xs12 sm12>
+                <v-text-field v-model="correo" color="#4A148C" label="Correo General" type="text"></v-text-field>
+              </v-flex>
+              <v-flex xs12 sm12></v-flex>
+              <v-flex xs12 sm12></v-flex>
+            </v-layout>
+            </v-container>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn flat @click="Guardar">Guardar</v-btn>
+          </v-card-actions>
+        </v-form>
+        <v-dialog v-model="terms" width="70%">
+          <v-card>
+            <v-card-title class="title">Terms</v-card-title>
+            <v-card-text v-for="n in 5" :key="n">{{ content }}</v-card-text>
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn flat color="#4A148C" @click="terms = false">Ok</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
+        <v-dialog v-model="conditions" width="70%">
+          <v-card>
+            <v-card-title class="title">Conditions</v-card-title>
+            <v-card-text v-for="n in 5" :key="n">{{ content }}</v-card-text>
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn flat color="#4A148C" @click="conditions = false">Ok</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
       </v-card>
-    </v-dialog>
-    <v-dialog v-model="conditions" width="70%">
-      <v-card>
-        <v-card-title class="title">Conditions</v-card-title>
-        <v-card-text v-for="n in 5" :key="n">{{ content }}</v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn flat color="#4A148C" @click="conditions = false">Ok</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
-  </v-card>
-            </v-flex>
-          </v-layout>
-        </v-container>
-      </v-form>
     </v-flex>
   </v-layout>
 </template>
 <script>
 import api from '@/plugins/service'
 export default {
-  data: () => ({
-    imageName: '',
-    nombre: ''
-  }),
   created () {
     this.$store.commit('SET_LAYOUT', 'administrador-layout')
   },
+  data: () => ({
+    imageName: '',
+    nombre: '',
+    empresa: '',
+    nit: '',
+    correo: ''
+  }),
   methods: {
     pickFile () {
       this.$refs.image.click()
@@ -201,5 +197,12 @@ export default {
 }
 .flex[data-v-853b481e], .child-flex > *[data-v-853b481e]{
   background-color: azure;
+}
+.container.grid-list-xl .layout:only-child{
+  width: 575px;
+  height: 100px;
+}
+.container.grid-list-xl .layout .flex{
+  padding: 9px;
 }
 </style>
