@@ -127,7 +127,7 @@ export default {
       headers: [
         {
           align: 'left',
-          sortable: false,
+          sortable: false
         },
         { text: 'Codigo', value: 'Codigo' },
         { text: 'Cantidad', value: 'Cantidad' },

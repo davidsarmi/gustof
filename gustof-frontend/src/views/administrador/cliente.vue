@@ -5,7 +5,7 @@
       <v-icon dark>check_circle</v-icon>
     </v-snackbar>
     <v-form ref="form" @submit.prevent="submit">
-       <v-subheader class="subheader black--text display-1 font-weight-bold" >Registro de Cliente</v-subheader>
+      <v-subheader class="subheader black--text display-1 font-weight-bold" > Registrar Cliente </v-subheader>
       <v-container grid-list-xl fluid style="border: solid #000 10px">
         <v-layout wrap>
           <v-flex xs12 sm6>

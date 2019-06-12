@@ -39,27 +39,19 @@
         <v-form ref="form" @submit.prevent="submit">
           <v-container grid-list-xl fluid style=" heigth: 350px width: 620px">
             <v-layout wrap>
-              <v-flex xs12 sm6>
-                <v-text-field
-                  v-model="empresa"
-                  color="#4A148C"
-                  label="Nombre de la Empresa"
-                  type="text"
-                ></v-text-field>
+              <v-flex xs12 sm12>
+                <v-text-field v-model="empresa" color="#4A148C" label="Nombre de la Empresa" type="text"></v-text-field>
               </v-flex>
-              <v-flex xs12 sm6>
+              <v-flex xs12 sm12>
                 <v-text-field v-model="nit" color="#4A148C" label="NIT" type="text"></v-text-field>
               </v-flex>
-              <v-flex xs12 sm6></v-flex>
-              <v-flex xs12 sm6></v-flex>
-              <v-flex xs12 sm6>
-                <v-text-field v-model="password" type="password" label="Contraseña Antigua"></v-text-field>
+              <v-flex xs12 sm12>
+                <v-text-field v-model="correo" color="#4A148C" label="Correo General" type="text"></v-text-field>
               </v-flex>
-              <v-flex xs12 sm6>
-                <v-text-field v-model="password" type="password" label="Contraseña Nueva"></v-text-field>
-              </v-flex>
+              <v-flex xs12 sm12></v-flex>
+              <v-flex xs12 sm12></v-flex>
             </v-layout>
-          </v-container>
+            </v-container>
           <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn flat @click="Guardar">Guardar</v-btn>
@@ -90,46 +82,49 @@
   </v-layout>
 </template>
 <script>
-import api from "@/plugins/service";
+import api from '@/plugins/service'
 export default {
-  data: () => ({
-    imageName: "",
-    nombre: ""
-  }),
-  created() {
-    this.$store.commit("SET_LAYOUT", "administrador-layout");
+  created () {
+    this.$store.commit('SET_LAYOUT', 'administrador-layout')
   },
+  data: () => ({
+    imageName: '',
+    nombre: '',
+    empresa: '',
+    nit: '',
+    correo: ''
+  }),
   methods: {
-    pickFile() {
-      this.$refs.image.click();
+    pickFile () {
+      this.$refs.image.click()
     },
-    onFilePicked(e) {
-      const files = e.target.files;
+    onFilePicked (e) {
+      const files = e.target.files
       if (files[0] !== undefined) {
-        this.imageName = files[0].name;
-        if (this.imageName.lastIndexOf(".") <= 0) {
-          return;
+        this.imageName = files[0].name
+        if (this.imageName.lastIndexOf('.') <= 0) {
+          return
         }
-        const fr = new FileReader();
-        fr.readAsDataURL(files[0]);
-        fr.addEventListener("load", () => {
-          this.imgUrl = fr.result;
-        });
+        const fr = new FileReader()
+        fr.readAsDataURL(files[0])
+        fr.addEventListener('load', () => {
+          this.imgUrl = fr.result
+        })
       } else {
-        this.imageName = "";
-        this.imageUrl = "";
+        this.imageName = ''
+        this.imageUrl = ''
       }
     },
-    async Aceptar() {
-      const res = await api.post("/company", {
+    async Aceptar () {
+      const res = await api.post('/company', {
         companyNew: {
           nombre: this.nombre
         }
-      });
-      console.log(res.data);
+      })
+      console.log(res.data)
     }
   }
-};
+}
 </script>
 
 <style scoped lang="stylus">
@@ -203,5 +198,12 @@ export default {
 .flex[data-v-853b481e],
 .child-flex > *[data-v-853b481e] {
   background-color: azure;
+}
+.container.grid-list-xl .layout:only-child{
+  width: 575px;
+  height: 100px;
+}
+.container.grid-list-xl .layout .flex{
+  padding: 9px;
 }
 </style>

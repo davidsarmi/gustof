@@ -37,62 +37,64 @@
         <v-app id="inspire">
           <v-container fluid>
             <v-layout justify-space-around>
-              <v-flex xs5>
+              <v-flex xs1>
                 <div class="title mb-1"></div>
                 <v-layout column>
                   <div class="subheading">Mesa 1</div>
-                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.7"></v-img>
+                  <v-img style="" src="https://picsum.photos/510/300?random" aspect-ratio="1.7"></v-img>
                   <div class="subheading pt-3">Mesa 2</div>
-                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="2"></v-img>
+                  <v-img style="" src="https://picsum.photos/510/300?random" aspect-ratio="2"></v-img>
                   <div class="subheading pt-3">Mesa 3</div>
-                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
+                  <v-img style="" src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
                   <div class="subheading pt-3">Mesa 4</div>
-                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
+                  <v-img style="" src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
                   <div class="subheading pt-3">Mesa 5</div>
-                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
+                  <v-img style="" src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
                 </v-layout>
               </v-flex>
 
-              <v-flex xs5>
+              <v-flex xs1>
                 <div class="title mb-1"></div>
                 <v-layout column>
                   <div class="subheading">Mesa 6</div>
-                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.7"></v-img>
+                  <v-img style="display:inline_block" src="https://picsum.photos/510/300?random" aspect-ratio="1.7"></v-img>
                   <div class="subheading pt-3">Mesa 7</div>
-                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="2"></v-img>
+                  <v-img style="" src="https://picsum.photos/510/300?random" aspect-ratio="2"></v-img>
                   <div class="subheading pt-3">Mesa 8</div>
-                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
+                  <v-img style="" src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
                   <div class="subheading pt-3">Mesa 9</div>
-                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
+                  <v-img style="" src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
                   <div class="subheading pt-3">Mesa 10</div>
-                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
+                  <v-img style="" src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
                 </v-layout>
               </v-flex>
 
-              <v-flex xs5>
+              <v-flex xs1>
                 <div class="title mb-1"></div>
                 <v-layout column>
                   <div class="subheading">Mesa 11</div>
-                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.7"></v-img>
+                  <v-img style="" src="https://picsum.photos/510/300?random" aspect-ratio="1.7"></v-img>
                   <div class="subheading pt-3">Mesa 12</div>
-                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="2"></v-img>
+                  <v-img style="; heigth: 150px" src="https://picsum.photos/510/300?random" aspect-ratio="2"></v-img>
                   <div class="subheading pt-3">Mesa 13</div>
-                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
+                  <v-img style="" src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
                   <div class="subheading pt-3">Mesa 14</div>
-                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
+                  <v-img style="" src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
                   <div class="subheading pt-3">Mesa 15</div>
-                  <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
+                  <v-img style="" src="https://picsum.photos/510/300?random" aspect-ratio="1.4"></v-img>
                 </v-layout>
               </v-flex>
-
             </v-layout>
           </v-container>
         </v-app>
       </div>
     </v-container>
 
+    
+
+
     <v-footer color="indigo" app inset>
-      <span class="white--text">&copy; 2017</span>
+      <span class="white--text">&copy; 2019</span>
     </v-footer>
   </v-app>
 </div>

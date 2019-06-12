@@ -2,9 +2,9 @@
   <div id="app">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
     <v-app id="inspire" ligth>
-      <v-navigation-drawer clippedgit fixed v-model="drawer" app dark>
-        <v-list dense>
-          <v-list-tile v-for="admin in admins" :key="admin.admins" @click="push(admin.to)">
+      <v-navigation-drawer clipped v-model="drawer" app dark>
+        <v-list dense >
+          <v-list-tile v-for="admin in user.rol === 'administrador' ? admins :  user.rol === 'chef' ? chef : user.rol === 'caja' ? caja : mesero " :key="admin.admins" @click="push(admin.to)">
             <v-list-tile-action v-if="admin.icon">
               <v-icon>{{ admin.icon }}</v-icon>
             </v-list-tile-action>
@@ -42,6 +42,7 @@
   </div>
 </template>
 <script>
+import { mapState } from 'vuex'
 export default {
   data: () => ({
     drawer: true,
@@ -111,6 +112,47 @@ export default {
         icon: "contacts",
         to: "/"
       }
+    ],
+    chef: [
+      {
+        text: 'SALIR',
+        icon: 'store',
+        to: '/'
+      }
+    ],
+    mesero: [
+      {
+        text: 'MESAS',
+        icon: 'store',
+        to: '/mesaslogin'
+      },
+      {
+        text: 'SALIR',
+        icon: 'conctacts',
+        to: '/'
+      }
+    ],
+    caja: [
+      {
+        text:'CLIENTE',
+        icon:'store',
+        to:'/administrador/cliente'
+      },
+      {
+       text:'PROVEEDORES',
+       icon:'store',
+       to:'/administrador/proveedores'
+      },
+      {
+       text:'FACTURACION',
+       icon:'store',
+       to:'/administrador/facturacion'
+      },
+      {
+        text: 'SALIR',
+        icon: 'conctacts',
+        to: '/'
+      }
     ]
   }),
   methods: {
@@ -124,22 +166,24 @@ export default {
   },
   props: {
     source: String
-  }
-};
+  },
+  computed: {
+    ...mapState(['user'])
+  },
+}
 </script>
 <style>
 .theme--dark.v-icon {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .v-list__tile__content {
-  color: black;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .v-list--dense .v-list__tile {
   font-size: 15px;
   font-family: fantasy;
-}
-.v-toolbar__content {
-  height: 45px !important;
 }
 .v-btn .v-btn__content .v-icon {
   color: rgb(255, 255, 255);
@@ -149,7 +193,11 @@ export default {
   background-color: black;
 }
 .theme--light.v-footer {
-  background: darkgray;
-  color: black;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+}
+.theme--dark.v-navigation-drawer {
+    background-color: rgb(20, 122, 153);
 }
 </style>
