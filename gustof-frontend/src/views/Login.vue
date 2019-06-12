@@ -23,7 +23,7 @@
             label="Cedula"
             type="text"
             v-model="cedula"
-            style="color: white;"
+            style="color:white !important"
           ></v-text-field>
           <v-text-field
             class="letras"
@@ -32,7 +32,7 @@
             label="Contraseña"
             id="password"
             type="password"
-            style="color: white;"
+            color="error"
             v-model="contrasena"
           ></v-text-field>
         </v-form>
@@ -93,17 +93,4 @@ export default {
   }
 };
 </script>
-<style scoped>
-.theme--light.v-label {
-  color: white;
-}
-.v-input__icon {
-  color: white;
-}
-.theme--light.v-icon {
-  color: white;
-}
-.theme--light.v-input {
-  color: white;
-}
-</style>
+

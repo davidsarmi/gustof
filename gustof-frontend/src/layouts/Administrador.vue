@@ -17,10 +17,15 @@
       <v-toolbar app fixed clipped-left>
         <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
         <v-btn style="background-color: black;">
-          <img src="@/assets/gustof.png" class="img-responsive" alt style="width:89px">
+          <img
+            src="@/assets/gustof.png"
+            class="img-responsive"
+            alt
+            style="width:89px; margin: 0 0 0 610px;"
+          >
         </v-btn>
       </v-toolbar>
-      
+
       <v-footer app fixed>
         <span>&copy; GUSTOF</span>
       </v-footer>
@@ -42,85 +47,85 @@ export default {
     drawer: true,
     admins: [
       {
-        text: '',
-        icon: '',
-        to: ''
+        text: "",
+        icon: "",
+        to: ""
       },
       {
-        text: 'PERFIL',
-        icon: 'group',
-        to: '/administrador/perfil'
+        text: "PERFIL",
+        icon: "group",
+        to: "/administrador/perfil"
       },
       {
-        text: 'MI EMPRESA',
-        icon: 'store',
-        to: '/administrador/miempresa'
+        text: "MI EMPRESA",
+        icon: "store",
+        to: "/administrador/miempresa"
       },
       {
-        text: 'CLIENTE',
-        icon: 'perm_identity',
-        to: '/administrador/cliente'
+        text: "CLIENTE",
+        icon: "perm_identity",
+        to: "/administrador/cliente"
       },
       {
-        text: 'PROVEEDORES',
-        icon: 'contacts',
-        to: '/administrador/proveedores'
+        text: "PROVEEDORES",
+        icon: "contacts",
+        to: "/administrador/proveedores"
       },
       {
-        text: 'PRODUCTOS',
-        icon: 'restaurant',
-        to: '/administrador/productos'
+        text: "PRODUCTOS",
+        icon: "restaurant",
+        to: "/administrador/productos"
       },
       {
-        text: 'FACTURACIÒN',
-        icon: 'list',
-        to: '/administrador/facturacion'
+        text: "FACTURACIÒN",
+        icon: "list",
+        to: "/administrador/facturacion"
       },
       {
-        text: 'BODEGA',
-        icon: 'reorder',
-        to: '/bodega'
+        text: "BODEGA",
+        icon: "reorder",
+        to: "/bodega"
       },
       {
-        text: 'PRODUCTOS DE BODEGA',
-        icon: 'restaurant',
-        to: '/bodega_productos'
+        text: "PRODUCTOS DE BODEGA",
+        icon: "restaurant",
+        to: "/bodega_productos"
       },
       {
-        text: 'AGREGAR',
-        icon: 'plus_one',
-        to: '/agregar'
+        text: "AGREGAR",
+        icon: "plus_one",
+        to: "/agregar"
       },
       {
-        text: 'SACAR',
-        icon: 'delete',
-        to: '/sacar'
+        text: "SACAR",
+        icon: "delete",
+        to: "/sacar"
       },
       {
-        text: 'CANDADOS',
-        icon: 'no_encryption',
-        to: '/administrador/candados'
+        text: "CANDADOS",
+        icon: "no_encryption",
+        to: "/administrador/candados"
       },
       {
-        text: 'SALIR',
-        icon: 'contacts',
-        to: '/'
+        text: "SALIR",
+        icon: "contacts",
+        to: "/"
       }
     ]
   }),
   methods: {
-    push (to) {
-      if (to === '/') {
-        this.$store.commit('SET_USER', {})
-        this.$router.push(to)
+    push(to) {
+      if (to === "/") {
+        this.$store.commit("SET_USER", {});
+        this.$router.push(to);
       }
-      this.$router.push(to)
+      this.$router.push(to);
     }
   },
   props: {
     source: String
   }
-}
+};
 </script>
 <style>
 .theme--dark.v-icon {
